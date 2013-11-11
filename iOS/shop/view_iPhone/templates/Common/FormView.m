@@ -703,7 +703,7 @@ ON_SIGNAL2( BeeUIBoard, signal )
 	}
 	else if ( [signal is:BeeUIBoard.LAYOUT_VIEWS] )
 	{
-		_table.frame = self.viewBound;
+		_table.frame = [UIScreen mainScreen].bounds;
 	}
     else if ( [signal is:BeeUIBoard.DID_APPEAR] )
     {

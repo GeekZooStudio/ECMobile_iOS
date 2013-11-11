@@ -153,9 +153,15 @@ ON_SIGNAL2( BeeUIBoard, signal )
 	else if ( [signal is:BeeUIBoard.LAYOUT_VIEWS] )
 	{
         _tabbar.frame = CGRectMake( 0, _tabbarOriginY, self.viewBound.size.width, TAB_HEIGHT );
-
-		CGRect frame = CGRectMake( 0, 0, self.viewBound.size.width, self.viewBound.size.height );
-		[BeeUIRouter sharedInstance].view.frame = frame;
+        
+        if ( IOS7_OR_LATER )
+        {
+            [BeeUIRouter sharedInstance].view.frame = self.view.frame;
+        }
+        else
+        {
+            [BeeUIRouter sharedInstance].view.frame = self.viewBound;
+        }
 	}
     else if ( [signal is:BeeUIBoard.LOAD_DATAS] )
     {

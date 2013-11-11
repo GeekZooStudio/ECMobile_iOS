@@ -37,6 +37,8 @@
 	
 	self.model = [[[GoodsModel alloc] init] autorelease];
 	[self.model addObserver:self];
+    
+    self.isToolbarHiden = YES;
 }
 
 - (void)unload
@@ -58,7 +60,6 @@ ON_SIGNAL2( BeeUIBoard, signal )
         [self showNavigationBarAnimated:YES];
         
         self.titleString = __TEXT(@"gooddetail_product");
-        self.isToolbarHiden = YES;
         self.webView.scalesPageToFit = YES;
         
         [self showBarButton:BeeUINavigationBar.LEFT image:[UIImage imageNamed:@"nav-back.png"]];
