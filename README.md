@@ -4,8 +4,8 @@ ECMobile_PHP
 [ECMobile](http://www.ecmobile.cn) 是基于 [ECShop](http://www.ecshop.com) 的手机商城客户端，包括iOS、Android、PHP三个平台源代码及框架已开放下载！
 
 1. iOS: [https://github.com/GeekZooStudio/ECMobile_iOS](https://github.com/GeekZooStudio/ECMobile_iOS)
-2. Android: [https://github.com/GeekZooStudio/ECMobile_iOS](https://github.com/GeekZooStudio/ECMobile_Android)
-3. PHP: [https://github.com/GeekZooStudio/ECMobile_iOS](https://github.com/GeekZooStudio/ECMobile_PHP)
+2. Android: [https://github.com/GeekZooStudio/ECMobile_Android](https://github.com/GeekZooStudio/ECMobile_Android)
+3. PHP: [https://github.com/GeekZooStudio/ECMobile_PHP](https://github.com/GeekZooStudio/ECMobile_PHP)
 4. BeeFramework: [https://github.com/gavinkwoe/BeeFramework](https://github.com/gavinkwoe/BeeFramework)
 
 [![Geek-Zoo](http://ecmobile.me/images/index/banner-phone-icon-2.png)](http://www.geek-zoo.com)
