@@ -16,7 +16,7 @@ ECMobile_PHP
 
 ## 技术支持
 
-论坛: [www.ecmobile.cn/bbs](www.ecmobile.cn/bbs)
+论坛: [bbs.ecmobile.cn](bbs.ecmobile.cn)
 QQ群: [329673575](329673575)
 
 ## 版权声明
