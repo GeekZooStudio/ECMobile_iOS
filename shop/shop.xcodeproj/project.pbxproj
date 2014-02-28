@@ -886,14 +886,6 @@
 		CBBE589318C0BDAF002EA99F /* ServiceShare_Weixin_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56E418C0BDAE002EA99F /* ServiceShare_Weixin_Config.m */; };
 		CBBE589418C0BDAF002EA99F /* ServiceShare_Weixin_Post.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56E618C0BDAE002EA99F /* ServiceShare_Weixin_Post.m */; };
 		CBBE589518C0BDAF002EA99F /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBE56E918C0BDAE002EA99F /* libWeChatSDK.a */; };
-		CBBE589618C0BDAF002EA99F /* bee.services.siri.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56EE18C0BDAE002EA99F /* bee.services.siri.m */; };
-		CBBE589718C0BDAF002EA99F /* bee.services.siri.md in Resources */ = {isa = PBXBuildFile; fileRef = CBBE56EF18C0BDAE002EA99F /* bee.services.siri.md */; };
-		CBBE589818C0BDAF002EA99F /* ServiceSiri.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56F218C0BDAE002EA99F /* ServiceSiri.m */; };
-		CBBE589918C0BDAF002EA99F /* ServiceSiri_Board.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56F418C0BDAE002EA99F /* ServiceSiri_Board.m */; };
-		CBBE589A18C0BDAF002EA99F /* ServiceSiri_Board.xml in Resources */ = {isa = PBXBuildFile; fileRef = CBBE56F518C0BDAE002EA99F /* ServiceSiri_Board.xml */; };
-		CBBE589B18C0BDAF002EA99F /* ServiceSiri_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56F718C0BDAE002EA99F /* ServiceSiri_Config.m */; };
-		CBBE589C18C0BDAF002EA99F /* ServiceSiri_Window.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56F918C0BDAE002EA99F /* ServiceSiri_Window.m */; };
-		CBBE589D18C0BDAF002EA99F /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBE56FB18C0BDAE002EA99F /* iflyMSC.framework */; };
 		CBBE589E18C0BDAF002EA99F /* bee.services.wizard.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE56FE18C0BDAE002EA99F /* bee.services.wizard.m */; };
 		CBBE589F18C0BDAF002EA99F /* bee.services.wizard.md in Resources */ = {isa = PBXBuildFile; fileRef = CBBE56FF18C0BDAE002EA99F /* bee.services.wizard.md */; };
 		CBBE58A018C0BDAF002EA99F /* ServiceWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE570218C0BDAE002EA99F /* ServiceWizard.m */; };
@@ -905,6 +897,14 @@
 		CBBE58A618C0BDAF002EA99F /* ServiceWizard_PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE570C18C0BDAE002EA99F /* ServiceWizard_PhotoCell.m */; };
 		CBBE58A718C0BDAF002EA99F /* ServiceWizard_PhotoCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = CBBE570D18C0BDAE002EA99F /* ServiceWizard_PhotoCell.xml */; };
 		CBBE58A818C0BDAF002EA99F /* ServiceWizard_Window.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE570F18C0BDAE002EA99F /* ServiceWizard_Window.m */; };
+		CBBE58B918C0EF00002EA99F /* bee.services.siri.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE58AB18C0EF00002EA99F /* bee.services.siri.m */; };
+		CBBE58BA18C0EF00002EA99F /* bee.services.siri.md in Resources */ = {isa = PBXBuildFile; fileRef = CBBE58AC18C0EF00002EA99F /* bee.services.siri.md */; };
+		CBBE58BB18C0EF00002EA99F /* ServiceSiri.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE58AF18C0EF00002EA99F /* ServiceSiri.m */; };
+		CBBE58BC18C0EF00002EA99F /* ServiceSiri_Board.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE58B118C0EF00002EA99F /* ServiceSiri_Board.m */; };
+		CBBE58BD18C0EF00002EA99F /* ServiceSiri_Board.xml in Resources */ = {isa = PBXBuildFile; fileRef = CBBE58B218C0EF00002EA99F /* ServiceSiri_Board.xml */; };
+		CBBE58BE18C0EF00002EA99F /* ServiceSiri_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE58B418C0EF00002EA99F /* ServiceSiri_Config.m */; };
+		CBBE58BF18C0EF00002EA99F /* ServiceSiri_Window.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBE58B618C0EF00002EA99F /* ServiceSiri_Window.m */; };
+		CBBE58C018C0EF00002EA99F /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBE58B818C0EF00002EA99F /* iflyMSC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -2416,19 +2416,6 @@
 		CBBE56E918C0BDAE002EA99F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		CBBE56EA18C0BDAE002EA99F /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		CBBE56EB18C0BDAE002EA99F /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		CBBE56ED18C0BDAE002EA99F /* bee.services.siri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bee.services.siri.h; sourceTree = "<group>"; };
-		CBBE56EE18C0BDAE002EA99F /* bee.services.siri.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bee.services.siri.m; sourceTree = "<group>"; };
-		CBBE56EF18C0BDAE002EA99F /* bee.services.siri.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bee.services.siri.md; sourceTree = "<group>"; };
-		CBBE56F118C0BDAE002EA99F /* ServiceSiri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri.h; sourceTree = "<group>"; };
-		CBBE56F218C0BDAE002EA99F /* ServiceSiri.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri.m; sourceTree = "<group>"; };
-		CBBE56F318C0BDAE002EA99F /* ServiceSiri_Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri_Board.h; sourceTree = "<group>"; };
-		CBBE56F418C0BDAE002EA99F /* ServiceSiri_Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri_Board.m; sourceTree = "<group>"; };
-		CBBE56F518C0BDAE002EA99F /* ServiceSiri_Board.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ServiceSiri_Board.xml; sourceTree = "<group>"; };
-		CBBE56F618C0BDAE002EA99F /* ServiceSiri_Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri_Config.h; sourceTree = "<group>"; };
-		CBBE56F718C0BDAE002EA99F /* ServiceSiri_Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri_Config.m; sourceTree = "<group>"; };
-		CBBE56F818C0BDAE002EA99F /* ServiceSiri_Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri_Window.h; sourceTree = "<group>"; };
-		CBBE56F918C0BDAE002EA99F /* ServiceSiri_Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri_Window.m; sourceTree = "<group>"; };
-		CBBE56FB18C0BDAE002EA99F /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		CBBE56FD18C0BDAE002EA99F /* bee.services.wizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bee.services.wizard.h; sourceTree = "<group>"; };
 		CBBE56FE18C0BDAE002EA99F /* bee.services.wizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bee.services.wizard.m; sourceTree = "<group>"; };
 		CBBE56FF18C0BDAE002EA99F /* bee.services.wizard.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bee.services.wizard.md; sourceTree = "<group>"; };
@@ -2447,6 +2434,19 @@
 		CBBE570D18C0BDAE002EA99F /* ServiceWizard_PhotoCell.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ServiceWizard_PhotoCell.xml; sourceTree = "<group>"; };
 		CBBE570E18C0BDAE002EA99F /* ServiceWizard_Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceWizard_Window.h; sourceTree = "<group>"; };
 		CBBE570F18C0BDAE002EA99F /* ServiceWizard_Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceWizard_Window.m; sourceTree = "<group>"; };
+		CBBE58AA18C0EF00002EA99F /* bee.services.siri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bee.services.siri.h; sourceTree = "<group>"; };
+		CBBE58AB18C0EF00002EA99F /* bee.services.siri.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bee.services.siri.m; sourceTree = "<group>"; };
+		CBBE58AC18C0EF00002EA99F /* bee.services.siri.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bee.services.siri.md; sourceTree = "<group>"; };
+		CBBE58AE18C0EF00002EA99F /* ServiceSiri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri.h; sourceTree = "<group>"; };
+		CBBE58AF18C0EF00002EA99F /* ServiceSiri.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri.m; sourceTree = "<group>"; };
+		CBBE58B018C0EF00002EA99F /* ServiceSiri_Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri_Board.h; sourceTree = "<group>"; };
+		CBBE58B118C0EF00002EA99F /* ServiceSiri_Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri_Board.m; sourceTree = "<group>"; };
+		CBBE58B218C0EF00002EA99F /* ServiceSiri_Board.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ServiceSiri_Board.xml; sourceTree = "<group>"; };
+		CBBE58B318C0EF00002EA99F /* ServiceSiri_Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri_Config.h; sourceTree = "<group>"; };
+		CBBE58B418C0EF00002EA99F /* ServiceSiri_Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri_Config.m; sourceTree = "<group>"; };
+		CBBE58B518C0EF00002EA99F /* ServiceSiri_Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceSiri_Window.h; sourceTree = "<group>"; };
+		CBBE58B618C0EF00002EA99F /* ServiceSiri_Window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceSiri_Window.m; sourceTree = "<group>"; };
+		CBBE58B818C0EF00002EA99F /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2472,7 +2472,7 @@
 				CBBE587118C0BDAE002EA99F /* libalixpay.a in Frameworks */,
 				CBBE589518C0BDAF002EA99F /* libWeChatSDK.a in Frameworks */,
 				6324A4221754FC7700372FD7 /* Security.framework in Frameworks */,
-				CBBE589D18C0BDAF002EA99F /* iflyMSC.framework in Frameworks */,
+				CBBE58C018C0EF00002EA99F /* iflyMSC.framework in Frameworks */,
 				6324A4231754FC7700372FD7 /* SystemConfiguration.framework in Frameworks */,
 				6324A4241754FC7700372FD7 /* UIKit.framework in Frameworks */,
 				6324A91E1755AA8300372FD7 /* AudioToolbox.framework in Frameworks */,
@@ -4697,7 +4697,7 @@
 				CBBE56BE18C0BDAD002EA99F /* bee.services.share.sinaweibo */,
 				CBBE56CD18C0BDAD002EA99F /* bee.services.share.tencentweibo */,
 				CBBE56DC18C0BDAE002EA99F /* bee.services.share.weixin */,
-				CBBE56EC18C0BDAE002EA99F /* bee.services.siri */,
+				CBBE58A918C0EF00002EA99F /* bee.services.siri */,
 				CBBE56FC18C0BDAE002EA99F /* bee.services.wizard */,
 			);
 			path = services;
@@ -5047,42 +5047,6 @@
 			path = WeixinSDK;
 			sourceTree = "<group>";
 		};
-		CBBE56EC18C0BDAE002EA99F /* bee.services.siri */ = {
-			isa = PBXGroup;
-			children = (
-				CBBE56ED18C0BDAE002EA99F /* bee.services.siri.h */,
-				CBBE56EE18C0BDAE002EA99F /* bee.services.siri.m */,
-				CBBE56EF18C0BDAE002EA99F /* bee.services.siri.md */,
-				CBBE56F018C0BDAE002EA99F /* source */,
-				CBBE56FA18C0BDAE002EA99F /* vendor */,
-			);
-			path = bee.services.siri;
-			sourceTree = "<group>";
-		};
-		CBBE56F018C0BDAE002EA99F /* source */ = {
-			isa = PBXGroup;
-			children = (
-				CBBE56F118C0BDAE002EA99F /* ServiceSiri.h */,
-				CBBE56F218C0BDAE002EA99F /* ServiceSiri.m */,
-				CBBE56F318C0BDAE002EA99F /* ServiceSiri_Board.h */,
-				CBBE56F418C0BDAE002EA99F /* ServiceSiri_Board.m */,
-				CBBE56F518C0BDAE002EA99F /* ServiceSiri_Board.xml */,
-				CBBE56F618C0BDAE002EA99F /* ServiceSiri_Config.h */,
-				CBBE56F718C0BDAE002EA99F /* ServiceSiri_Config.m */,
-				CBBE56F818C0BDAE002EA99F /* ServiceSiri_Window.h */,
-				CBBE56F918C0BDAE002EA99F /* ServiceSiri_Window.m */,
-			);
-			path = source;
-			sourceTree = "<group>";
-		};
-		CBBE56FA18C0BDAE002EA99F /* vendor */ = {
-			isa = PBXGroup;
-			children = (
-				CBBE56FB18C0BDAE002EA99F /* iflyMSC.framework */,
-			);
-			path = vendor;
-			sourceTree = "<group>";
-		};
 		CBBE56FC18C0BDAE002EA99F /* bee.services.wizard */ = {
 			isa = PBXGroup;
 			children = (
@@ -5114,6 +5078,42 @@
 				CBBE570F18C0BDAE002EA99F /* ServiceWizard_Window.m */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		CBBE58A918C0EF00002EA99F /* bee.services.siri */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE58AA18C0EF00002EA99F /* bee.services.siri.h */,
+				CBBE58AB18C0EF00002EA99F /* bee.services.siri.m */,
+				CBBE58AC18C0EF00002EA99F /* bee.services.siri.md */,
+				CBBE58AD18C0EF00002EA99F /* source */,
+				CBBE58B718C0EF00002EA99F /* vendor */,
+			);
+			path = bee.services.siri;
+			sourceTree = "<group>";
+		};
+		CBBE58AD18C0EF00002EA99F /* source */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE58AE18C0EF00002EA99F /* ServiceSiri.h */,
+				CBBE58AF18C0EF00002EA99F /* ServiceSiri.m */,
+				CBBE58B018C0EF00002EA99F /* ServiceSiri_Board.h */,
+				CBBE58B118C0EF00002EA99F /* ServiceSiri_Board.m */,
+				CBBE58B218C0EF00002EA99F /* ServiceSiri_Board.xml */,
+				CBBE58B318C0EF00002EA99F /* ServiceSiri_Config.h */,
+				CBBE58B418C0EF00002EA99F /* ServiceSiri_Config.m */,
+				CBBE58B518C0EF00002EA99F /* ServiceSiri_Window.h */,
+				CBBE58B618C0EF00002EA99F /* ServiceSiri_Window.m */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		CBBE58B718C0EF00002EA99F /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE58B818C0EF00002EA99F /* iflyMSC.framework */,
+			);
+			path = vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -5263,6 +5263,7 @@
 				CB9C23D418BB3B0C00DDA501 /* D0_SearchCategory_iPhone.xml in Resources */,
 				CB9C231118BB3B0C00DDA501 /* no_internet_connection_inter_icon@2x.png in Resources */,
 				CB9C22D318BB3B0C00DDA501 /* expired@2x.jpg in Resources */,
+				CBBE58BD18C0EF00002EA99F /* ServiceSiri_Board.xml in Resources */,
 				CB9C23B118BB3B0C00DDA501 /* C0_ShoppingCartHeaderCell_iPhone.xml in Resources */,
 				CB9C237218BB3B0C00DDA501 /* B0_BannerCell_iPhone.xml in Resources */,
 				CB9C240E18BB3B0C00DDA501 /* F0_AddressListCell_iPhone.xml in Resources */,
@@ -5303,7 +5304,6 @@
 				CB9C22C518BB3B0C00DDA501 /* button_narrow_blue@2x.png in Resources */,
 				CB9C235418BB3B0C00DDA501 /* tuitional-carousel-active-btn@2x.png in Resources */,
 				CB9C240618BB3B0C00DDA501 /* E6_ShippingStatusFooter_iPhone.xml in Resources */,
-				CBBE589A18C0BDAF002EA99F /* ServiceSiri_Board.xml in Resources */,
 				CB9C236A18BB3B0C00DDA501 /* wizard_5.xml in Resources */,
 				CB9C22BE18BB3B0C00DDA501 /* address_empty_body_add_icon@2x.png in Resources */,
 				CB9C242518BB3B0C00DDA501 /* G2_MessageCell_iPhone.xml in Resources */,
@@ -5354,6 +5354,7 @@
 				CB9C23EA18BB3B0C00DDA501 /* E1_PendingPaymentCellFooter_iPhone.xml in Resources */,
 				CB9C234918BB3B0C00DDA501 /* trade_info_stream_body_bg_01@2x.png in Resources */,
 				1848BD8218B4D8690007238A /* blueArrow@2x.png in Resources */,
+				CBBE58BA18C0EF00002EA99F /* bee.services.siri.md in Resources */,
 				CB9C233E18BB3B0C00DDA501 /* shopping_checkout_body_bg_sm@2x.png in Resources */,
 				CB9C22EF18BB3B0C00DDA501 /* item_grid_filter_down_active_arrow@2x.png in Resources */,
 				CBBE589F18C0BDAF002EA99F /* bee.services.wizard.md in Resources */,
@@ -5371,7 +5372,6 @@
 				CB9C235B18BB3B0C00DDA501 /* tuitional_img_2_3@2x.png in Resources */,
 				CB9C22E118BB3B0C00DDA501 /* icon_necessary@2x.png in Resources */,
 				CB9C22CD18BB3B0C00DDA501 /* cell_bg_footer_small@2x.png in Resources */,
-				CBBE589718C0BDAF002EA99F /* bee.services.siri.md in Resources */,
 				CB9C229D18BB3B0C00DDA501 /* CommonPullLoader.xml in Resources */,
 				CB9C22A918BB3B0C00DDA501 /* FormOptionCell2.xml in Resources */,
 				CB9C236518BB3B0C00DDA501 /* wizard.css in Resources */,
@@ -5610,7 +5610,7 @@
 				1848BD9018B4D8690007238A /* UMContactViewController.m in Sources */,
 				CB9C229C18BB3B0C00DDA501 /* CommonPullLoader.m in Sources */,
 				CBBE575D18C0BDAE002EA99F /* UIImageView+UIDataBinding.m in Sources */,
-				CBBE589818C0BDAF002EA99F /* ServiceSiri.m in Sources */,
+				CBBE58BB18C0EF00002EA99F /* ServiceSiri.m in Sources */,
 				CBBE57B918C0BDAE002EA99F /* UIView+LayoutParser.m in Sources */,
 				CBBE575918C0BDAE002EA99F /* Bee_UIAnimationZoom.m in Sources */,
 				CB9C236D18BB3B0C00DDA501 /* A1_SignupBoard_iPhone.m in Sources */,
@@ -5674,8 +5674,8 @@
 				CBBE57FA18C0BDAE002EA99F /* BeeDatabase+BeeActiveRecord.m in Sources */,
 				CBBE586F18C0BDAE002EA99F /* RSADataSigner.m in Sources */,
 				CB9C23F918BB3B0C00DDA501 /* E4_HistoryCell_iPhone.m in Sources */,
-				CBBE589C18C0BDAF002EA99F /* ServiceSiri_Window.m in Sources */,
 				CBBE583118C0BDAE002EA99F /* ProcessingRequest.m in Sources */,
+				CBBE58BF18C0EF00002EA99F /* ServiceSiri_Window.m in Sources */,
 				CBBE57D718C0BDAE002EA99F /* Bee_UITemplateMediaQuery.m in Sources */,
 				CB9C236F18BB3B0C00DDA501 /* A1_SignupCell_iPhone.m in Sources */,
 				CBBE579A18C0BDAE002EA99F /* Bee_UIZoomView.m in Sources */,
@@ -5775,10 +5775,10 @@
 				CB9C23CF18BB3B0C00DDA501 /* C6_RedEnvelopeBoard_iPhone.m in Sources */,
 				CBBE585318C0BDAE002EA99F /* CXMLNode.m in Sources */,
 				CB81D26318ABB3F000F277EA /* BannerModel.m in Sources */,
-				CBBE589618C0BDAF002EA99F /* bee.services.siri.m in Sources */,
 				CBBE583F18C0BDAE002EA99F /* ASIHTTPRequest.m in Sources */,
 				CBBE587718C0BDAF002EA99F /* bee.services.push.m in Sources */,
 				CBBE582A18C0BDAE002EA99F /* Bee_HTTPServer2.m in Sources */,
+				CBBE58B918C0EF00002EA99F /* bee.services.siri.m in Sources */,
 				CBBE574F18C0BDAE002EA99F /* CSSSelector.m in Sources */,
 				CB81D27518ABB3F000F277EA /* OrderModel.m in Sources */,
 				CBBE573C18C0BDAE002EA99F /* UIViewController+UINavigationController.m in Sources */,
@@ -5997,7 +5997,7 @@
 				CBBE571118C0BDAE002EA99F /* Bee_Package.mm in Sources */,
 				CB81D27A18ABB3F000F277EA /* SearchKeywordsModel.m in Sources */,
 				CB81D26E18ABB3F000F277EA /* NSObject+TagList.m in Sources */,
-				CBBE589918C0BDAF002EA99F /* ServiceSiri_Board.m in Sources */,
+				CBBE58BC18C0EF00002EA99F /* ServiceSiri_Board.m in Sources */,
 				CBBE579018C0BDAE002EA99F /* UIView+Traversing.m in Sources */,
 				CB9C239518BB3B0C00DDA501 /* B2_ProductSpecifyButton_iPhone.m in Sources */,
 				1848BD9218B4D8690007238A /* UMFeedbackTableViewCellLeft.m in Sources */,
@@ -6021,7 +6021,7 @@
 				CB9C238318BB3B0C00DDA501 /* B1_ProductListFilterCell_iPhone.m in Sources */,
 				CBBE573218C0BDAE002EA99F /* BeeUIBoard+Popover.m in Sources */,
 				CB9C239D18BB3B0C00DDA501 /* B4_ProductParamBoard_iPhone.m in Sources */,
-				CBBE589B18C0BDAF002EA99F /* ServiceSiri_Config.m in Sources */,
+				CBBE58BE18C0EF00002EA99F /* ServiceSiri_Config.m in Sources */,
 				CBBE576018C0BDAE002EA99F /* UITextField+UIDataBinding.m in Sources */,
 				CB9C241A18BB3B0C00DDA501 /* G0_SettingBoard_iPhone.m in Sources */,
 				CBBE574518C0BDAE002EA99F /* UIImageView+BeeUIStyle.m in Sources */,
@@ -6136,37 +6136,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/shop/vendor",
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/iflyMSC,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/iflyMSC,
-					/Users/apple/Desktop/iOS/shop/shop/vendor,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.siri/vendor,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.siri/vendor,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.siri/vendor,
+					"$(SRCROOT)/services/bee.services.siri/vendor",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "shop/shop-Prefix.pch";
 				GENERATE_PROFILING_CODE = YES;
-				HEADER_SEARCH_PATHS = (
-					/usr/include/libxml2,
-					"$(SRCROOT)/ECMobileManager/ECMobileManager",
-				);
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "shop/shop-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib",
-					"$(SRCROOT)/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK",
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/UMAnalytics,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/UMFeedback,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/UMAnalytics,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/UMFeedback,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.share.weixin/vendor/WeixinSDK,
+					"$(SRCROOT)/shop/vendor/UMAnalytics",
+					"$(SRCROOT)/shop/vendor/UMFeedback",
+					"$(SRCROOT)/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib",
+					"$(SRCROOT)/services/bee.services.share.weixin/vendor/WeixinSDK",
 				);
 				PRODUCT_NAME = ECMobile;
 				PROVISIONING_PROFILE = "4D1A71C6-55C8-4413-8CC1-2ED6D42FED55";
@@ -6187,37 +6170,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/shop/vendor",
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/iflyMSC,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/iflyMSC,
-					/Users/apple/Desktop/iOS/shop/shop/vendor,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.siri/vendor,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.siri/vendor,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.siri/vendor,
+					"$(SRCROOT)/services/bee.services.siri/vendor",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "shop/shop-Prefix.pch";
 				GENERATE_PROFILING_CODE = NO;
-				HEADER_SEARCH_PATHS = (
-					/usr/include/libxml2,
-					"$(SRCROOT)/ECMobileManager/ECMobileManager",
-				);
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "shop/shop-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib",
-					"$(SRCROOT)/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK",
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/UMAnalytics,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/UMFeedback,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/UMAnalytics,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/UMFeedback,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.share.weixin/vendor/WeixinSDK,
+					"$(SRCROOT)/shop/vendor/UMAnalytics",
+					"$(SRCROOT)/shop/vendor/UMFeedback",
+					"$(SRCROOT)/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib",
+					"$(SRCROOT)/services/bee.services.share.weixin/vendor/WeixinSDK",
 				);
 				PRODUCT_NAME = ECMobile;
 				PROVISIONING_PROFILE = "4D1A71C6-55C8-4413-8CC1-2ED6D42FED55";
@@ -6267,37 +6233,20 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/shop/vendor",
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/iflyMSC,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/iflyMSC,
-					/Users/apple/Desktop/iOS/shop/shop/vendor,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.siri/vendor,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.siri/vendor,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.siri/vendor,
+					"$(SRCROOT)/services/bee.services.siri/vendor",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "shop/shop-Prefix.pch";
 				GENERATE_PROFILING_CODE = NO;
-				HEADER_SEARCH_PATHS = (
-					/usr/include/libxml2,
-					"$(SRCROOT)/ECMobileManager/ECMobileManager",
-				);
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "shop/shop-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib",
-					"$(SRCROOT)/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK",
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/UMAnalytics,
-					/Users/god/Desktop/ecmobile/client/iOS/shop/shop/vendor/UMFeedback,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/UMAnalytics,
-					/Users/apple/Desktop/iOS/shop/shop/vendor/UMFeedback,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/apple/Desktop/iOS/shop/ECMobileFramework/ECMobileFramework/services/bee.services.share.weixin/vendor/WeixinSDK,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib,
-					/Users/god/Desktop/ecmobile/branches/ECMobile_iOS_Opensource/shop/services/bee.services.share.weixin/vendor/WeixinSDK,
+					"$(SRCROOT)/shop/vendor/UMAnalytics",
+					"$(SRCROOT)/shop/vendor/UMFeedback",
+					"$(SRCROOT)/services/bee.services.alipay/vendor/AlipaySDK/openssl/lib",
+					"$(SRCROOT)/services/bee.services.share.weixin/vendor/WeixinSDK",
 				);
 				PRODUCT_NAME = ECMobile;
 				PROVISIONING_PROFILE = "4D1A71C6-55C8-4413-8CC1-2ED6D42FED55";
