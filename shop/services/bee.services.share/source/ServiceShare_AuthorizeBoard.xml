@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="ServiceShare_AuthorizeBoard">
+
+	<linear orientation="v" class="wrapper">
+		<web id="web"/>
+	</linear>
+	
+	<style type="text/css">
+		.wrapper {
+			width: 100%;
+			height: 100%;
+		}
+
+		#web {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+		}
+	</style>
+	
+</ui>

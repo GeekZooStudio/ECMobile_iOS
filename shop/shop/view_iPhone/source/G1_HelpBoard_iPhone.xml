@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="G1_HelpBoard_iPhone">
+    <list id="list" class="col-md-6"/>
+</ui>

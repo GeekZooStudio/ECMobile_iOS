@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="FormPlainInputCell">
+    <col class="form-group">
+        <row class="form input plain">
+            <image class="background"/>
+            <input class="textfield" id="input"/>
+        </row>
+    </col>
+</ui>

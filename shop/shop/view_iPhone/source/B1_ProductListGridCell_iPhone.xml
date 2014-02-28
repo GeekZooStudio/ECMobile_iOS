@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B1_ProductListGridCell_iPhone">
+    <col class="container">
+		<image class="bg"/>
+		<image class="goods-photo"/>
+		<label id="goods-title" class="goods-title"/>
+		<label class="goods-price"></label>
+        <row class="goods-subprice-group">
+            <label class="goods-subprice"></label>
+            <view id="goods-subprice-line"></view>
+        </row>
+    </col>
+    
+    <style type="text/css">
+        
+        .container {
+            width: 100%;
+            height: 178px;
+            padding: 2px;
+            margin-top: 2px;
+        }
+    
+        .bg {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 2px;
+            image-src: url(body_cont_bg.png);
+            image-mode: stretch;
+        }
+        
+        .goods-photo {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            padding: 4px;
+            border-radius: 5px;
+            image-src: url();
+            image-mode: fit;
+        }
+        
+        .goods-title {
+            width: 150px;
+            height: 24px;
+            position: absolute;
+            top: 150px;
+            left: 3px;
+            color: #333;
+            font-size: 14px;
+            font-weight: lighter;
+            text-align: left;
+            margin-top: 2px;
+            line-break: tail-trunc;
+        }
+        
+        .goods-price {
+            width: auto;
+            height: 20px;
+            position: absolute;
+            top: 20px;
+            left: 3px;
+            background-color: #e63019 0.8;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+        
+        .goods-subprice-group {
+            margin-left: 3px;
+            width: auto;
+            height: 18px;
+            position: absolute;
+            top: 40px;
+            left: 0px;
+        }
+        
+        #goods-subprice-line {
+            height: 1px;
+            width: 100%;
+            background-color: #666;
+            position: absolute;
+            top: 8px;
+            left: 0px;
+        }
+        
+        .goods-subprice {
+            width: auto;
+            height: 18px;
+            background-color: #eee 0.8;
+            color: #666;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+            border-radius: 2px;
+        }
+    
+        </style>
+</ui>

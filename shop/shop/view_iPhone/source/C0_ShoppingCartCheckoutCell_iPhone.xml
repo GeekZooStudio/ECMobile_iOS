@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="C0_ShoppingCartCheckoutCell_iPhone">
+    
+    <row class="cart-cell-wrapper">
+        
+        <image class="cart-cell-wrapper-bg"/>
+        
+        <col class="cart-cell-info">
+            <label id="cart-goods-desc">@{total}</label>
+            <label id="cart-goods-price"></label>
+        </col>
+        
+        <row class="button-checkout-wrapper">
+            <button id="checkout"></button>
+            <label class="button-label">@{checkout}</label>
+        </row>
+        
+    </row>
+    
+    <style type="text/css">
+        
+        .cart-cell-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 40px;
+        image: url(shopping_cart_body_bg_02.png);
+        }
+        
+        .cart-cell-wrapper {
+        margin-left: 3px;
+        width: 314px;
+        height: 90px;
+        }
+        
+        .cart-cell-info {
+        width: 130px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 20px;
+        }
+        
+        #cart-goods-desc {
+        font: 14px;
+        color: #333;
+        width: 100%;
+        text-align: left;
+        height: 15px;
+        }
+        
+        #cart-goods-price {
+        font: 20px;
+        color: #cc0b00;
+        height: 20px;
+        width: 100%;
+        text-align: left;
+        }
+        
+        .button-checkout-wrapper {
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 120px;
+        height: 40px;
+        v-align: center;
+        }
+        
+        #checkout {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(shopping_cart_btn_with_icon.png);
+        }
+        
+        .button-label {
+        margin-top: 10px;
+        padding-left: 36px;
+        color: #fff;
+        font: 14px bold;
+        text-align: center;
+        height: 20px;
+        width: 100%;
+        }
+        
+        .button-image {
+        margin-left: 30px;
+        width: 25px;
+        height: 25px;
+        image-src: url(shopping_cart_acc_cart_icon.png);
+        }
+        
+    </style>
+</ui>

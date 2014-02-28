@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="E2_PendingShippedCellFooter_iPhone">
+    
+    <row class="cart-cell-wrapper">
+        
+        <image class="cart-cell-wrapper-bg"/>
+        
+        <row class="cart-cell-info">
+            <label id="cart-goods-desc"></label>
+            <label id="cart-goods-price"></label>
+        </row>
+        
+    </row>
+    
+    <style type="text/css">
+        
+        .cart-cell-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 40px;
+        image: url(shopping_cart_body_bg_02.png);
+        }
+        
+        .cart-cell-wrapper {
+        margin-left: 3px;
+        width: 314px;
+        height: 100%;
+        }
+        
+        .cart-cell-info {
+        width: 145px;
+        height: 40px;
+        margin-left: 15px;
+        margin-top: 20px;
+        }
+        
+        #cart-goods-desc {
+        font: 14px;
+        color: #333;
+        width: auto;
+        text-align: left;
+        height: 20px;
+        float: left;
+        }
+        
+        #cart-goods-price {
+        font: 14px;
+        color: #cc0b00;
+        height: 20px;
+        width: 210px;
+        margin-left:2px;
+        text-align: left;
+        }
+        
+    </style>
+</ui>

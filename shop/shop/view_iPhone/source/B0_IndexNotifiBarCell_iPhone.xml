@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ui namespace="B0_IndexNotifiBarCell_iPhone">
+	
+    <col class="wrapper">
+        <button id="notify" class="button">@{topview_message}</button>
+        <col id="badge-group">
+            <image id="badge-bg"/>
+            <label id="badge-count">0</label>
+        </col>
+    </col>
+
+    <style type="text/css">
+
+        .wrapper {
+			   width: 40px;
+			   height: 44px;
+        }
+        
+        .button {
+			margin-top: 7px;
+			font: 13px bold;
+			text-align: center;
+			color: #fff;
+			width: 100%;
+			height: 29px;
+			button-image: url(nav_right.png);
+			position: absolute;
+			left: -10px;
+        }
+        
+        #badge-group {
+			position: absolute;
+			top: 2px;
+			right: -6px;
+			width: auto;
+			height: 17px;
+        }
+        
+        #badge-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			image-mode: stretch;
+			image-src: url(search_new_shopping_cart_num_bg.png);
+        }
+        
+        #badge-count {
+			color: white;
+			width: auto;
+			height: 13px;
+			text-align: center;
+			font-size: 12px;
+			font-weight: bold;
+			margin-top: 2px;
+			margin-left: 6px;
+			margin-bottom: 0px;
+			margin-right: 6px;
+        }
+        
+    </style>
+</ui>

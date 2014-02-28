@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B5_ProductCommentCell_iPhone">
+    
+    <col class="comment-wrapper">
+        <image id="background" class="background" />
+        <row class="comment-header">
+            <label id="creator"></label>
+            <label id="date"></label>
+        </row>
+        
+        <label id="content"></label>
+    </col>
+    
+    <style type="text/css">
+        
+        .comment-wrapper {
+        margin-left: 10px;
+        width: 300px;
+        height: auto;
+        }
+        
+        .background {
+        position: absolute;
+        width: 300px;
+        height: 100%;
+        image-mode: stretched;
+        }
+       
+        .comment-header {
+        margin-left: 10px;
+        height: 20px;
+        width: 280px;
+        }
+        
+        #creator {
+        font: 13px;
+        width: 200px;
+        height: 20px;
+        text-align: left;
+        margin-top: 8px;
+        }
+        
+        #date {
+        font: 13px;
+        color: #999;
+        width: 80px;
+        height: 20px;
+        text-align: right;
+        float: right;
+        margin-top: 8px;
+        }
+        
+        #content {
+        text-align: left;
+        margin-top: 8px;
+        margin-left: 10px;
+        margin-bottom: 8px;
+        font: 14px;
+        width: 280px;
+        line-num: 0;
+        height: auto;
+        }
+        
+    </style>
+</ui>

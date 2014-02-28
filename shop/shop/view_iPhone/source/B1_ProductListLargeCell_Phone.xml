@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B1_ProductListLargeCell_Phone">
+    <col class="container">
+		<image class="goods-bg-large"/>
+		<image class="goods-photo-large"/>
+		<label class="goods-title-large"></label>
+		<row class="goods-info-large">
+			<label class="goods-price-large"></label>
+			<row class="goods-subprice-group">
+                <label class="goods-subprice-large"></label>
+                <view id="goods-subprice-line"></view>
+            </row>
+		</row>
+    </col>
+    
+    <style type="text/css">
+        
+        .container {
+            width: 100%;
+            height: 364px;
+        }
+    
+        .goods-bg-large {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 5px;
+            image-mode: stretch;
+            image: url(body_cont_bg.png);
+        }
+        
+        .goods-photo-large {
+            width: 290px;
+            height: 290px;
+            float: center;
+            padding: 5px;
+            margin-top: 14px;
+            image-mode: fit;
+        }
+        
+        .goods-info-large {
+            width: 290px;
+            height: 20px;
+            color: #999;
+            text-align: left;
+            v-align: center;
+            margin-left: 14px;
+        }
+        
+        .goods-title-large {
+            margin-top: 5px;
+            margin-left: 14px;
+            width: 296px;
+            height: 20px;
+            color: #333;
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+            line-break: tail-trunc;
+            line-num: 1;
+        }
+        
+        .goods-price-large-label {
+            width: auto;
+            color: #f00;
+            height: 20px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .goods-price-large {
+            width: auto;
+            color: #e63019;
+            height: 20px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .goods-subprice-group {
+            margin-left: 5px;
+            width: auto;
+            height: 20px;
+        }
+        
+        .goods-subprice-large {
+            width: auto;
+            height: 20px;
+            color: #666;
+            text-align: left;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        
+        .goods-subprice-label {
+            width: auto;
+            height: 20px;
+            color: #999;
+            text-align: left;
+            font-size: 12px;
+        }
+        
+        #goods-subprice-line {
+            height: 1px;
+            width: 100%;
+            background-color: #666;
+            position: absolute;
+            left: 0px;
+            top: 10px;
+        }
+        
+        .goods-icon-postage {
+            width: auto;
+            height: auto;
+            margin-left: 5px;
+            image-src: url(item_grid_body_free_shipping_btn.png);
+            image-mode: center;
+        }
+        
+        .goods-sales-large {
+            margin-left: 10px;
+            width: 40px;
+            color: #666;
+            text-align: left;
+        }
+        
+        .goods-sales-volume-large {
+            width: auto;
+            color: #666;
+            text-align: left;
+        }
+    
+        </style>
+</ui>

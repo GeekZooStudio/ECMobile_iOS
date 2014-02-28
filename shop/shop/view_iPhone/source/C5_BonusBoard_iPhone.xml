@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="C5_BonusBoard_iPhone">
+    <col class="form-group">
+        <label class="caption" id="info">@{balance_exp}</label>
+        <row class="form input single">
+            <image class="background"/>
+            <input class="textfield" id="input" placeholder="@{balance_exp}"/>
+        </row>
+    </col>
+</ui>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ui namespace="ServiceWizard_Cell">
+
+    <linear orientation="v" class="wrapper">
+        <linear orientation="v" class="header-wrapper">
+            <label id="h1" class="title">@{smooth_operation_experience}</label>
+        </linear>
+        <linear orientation="v" class="inner-wrapper-little">
+            <image id="img-1" class="abs" src="tuitional_img_4_1.png"/>
+            <image id="img-2" class="abs" src="tuitional_img_4_2.png"/>
+        </linear>
+        <linear orientation="v" class="footer-wrapper">
+            <label id="h2" class="subtitle">@{ecmobile_design_introduction}</label>
+        </linear>
+    </linear>
+    
+    <style href="wizard.css" media="iPhone4"/>
+    <style href="wizard-568h.css" media="iPhone5"/>
+
+    <style type="text/css" media="iPhone4">
+		#img-1 {
+			top: 10px;
+			left: 40px;
+			width: 148px;
+			height: 230px;
+			image-mode:fit;
+        }
+		
+        #img-2 {
+			top: 30px;
+			left: 135px;
+			width: 148px;
+			height: 230px;
+			image-mode:fit;
+        }
+	</style>
+    <style type="text/css" media="iPhone5">
+        #img-1 {
+			top: 40px;
+			left: 40px;
+			width: 148px;
+			height: 230px;
+			image-mode: fit;
+        }
+		
+        #img-2 {
+			top: 60px;
+			left: 135px;
+			width: 148px;
+			height: 230px;
+			image-mode: fit;
+        }
+	</style>
+
+</ui>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ui namespace="AppClosed_iPhone">
+	
+	<col class="wrapper">
+		<image class="bg"/>
+		<button id="mask"/>
+	</col>
+
+	<style type="text/css">
+
+		.wrapper {
+			width: 100%;
+			height: 100%;
+		}
+
+		.bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			image: url(closed.jpg);
+		}
+
+		@media(device:iphone5)
+		{
+			.bg {
+				image: url(closed_568h.jpg);
+			}
+		}
+
+		#mask {
+			width: 100%;
+			height: 100%;
+		}
+
+	</style>
+</ui>

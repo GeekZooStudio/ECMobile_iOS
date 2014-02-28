@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="FormInputCell">
+    <col class="form-group">
+        <label class="caption">@{bill_title}</label>
+        <row class="form input single">
+            <image class="background"/>
+            <input class="textfield" id="input"/>
+        </row>
+    </col>
+</ui>

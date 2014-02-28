@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="C0_ShoppingCartHeaderCell_iPhone">
+    
+	<row class="wrapper">
+        <image id="header"/>
+    </row>
+   
+	<style type="text/css">
+        
+        .wrapper {
+            width: 100%;
+            height: 15px;
+        }
+        
+        #header{
+            width: 100%;
+            height: 100%;
+            image-mode: fit;
+            image-src: url(shopping_cart_body_bg_04.png);
+        }
+	</style>
+</ui>

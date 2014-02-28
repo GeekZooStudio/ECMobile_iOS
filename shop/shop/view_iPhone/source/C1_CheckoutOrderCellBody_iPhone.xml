@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="C1_CheckoutOrderCellBody_iPhone">
+    
+    <col class="order-cell-wrapper">
+        
+        <image class="order-cell-wrapper-bg"/>
+        
+        <row class="order-cell-body">
+            <label id="order-goods-title"></label>
+            <label id="order-goods-count"></label>
+            <label id="order-goods-price"></label>
+        </row>
+        
+    </col>
+    
+    <style type="text/css">
+        
+        .order-cell-wrapper {
+        margin-left: 3px;
+        width: 314px;
+        height: 30px;
+        }
+        
+        .order-cell-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 20px;
+        image: url(shopping_cart_body_bg_04.png);
+        }
+        
+        
+        .order-cell-body {
+        margin-top: 10px;
+        margin-left: 15px;
+        width: 285px;
+        height: 100%;
+        }
+        
+        #order-goods-title {
+        width: 170px;
+        line-num: 1;
+        height: 14px;
+        color: #333;
+        font-size: 14px;
+        text-align: left;
+        }
+        
+        #order-goods-count {
+        font-size: 14px;
+        color: #333;
+        text: x1;
+        height: 14px;
+        width: 32px;
+        text-align: right;
+        }
+        
+        #order-goods-price {
+        font-size: 14px;
+		font-weight: bold;
+        color: #e63019;
+        text: ￥0;
+        height: 14px;
+        width: 83px;
+        text-align: right;
+        }
+        
+    </style>
+</ui>

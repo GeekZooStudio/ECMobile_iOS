@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="E5_CollectionCell_iPhone">
+    
+    <col class="container">
+		<image class="bg"/>
+		<image class="goods-photo"/>
+		<label class="goods-title"/>
+        <image class="goods-price-bg"/>
+		<label class="goods-price"></label>
+		
+		<button id="delete"></button>
+        
+    </col>
+    
+    <style type="text/css">
+        
+        .container {
+        width: 98%;
+        height: 178px;
+        margin-top: 2px;
+        }
+		
+        .bg {
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2px;
+        image-src: url(body_cont_bg.png);
+        image-mode: stretch;
+        }
+		
+        .goods-photo {
+        width: 150px;
+        height: 151px;
+        position: absolute;
+        padding: 5px;
+        top: 4px;
+        left: 5px;
+        border-radius: 5px;
+        image-src: url();
+        image-mode: fit;
+        }
+        
+        .goods-title {
+        width: 140px;
+        height: 24px;
+        position: absolute;
+        top: 150px;
+        left: 10px;
+        color: #333;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 8px;
+        }
+        
+        .goods-price-bg {
+        width: auto;
+        height: 20PX;
+        position: absolute;
+        top: 10px;
+        left: 3px;
+        image-src: url(item_grid_body_price_bg_red.png);
+        image-mode: stretch;
+        }
+		
+        .goods-price {
+        width: auto;
+        height: 20px;
+        position: absolute;
+        top: 10px;
+        left: 3px;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 2px;
+        }
+		
+        .goods-subprice-group {
+        margin-left: 3px;
+        width: auto;
+        height: 18px;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        }
+        
+        #goods-subprice-line {
+        height: 1px;
+        width: 100%;
+        background-color: #666;
+        position: absolute;
+        top: 8px;
+        left: 0px;
+        }
+		
+        .goods-subprice {
+        width: auto;
+        height: 18px;
+        background-color: #eee 0.8;
+        color: #666;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        border-radius: 2px;
+        }
+		
+		#delete {
+        width: 30px;
+        height: 30px;
+        button-image: url(item_faverites_edit_close_btn.png);
+        position: absolute;
+        top: 4px;
+        left: 128px;
+        }
+        
+    </style>
+</ui>

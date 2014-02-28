@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="CommonCountdownCell">
+     
+	<row class="countdown-row">
+        <label class="countdown-label">@{will_end}</label>
+        <label class="countdown-timer" id="countdown"></label>
+        <label class="countdown-label">@{will_end2}</label>
+    </row>
+
+	<style type="text/css">
+        
+        .countdown-row {
+            height: 100%;
+            width: auto;
+            margin: 0 5px;
+        }
+        
+        .countdown-label {
+            font-size: 14px;
+            width: auto;
+            height: 100%;
+            color: #666;
+        }
+    
+        .countdown-timer {
+            margin: 0 5px;
+            color: red;
+            font-size: 14px;
+            width: auto;
+            height: 100%;
+        }
+        
+	</style>
+</ui>

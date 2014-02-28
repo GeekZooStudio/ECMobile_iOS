@@ -1,0 +1,46 @@
+.title {
+    color: #fff;
+    width: 100%;
+    height: auto;
+    v-float: bottom;
+    font-size: 23px;
+	font-weight: lighter;
+    text-align: center;
+	text-shadow: 0.5px 0.5px 0.5px #666;
+}
+.subtitle {
+	font-size: 16px;
+	font-weight: lighter;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    v-float: top;
+    line-num: 0;
+    text-align: left;
+	text-shadow: 0.5px 0.5px 0.5px #666;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    align: center;
+}
+.header-wrapper {
+    width: 100%;
+    height: 50px;
+}
+.inner-wrapper {
+    margin-top: 5px;
+    width: 100%;
+    height: 325px;
+}
+.inner-wrapper-little {
+    width: 100%;
+    height: 300px;
+}
+.footer-wrapper {
+    width: 260px;
+    height: 60px;
+}
+.abs {
+    position: absolute;
+}

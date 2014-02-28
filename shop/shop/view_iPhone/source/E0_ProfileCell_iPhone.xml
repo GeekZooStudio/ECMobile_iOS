@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ui namespace="E0_ProfileCell_iPhone">
+    
+    <col class="wrapper">
+        
+        <col class="header-wrapper">
+            <image id="bg" class="bg"/>
+			<col class="header-box">
+                <!--<button id="setting" class="header-setting" />-->
+                <col class="header-avatar-box">
+                    <image id="header-avatar" class="header-avatar"/>
+                    <button id="header-carema" class="header-carema"/>
+					<button id="carema"/>
+                </col>
+                
+                <label id="name" class="header-name"></label>
+                
+                <row class="header-level-box">
+                    <image id="header-level-icon"/>
+                    <label id="header-level-name"/>
+                </row>
+            </col>
+			<button id="signin"></button>
+        </col>
+        
+        <col class="scroll-wrapper">
+            
+            <row class="bar-wrapper">
+                <image class="list-large-bg"/>
+                <col class="bar-item">
+                    <image class="bar-item-icon payment"/>
+                    <label class="bar-item-info" id="await_pay_label">@{profile_obligation}</label>
+                    <col class="badge-wrapper">
+                        <image id="await_pay-bg" class="badge-wrapper-bg"/>
+                        <label id="await_pay" class="bar-item-badge"></label>
+                    </col>
+                    <button id="order_await_pay" class="mask"/>
+                </col>
+                
+                <col class="bar-item">
+                    <image class="bar-item-icon ship" />
+                    <label class="bar-item-info" id="await_ship_label">@{profile_readyforshipment}</label>
+                    <col class="badge-wrapper">
+                        <image id="await_ship-bg" class="badge-wrapper-bg"/>
+                        <label id="await_ship" class="bar-item-badge"></label>
+                    </col>
+                    <button id="order_await_ship" class="mask"/>
+                </col>
+                
+                <col class="bar-item">
+                    <image class="bar-item-icon receipt"/>
+                    <label class="bar-item-info" id="shipped_label">@{profile_forthegoods}</label>
+                    <col class="badge-wrapper">
+                        <image id="shipped-bg" class="badge-wrapper-bg"/>
+                        <label id="shipped" class="bar-item-badge"></label>
+                    </col>
+                    <button id="order_shipped" class="mask"/>
+                </col>
+                
+                <col class="bar-item">
+                    <image class="bar-item-icon history"/>
+                    <label class="bar-item-info" id="finished_label">@{profile_history}</label>
+                    <col class="badge-wrapper">
+                        <image id="finished-bg" class="badge-wrapper-bg"/>
+                        <label id="finished" class="bar-item-badge"></label>
+                    </col>
+                    <button id="order_finished" class="mask"/>
+                </col>
+            </row>
+            
+            <col class="list-wrapper">
+                
+                <row class="list-item">
+                    <image class="list-bg"/>
+                    <label class="list-title">@{collect_myfavorite}</label>
+                    <label id="fav-count" class="list-subtitle"></label>
+                    <image class="list-indictor"/>
+                    <button id="collection" class="mask"/>
+                </row>
+                
+                <!--row class="list-item">
+                 <image class="list-bg"/>
+                 <label class="list-title">@{profile_message}</label>
+                 <label class="list-subtitle">0</label>
+                 <image class="list-indictor"/>
+                 <button id="notification" class="mask"/>
+                 </row-->
+                
+                <row class="list-item">
+                    <image class="list-bg"/>
+                    <label class="list-title">@{manage_address}</label>
+                    <label class="list-subtitle"></label>
+                    <image class="list-indictor"/>
+                    <button id="manage" class="mask"/>
+                </row>
+                
+                <row class="list-item">
+                    <image class="list-bg"/>
+                    <label class="list-title">@{profile_help}</label>
+                    <label class="list-subtitle"></label>
+                    <image class="list-indictor"/>
+                    <button id="help" class="mask"/>
+                </row>
+
+            </col>
+        </col>
+    </col>
+    
+    <style type="text/css">
+        
+        .wrapper {
+			height: auto;
+			width: 100%;
+        }
+		
+		.scroll-wrapper {
+			height: auto;
+			margin-top: 10px;
+			align: center;
+		}
+		
+		.list-wrapper {
+			align: center;
+			height: auto;
+		}
+		
+		.list-item {
+			margin-top: 10px;
+			width: 300px;
+			height: 44px;
+			v-align: center;
+		}
+		
+		.list-title {
+			margin-left: 14px;
+			font-size: 14px;
+			font-weight: bold;
+			color: #333;
+			width: 146px;
+			text-align: left;
+			height: 20px;
+		}
+		
+		.list-subtitle {
+			font-size: 14px;
+			font-weight: lighter;
+			color: #333;
+			margin: 0 10px;
+			width: 100px;
+			text-align: right;
+			height: 20px;
+		}
+		
+		.list-indictor {
+			width: auto;
+			height: 100%;
+			image: url(accsessory_arrow_right.png);
+		}
+		
+		.bar-wrapper {
+			width: 300px;
+			height: 60px;
+			v-align: center;
+		}
+		
+		.bar-item {
+			width: 60px;
+			height: 40px;
+			align: center;
+			margin-left: 10px;
+		}
+		
+		.badge-wrapper {
+			width: auto;
+			height: 15px;
+			position: absolute;
+			left: 36px;
+			top: 0px;
+		}
+		
+		.badge-wrapper-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			image-mode: stretch;
+			image-src: url(search_new_shopping_cart_num_bg.png);
+		}
+		
+		.bar-item-badge {
+			color: white;
+			width: auto;
+			height: 100%;
+			text-align: center;
+			line-height: 13px;
+			font-size: 10px;
+			font-weight: bold;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		
+		.bar-item-icon {
+			width: 20px;
+			height: 20px;
+		}
+		
+		.payment {
+			background-image: url(profile_refresh_payment_icon.png);
+		}
+		
+		.ship {
+			background-image: url(profile_refresh_ship_icon.png);
+		}
+		
+		.receipt {
+			background-image: url(profile_refresh_receipt_icon.png);
+		}
+		
+		.history {
+			background-image: url(profile_refresh_history_icon.png);
+		}
+		
+		.bar-item-info {
+			text-align: center;
+			font-size: 12px;
+			font-weight: bold;
+			color: #333;
+			width: 100%;
+			height: 20px;
+		}
+		
+		.header-wrapper {
+			width: 100%;
+			height: 167px;
+			v-align: center;
+		}
+		
+		.header-box {
+			margin-left: 20px;
+			width: 280px;
+			height: 150px;
+			align: center;
+		}
+		
+		.header-setting {
+			width: 21px;
+			height: 21px;
+			background-image: url(profile_refresh_site_icon.png);
+			float: right;
+			margin-right: 20px;
+		}
+		
+		.header-avatar-box {
+			width: 64px;
+			height: 64px;
+			v-align: bottom;
+			margin-top: 20px;
+		}
+		
+		.header-avatar {
+			width: 64px;
+			height: 64px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			image-mode: fill;
+			border-radius: 32px;
+			border-width: 4px;
+			border-color: #fff;
+		}
+		
+		.header-level-box {
+			width: auto;
+			height: 24px;
+		}
+		
+		#header-level-icon {
+			margin-top: 2px;
+			height: 25px;
+			width: 18px;
+			margin-right: 5px;
+            image-mode: fit;
+		}
+		
+		#header-level-name {
+			background-color: #333 0.6;
+			border-radius: 3px;
+			color: #ccc;
+			width:auto;
+			height: 16px;
+			font-size: 13px;
+			font-weight: bold;
+			margin-top: 5px;
+		}
+		
+		.header-carema {
+			width: 24px;
+			height: 24px;
+			float: right;
+			background-image: url(profile_refresh_camera_icon.png);
+		}
+		
+		.header-name {
+			font-size: 13px;
+			font-weight: bold;
+			color: #fff;
+			width: auto;
+			height: 20px;
+			text-align: center;
+			margin: 6px;
+		}
+		
+		#signin {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.body-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #999;
+			background-mode: stretch;
+			background-insets: 10px;
+			background-image: url(body_bg.png);
+		}
+		
+		.list-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			image: url(body_cont_bg.png);
+			image-insets: 10;
+			image-mode: fit;
+		}
+		
+		.list-large-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			image: url(body_cont_bg.png);
+			image-insets: 10 25;
+			image-mode: fit;
+		}
+		
+		.bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #eee;
+			image-src:url(profile_img_bg.png);
+		}
+		
+		.container {
+			background-color: #aaa;
+		}
+		
+		#carema {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+    
+    </style>
+</ui>

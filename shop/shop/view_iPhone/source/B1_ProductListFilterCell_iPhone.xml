@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B1_ProductListFilterCell_iPhone">
+    
+    <row class="filter-wrapper">
+        <image class="filter-bg"/>
+        
+        <row class="filter-item">
+            <label id="item-popular" class="filter-title">@{popularity}</label>
+            <image id="item-popular-arrow" class="filter-icon arrow-down"/>
+            <image id="item-popular-indicator" class="filter-indicator"/>
+			<button id="item-popular-button" class="filter-button"/>
+        </row>
+        
+        <image class="filter-seprator"/>
+        
+        <row class="filter-item">
+            <label id="item-expensive" class="filter-title">@{top_price}</label>
+            <image id="item-expensive-arrow" class="filter-icon arrow-down"/>
+            <image id="item-expensive-indicator" class="filter-indicator"/>
+			<button id="item-expensive-button" class="filter-button"/>
+        </row>
+        
+        <image class="filter-seprator"/>
+        
+        <row class="filter-item">
+            <label id="item-cheap" class="filter-title">@{cheapest}</label>
+            <image id="item-cheap-arrow" class="filter-icon arrow-down"/>
+            <image id="item-cheap-indicator" class="filter-indicator"/>
+			<button id="item-cheap-button" class="filter-button"/>
+        </row>
+        
+    </row>
+    
+    <style>
+        
+        .filter-wrapper {
+            height: 45px;
+            width: 100%;
+            v-align: center;
+        }
+    
+        .filter-bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #333;
+        }
+        
+        .filter-indicator {
+            float: center;
+            width: 14px;
+            height: 7px;
+            v-float: bottom;
+            image: url(item_grid_filter_sanjiao_icon.png);
+        }
+        
+        .filter-item {
+            height: 45px;
+            width: 105px;
+            color: #fff;
+        }
+        
+        .filter-seprator {
+            height: 29px;
+            width: 2px;
+            image: url(item_grid_filter_bg_line.png);
+        }
+        
+        .filter-title {
+            width: 65px;
+            height: 100%;
+            color: #999;
+            font-size: 12px;
+            font-weight: lighter;
+            text-align: right;
+        }
+        
+        .filter-title-selected {
+            width: 65px;
+            height: 100%;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .filter-icon {
+            margin-left: 5px;
+            width: 12px;
+            height: 13px;
+            v-float: center;
+        }
+        
+        .filter-button {
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        
+        .arrow-up {
+            image: url(item_grid_filter_up_arrow.png);
+        }
+        
+        .arrow-up-selected {
+            image: url(item_grid_filter_up_active_arrow.png);
+        }
+        
+        .arrow-down {
+            image: url(item_grid_filter_down_arrow.png);
+        }
+        
+        .arrow-down-selected {
+            image: url(item_grid_filter_down_active_arrow.png);
+        }
+        
+        .arrow-both {
+            image: url(item_grid_filter_price_arrow.png);
+        }
+        
+        .arrow-both-selected {
+            image: url(item_grid_filter_price_active_arrow.png);
+        }
+    
+        </style>
+    
+</ui>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="E6_ShippingStatusFooter_iPhone">
+    
+    <col class="wrapper">
+        <image class="bg"/>
+        <col class="info-wrapper">
+            <label id="context"></label>
+            <label id="time"></label>
+        </col>
+    </col>
+    
+    <style type="text/css">
+        
+        .wrapper {
+        width: 310px;
+        margin-left: 5px;
+        height: 104px;
+        }
+        
+        .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image: url(trade_info_cont_bg4.png);
+        }
+        
+        .info-wrapper {
+        margin-top: 5px;
+        margin-left: 60px;
+        width: 210px;
+        height: 55px;
+        }
+        
+        #context {
+        font: 14px;
+        color: #333;
+        text-align: left;
+        width: 100%;
+        line-num: 2;
+        height: 40px;
+        
+        }
+        
+        #time {
+        font: 13px;
+        color: #333;
+        text-align: left;
+        width: 100%;
+        line-num: 2;
+        height: 15px;
+        }
+        
+    </style>
+</ui>

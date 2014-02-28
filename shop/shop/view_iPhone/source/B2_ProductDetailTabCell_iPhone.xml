@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B2_ProductDetailTabCell_iPhone">
+    <row class="container">
+        <image class="container-bg"/>
+        
+        <button id="favorite" class="button-star"></button>
+        
+		<button id="buy" class="btn button-orange">@{gooddetail_buy}</button>
+        <button id="add" class="btn button-red">@{gooddetail_shoppingcart}</button>
+		
+        <col class="cart-wrapper">
+            <button id="cart" class="cart-icon"/>
+			<col class="badge-wrapper">
+				<image id="badge-bg" class="badge-bg"/>
+				<label id="badge" class="badge-number"/>
+			</col>
+        </col>
+    </row>
+    
+    <style type="text/css">
+        
+        .container {
+        width: 100%;
+        height: 100%;
+        v-align: center;
+        }
+        
+        .container-bg  {
+        image: url(footer_bg.png);
+        image-insets: 0 25;
+        image-mode: fit;
+        
+        position: absolute;
+        left: 0;
+        top: 0;
+		}
+        
+        .btn {
+        font: 11px bold;
+        text-align: center;
+        color: #fff;
+        width: 86px;
+        height: 28px;
+        line-height: 28px;
+        background-mode: stretch;
+        }
+        
+        .button-star {
+        margin-top: 9px;
+        margin-left: 8px;
+        width: 27px;
+        height: 27px;
+        button-image: url(item_info_disabled_btn.png);
+        button-image-selected: url(item_info_pushed_collect_btn.png);
+        }
+        
+        .button-red {
+        background-image: url(button_red.png);
+        }
+        
+        .button-blue {
+        background-image: url(button_blue.png);
+        }
+        
+        .button-orange {
+        background-image: url(button_orange.png);
+        }
+        
+        .button-narrow-red {
+        height: 23px;
+        line-height: 23px;
+        background-image: url(button_narrow_red.png);
+        }
+        
+        .button-narrow-blue {
+        height: 23px;
+        line-height: 23px;
+        background-image: url(button_narrow_blue.png);
+        }
+        
+        .button-narrow-orange {
+        height: 23px;
+        line-height: 23px;
+        background-image: url(button_narrow_orange.png);
+        }
+        
+        .button-large-red {
+        width: 182px;
+        height: 33px;
+        background-image: url(button_large_red.png);
+        font-size: 15px;
+        line-height: 33px;
+        }
+        
+        .cart-wrapper {
+        margin-left: 14px;
+        width: 44px;
+        height: 44px;
+        align: center;
+        }
+        
+        .cart-icon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        image: url(footer_shopping_cart_icon.png);
+        }
+        
+		.badge-wrapper {
+        width: auto;
+        height: 15px;
+        position: absolute;
+        left: 26px;
+        top: 6px;
+		}
+		
+		.badge-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        image-src: url(search_new_shopping_cart_num_bg.png);
+		}
+        
+		.badge-number {
+        width: auto;
+        height: 100%;
+        color: white;
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+		}
+		
+        #buy {
+        margin-left: 26px;
+        }
+        
+        #add {
+        margin-left: 20px;
+        }
+        
+    </style>
+</ui>

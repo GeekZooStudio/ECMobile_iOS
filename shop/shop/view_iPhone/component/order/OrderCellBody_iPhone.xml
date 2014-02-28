@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="OrderCellBody_iPhone">
+    
+    <col class="order-cell-wrapper">
+        
+        <image class="order-cell-wrapper-bg"/>
+        
+        <row class="order-cell-body">
+            <col class="order-goods-photo-wrapper">
+                <image class="order-goods-photo-wrapper-bg"/>
+                <image id="order-goods-photo"/>
+            </col>
+            
+            <col class="order-goods-title-wrapper">
+                <label id="order-goods-title"></label>
+            </col>
+            
+            <col class="order-goods-detail-wrapper">
+                <label id="order-goods-price"></label>
+                <label id="order-goods-count"></label>
+            </col>
+        </row>
+        
+    </col>
+    
+    <style type="text/css">
+        
+        .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        }
+        
+        .order-cell-wrapper {
+        margin-left: 3px;
+        width: 314px;
+        height: 90px;
+        }
+        
+        .order-cell-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 20px;
+        image: url(shopping_cart_body_bg_03.png);
+        }
+        
+        .order-goods-wrapper {
+        margin-left: 10px;
+        width: 280px;
+        height: auto;
+        }
+        
+        .order-goods-header {
+        margin-left: 10px;
+        height: 40px;
+        width: 275px;
+        v-align: center;
+        }
+        
+        #order-goods-price {
+        font: 20px;
+        color: #cc0b00;
+        text: ￥ 2000;
+        height: 20px;
+        width: 200px;
+        text-align: left;
+        }
+        
+        #action-modify {
+        width: 54px;
+        height: 18px;
+        background-image: url(shopping_cart_modify_btn_grey.png);
+        button-title: 修 改;
+        button-title-color: #666;
+        font: 12px;
+        float: right;
+        }
+        
+        .order-goods-photo-wrapper {
+        width: 70px;
+        height: 70px;
+        }
+        
+        .order-goods-photo-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        border-width: 1px;
+        border-color: #ddd;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        
+        #order-goods-photo {
+        margin-left: 5px;
+        margin-top: 5px;
+        width: 60px;
+        height: 60px;
+        image-mode: fit;
+        }
+        
+        .order-cell-body {
+        margin-top: 10px;
+        margin-left: 15px;
+        width: 285px;
+        }
+        
+        .order-goods-title-wrapper {
+        margin-left: 10px;
+        width: 110px;
+        height: 70px;
+        }
+        
+        #order-goods-title {
+        width: 100%;
+        line-num: 3;
+        height: auto;
+        color: #333;
+        font: 15px;
+        text-align: left;
+        text-v-align: top;
+        }
+        
+        .order-goods-detail-wrapper {
+        margin-top: 5px;
+        margin-left: 10px;
+        width: 85px;
+        height: 70px;
+        }
+        
+        #order-goods-price {
+        text: 250.00;
+        width: 100%;
+        line-num: 2;
+        height: 14px;
+        color: #333;
+        font: 12px;
+        text-align: right;
+        }
+        
+        #order-goods-count {
+        text: x 1;
+        margin-top: 35px;
+        width: 100%;
+        line-num: 2;
+        height: 10px;
+        color: #666;
+        font: 10px;
+        text-align: right;
+        }
+        
+    </style>
+</ui>

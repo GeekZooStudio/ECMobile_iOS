@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="B2_ProductSpecifyButton_iPhone">
+    <button class="mask" id="confirm">@{dialog_ensure}</button>
+    <style>
+        #confirm {
+            background-mode: stretch;
+            background-image: url(button_red.png);
+            width: 290px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            height: 44px;
+        }
+    </style>
+</ui>

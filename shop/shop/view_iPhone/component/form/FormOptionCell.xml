@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="FormOptionCell">
+    <col class="form-group">
+        <row class="form option">
+            <image class="background"/>
+            <label class="title" id="title"/>
+            <image class="accessory" id="accessory"/>
+            <button class="mask" id="mask"/>
+        </row>
+    </col>
+</ui>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B2_ProductDetailSlideCell_iPhone">
+    
+    <col class="container">
+        <col class="slide-wrapper">
+            <image class="slide-wrapper-bg"/>
+            <image id="slide-image"/>
+        </col>
+    </col>
+    
+    <style>
+        .container {
+            width: 174px;
+            height: 174px;
+        }
+        
+        .slide-wrapper {
+            margin-left: 6px;
+            margin-top: 6px;
+            width: 162px;
+            height: 162px;
+        }
+        
+        .slide-wrapper-bg {
+            image: url(body_cont_bg.png);
+            image-mode: stretch;
+            image-insets: 20;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        #slide-image {
+            margin-top: 6px;
+            margin-left: 6px;
+            width: 150px;
+            height: 150px;
+            image-mode: fit;
+            image-loading: gray;
+        }
+    </style>
+</ui>

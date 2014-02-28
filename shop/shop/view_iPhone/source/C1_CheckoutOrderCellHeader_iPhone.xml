@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="C1_CheckoutOrderCellHeader_iPhone">
+    
+    <row class="order-date-wrapper">
+        
+        <image class="order-date-wrapper-bg"/>
+        <label id="order-date-label">@{balance_detail}</label>
+        
+    </row>
+    
+    <style type="text/css">
+        
+        .order-date-wrapper {
+        margin-left: 3px;
+        width: 314px;
+        height: 35px;
+        }
+        
+        .order-date-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 20px;
+        image: url(shopping_checkout_body_bg.png);
+        }
+        
+        #order-date-label {
+        margin-left: 15px;
+        margin-top: 15px;
+        width: auto;
+        height: 14px;
+        color: #333;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        }
+        
+        #order-date {
+        margin-left: 5px;
+        margin-top: 15px;
+        width: 200px;
+        height: 14px;
+        color: #333;
+        font: 12px;
+        text-align: left;
+        }
+        
+        
+    </style>
+</ui>

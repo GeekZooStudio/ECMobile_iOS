@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="E6_ShippingStatusHeader_iPhone">
+    
+    <row class="wrapper">
+        <image class="bg"/>
+        
+        <image id="shipping-logo"/>
+        
+        <col class="info-wrapper">
+            <label id="shipping-name"></label>
+            <label id="shipping-sn"></label>
+        </col>
+    </row>
+    
+    <style type="text/css">
+        
+        .wrapper {
+        width: 310px;
+        margin-left: 5px;
+        height: 83px;
+        }
+        
+        .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image: url(trade_info_cont_bg1.png);
+        }
+        
+        #shipping-logo {
+        margin-top: 20px;
+        margin-left: 28px;
+        width: 51px;
+        height: 51px;
+        background-image: url(trade_info_stream_express_delivery_logo.png);
+        }
+        
+        .info-wrapper {
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 190px;
+        height: 51px;
+        }
+        
+        #shipping-name {
+        font: 18px bold;
+        color: #333;
+        text-align: left;
+        width: 100%;
+        height: 25px;
+        }
+        
+        #shipping-sn {
+        font: 14px;
+        color: #666;
+        text-align: left;
+        width: 100%;
+        height: 25px;
+        }
+        
+    </style>
+</ui>

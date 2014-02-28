@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="E0_ProfileHelpCell_iPhone">
+
+<row class="list-item">
+    <image class="list-bg"/>
+    <label class="list-title" id="helper-title"></label>
+    <label class="list-subtitle" id="helper-subtitle"></label>
+    <image class="list-indictor"/>
+    <button id="collection" class="fill"/>
+</row>
+
+<style>
+    
+    .list-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    image: url(cell_bg_content.png);
+    image-mode: stretch;
+    }
+    
+    .list-item {
+    width: 100%;
+    height: 44px;
+    }
+    
+    .list-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    width: 146px;
+    text-align: left;
+    height: 20px;
+    v-float: center;
+    margin-left: 20px;
+    }
+    
+    .list-subtitle {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #333;
+    margin: 0 10px;
+    width: 100px;
+    text-align: right;
+    height: 20px;
+    }
+    
+    .list-indictor {
+    width: auto;
+    height: 100%;
+    image: url(accsessory_arrow_right.png);
+    }
+    
+</style>
+
+</ui>

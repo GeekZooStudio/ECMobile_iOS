@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B2_ProductDetailCell_iPhone">
+    
+    <col class="wrapper">
+        
+        <label id="goods-title"></label>
+        
+        <row class="goods-price-wrapper">
+            <label id="goods-price"></label>
+            <row class="goods-subprice-wrapper">
+                <label id="goods-subprice-label">@{market_price}</label>
+                <label id="goods-subprice"></label>
+                <view id="goods-subprice-line"></view>
+            </row>
+        </row>
+        
+        <CommonCountdownCell id="countdown"/>
+        
+        <col class="goods-slide-wrapper">
+            
+            <!-- <view type="BeeUIScrollView" id="goods-slide" /> -->
+            <!--    <view type="BeeUIPageControl" id="goods-pagectrl" /> -->
+            <list id="list"/>
+            <!--<pager id="pager"/> -->
+            
+        </col>
+        
+        <label id="goods-info"/>
+        
+        <col class="list-group">
+            
+            <row class="spec list-row-single">
+                <image id="specification-bg" class="list-group-signle-bg"/>
+                <label id="specification-title" class="list-fill-title">@{select_specification_first}</label>
+                <image id="specification-indictor" class="list-indictor"/>
+                <button id="specify" class="fill"></button>
+            </row>
+            
+        </col>
+        
+        <col class="list-group">
+            
+            <row class="list-row">
+                <image class="bg list-group-header"/>
+                <label class="list-title">@{gooddetail_parameter}</label>
+                <label class="list-subtitle" id="info-1"></label>
+                <image class="list-indictor"/>
+                <button id="property" class="fill"></button>
+            </row>
+            
+            <row class="list-row">
+                <image class="bg list-group-body"/>
+                <label class="list-title">@{gooddetail_description}</label>
+                <label class="list-subtitle" id="info-2"></label>
+                <image class="list-indictor"/>
+                <button id="detail" class="fill"></button>
+            </row>
+            
+            <row class="list-row">
+                <image class="bg list-group-footer"/>
+                <label class="list-title">@{gooddetail_commit}</label>
+                <label class="list-subtitle" id="info-3"></label>
+                <image class="list-indictor"/>
+                <button id="comment" class="fill"></button>
+            </row>
+            
+        </col>
+        
+    </col>
+    
+    <style>
+        
+        .wrapper {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .goods-bg-large {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #333;
+        }
+        
+        #goods-title {
+            margin-left: 10px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 20px;
+            width: 300px;
+            height: 30px;
+            color: #333;
+        }
+        
+        .goods-price-wrapper {
+            margin-left: 10px;
+            margin-top: 5px;
+            height: 20px;
+            width: 300px;
+            v-align: bottom;
+        }
+        
+        #goods-price {
+            color: #cc0b00;
+            font: 22px;
+            height: 20px;
+            width: auto;
+        }
+        
+        .goods-subprice-wrapper {
+            width: auto;
+            height: 14px;
+            margin-left: 14px;
+            margin-right: 2px;
+        }
+        
+        #goods-subprice-label {
+            font: 12px bold;
+            color: #666;
+            height: 100%;
+            width: auto;
+        }
+        
+        #goods-subprice {
+            color: #666;
+            font-size: 14px;
+            font-weight: bold;
+            height: 100%;
+            width: auto;
+        }
+        
+        #goods-subprice-line {
+            height: 1px;
+            width: 100%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+        
+        #countdown {
+            margin-top: 5px;
+            width: 100%;
+            padding-left: 10px;
+            height: 20px;
+        }
+        
+        .goods-slide-wrapper {
+            margin-top: 5px;
+            width: 100%;
+            height: auto;
+            align:center;
+        }
+        
+        #goods-slide {
+            width: 100%;
+            height: 172px;
+        }
+        
+        #goods-pagectrl {
+            width: 80px;
+            height: 16px;
+            border-radius: 5px;
+            background-color: #333 0.6;
+        }
+        
+        #list {
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 172px;
+        /*    scroll-mode: paging; */
+            scroll-lines: 1;
+            scroll-insets: 0px 0px 0px 0px;
+            scroll-direction: h;
+		}
+        
+		#pager {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 16px;
+		}
+        
+        #goods-info {
+            margin-top: 5px;
+            margin-left: 14px;
+            color: #333;
+            font-size: 14px;
+            font-weight: lighter;
+            text-align: left;
+            line-num: 0;
+            width: 280px;
+            height: auto;
+        }
+        
+        .bg {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                image-mode: stretch;
+        }
+        
+        .fill {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            image-mode: stretch;
+        }
+        
+        .list-group-signle-bg {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            image-mode: stretch;
+            image-src: url(cell_bg_single.png);
+        }
+        
+        .list-group-header {
+            image-src: url(cell_bg_header.png);
+        }
+        
+        .list-group-body {
+            image-src: url(cell_bg_content.png);
+        }
+        
+        .list-group-footer {
+            image-src: url(cell_bg_footer.png);
+        }
+        
+        .list-group {
+            margin-top: 10px;
+            width: 100%;
+            align: center;
+            height: auto;
+        }
+        
+        .list-single {
+            height: auto;
+        }
+        
+        .list-row {
+            width: 300px;
+            height: 44px;
+            v-align: center;
+        }
+        
+        .list-row-single {
+            width: 300px;
+            height: auto;
+            v-align: center;
+        }
+        
+        .list-title {
+            margin-left: 14px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            width: 140px;
+            text-align: left;
+            height: 20px;
+        }
+        
+        .list-subtitle {
+            font-size: 12px;
+            color: #333;
+            margin: 0 10px;
+            width: 106px;
+            text-align: right;
+            height: 20px;
+        }
+        
+        .list-fill-title {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 14px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            width: 266px;
+            text-align: left;
+            height: auto;
+            line-num: 999;
+        }
+        
+        .list-indictor {
+            width: 6px;
+            height: 10px;
+            image-src: url(accsessory_arrow_right.png);
+        }
+        
+    </style>
+</ui>
