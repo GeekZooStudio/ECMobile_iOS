@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="G1_HelpCell_iPhone">
+	
+    <row id="mask" class="wrapper">
+        <image class="background"/>
+        <label id="title" class="title"></label>
+    </row>
+    <style>
+        .wrapper {
+			width:100%;
+			height:44px;
+		}
+	
+        .title {
+			width: auto;
+			line-num: 0;
+			font-size: 15px;
+			v-float: center;
+			margin-left: 20px;
+        }
+
+		.subtitle {
+			margin-left: 10px;
+			width: 190px;
+			line-num: 0;
+			height: auto;
+			font-size: 13px;
+			text-align: left;
+			v-float: center;
+        }
+	
+        .background {
+			image: url(cell_bg_content.png);
+			mode: stretch;
+        }
+    </style>
+</ui>

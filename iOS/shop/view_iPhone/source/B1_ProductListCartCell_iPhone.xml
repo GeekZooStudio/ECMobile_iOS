@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B1_ProductListCartCell_iPhone">
+    
+    <row class="container">
+        <col class="cart-wrapper">
+            <image class="cart-bg"/>
+            <button id="cart" class="cart-icon"/>
+            <col class="badge-wrapper">
+                <image id="badge-bg" class="badge-wrapper-bg"/>
+                <label id="badge" class="bar-item-badge"></label>
+            </col>
+        </col>
+    </row>
+    
+    <style>
+        
+        .badge-wrapper {
+            width: auto;
+            height: 17px;
+            position: absolute;
+            top: 5px;
+            left: 24px;
+        }
+    
+        .badge-wrapper-bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            image-mode: stretch;
+            image-src: url(search_new_shopping_cart_num_bg.png);
+        }
+        
+        .bar-item-badge {
+            color: white;
+            width: auto;
+            height: 100%;
+            margin-left: 5px;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 13px;
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .cart-wrapper {
+            width: 44px;
+            height: 44px;
+            align: center;
+        }
+        
+        .cart-bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(item_grid_float_bg_grey.png);
+        }
+        
+        .cart-icon {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            image: url(item_grid_float_shopping_cart_icon.png);
+        }
+    
+        </style>
+    
+</ui>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="C0_ShoppingCartPullLoader_iPhone">
+    
+    <col class="cart-wrapper">
+        <row class="header-wrapper">
+            <image id="header"/>
+        </row>
+        <list id="list"/>
+    </col>
+    
+    <style type="text/css">
+        
+        .header-wrapper {
+            width: 100%;
+            height: 15px;
+        }
+        
+        #header {
+            width: 100%;
+            height: 100%;
+            image-mode: fit;
+            image: url(shopping_cart_body_bg_01.png);
+        }
+    
+        #list {
+            width: 100%;
+            height: 100%;
+            float: center;
+            insets: 0 0 44 0;
+        }
+        
+    </style>
+</ui>

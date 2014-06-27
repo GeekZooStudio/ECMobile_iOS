@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="C1_CheckoutHeader_iPhone">
+    
+    <col class="wrapper-one">
+        
+        <image class="wrapper-one-bg"/>
+        
+        <row class="wrapper-two">
+            <label id="address-name-label">@{balance_receiver}</label>
+            <label id="address-name"></label>
+            <image id="icon-photo"></image>
+            <label id="phone"></label>
+        </row>
+        <col class="wrapper-three">
+            <label id="location"></label>
+            <label id="address"></label>
+        </col>
+        
+	</col>
+    
+    <style type="text/css">
+        
+        .wrapper-one {
+        margin-left: 10px;
+        width: 300px;
+        height: 110px;
+        }
+        
+        .wrapper-two {
+        width: 100%;
+        height: 13px;
+        margin-top: 20px;
+        }
+        
+        .wrapper-one-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 60 150 40 150;
+        image: url(shopping_checkout_cont_bg.png);
+        }
+        
+        #address-name-label {
+        margin-left: 12px;
+        font-size: 13px;
+        color: #333;
+        width: auto;
+        text-align: left;
+        height: 20px;
+ 
+        }
+        
+        #address-name {
+        margin:0 5px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        width: auto;
+        text-align: left;
+        height: 20px;
+    
+        }
+        
+        #icon-photo {
+        margin-top: 4px;
+        width: 13px;
+        height: 13px;
+        image: url(shopping_checkout_phone_icon.png);
+        }
+        
+        #phone {
+        margin-left: 5px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: lighter;
+        color: #333;
+        width: auto;
+        height: 20px;
+
+        }
+        
+        .wrapper-three {
+        width: 100%;
+        position: absolute;
+        top: 48px;
+        left: 12px;
+        width: 280px;
+        height: auto;
+        }
+        
+        #location {
+        margin-top: 15px;
+        text-align: left;
+        color: #333;
+        font: 14px;
+        width: 100%;
+        height: 15px;
+        }
+        
+        #address {
+        text-align: left;
+        color: #333;
+        font: 14px;
+        width: 100%;
+        height: auto;
+        line-num: 2;
+        }
+        
+    </style>
+</ui>

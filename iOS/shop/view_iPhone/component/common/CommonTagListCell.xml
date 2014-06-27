@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="CommonTagListCell">
+    
+	<col class="wrapper">
+        <button id="button"/>
+        <label id="title"/>
+    </col>
+   
+	<style type="text/css">
+
+        .wrapper {
+            width: auto;
+            height: 100%;
+        }
+        
+        #button {
+            position: absolute;
+            width: 98%;
+            height: 100%;
+        }
+        
+        #title {
+            width: auto;
+            height: 100%;
+            margin: 5px 15px;
+            v-float: center;
+            font-size: 14px bold;
+        }
+	</style>
+</ui>

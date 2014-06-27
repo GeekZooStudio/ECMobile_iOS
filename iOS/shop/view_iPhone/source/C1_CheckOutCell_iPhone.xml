@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="C1_CheckOutCell_iPhone">
+    
+    <col class="form-container">
+        <!-- 图片质量 -->
+        <col class="form-group separator">
+            <row class="form custom">
+                <C1_CheckoutHeader_iPhone id="consignee_cell" class="CheckoutHeader"/>
+                <button class="mask" id="consignee"/>
+            </row>
+        </col>
+        <!-- 付款，配送，发票 -->
+        <col class="form-group separator">
+            <row class="form ex-nextor first">
+                <image class="background"/>
+                <label class="title">@{balance_pay}</label>
+                <image class="necessory"/>
+                <label class="subtitle" id="balance_pay_subtitle"></label>
+                <image class="accessory"/>
+                <button class="mask" id="balance_pay"/>
+            </row>
+            <row class="form ex-nextor">
+                <image class="background"/>
+                <label class="title">@{balance_shipping}</label>
+                <image class="necessory"/>
+                <label class="subtitle" id="balance_shipping_subtitle"></label>
+                <image class="accessory"/>
+                <button class="mask" id="balance_shipping"/>
+            </row>
+            <row class="form ex-nextor last">
+                <image class="background"/>
+                <label class="title">@{balance_bill}</label>
+                <label class="subtitle" id="balance_bill_subtitle"></label>
+                <image class="accessory"/>
+                <button class="mask" id="balance_bill"/>
+            </row>
+        </col>
+        
+        <!-- 红包，积分 -->
+        <col class="form-group separator">
+            <row class="form normal first">
+                <image class="background"/>
+                <label class="title" id="balance_redpocket_title">@{balance_redpocket}</label>
+                <label class="subtitle" id="balance_redpocket_subtitle"></label>
+                <button class="mask" id="balance_redpocket"/>
+            </row>
+            <row class="form normal last">
+                <image class="background"/>
+                <label class="title" id="balance_exp_title">@{balance_exp}</label>
+                <label class="subtitle" id="balance_exp_subtitle"></label>
+                <button class="mask" id="balance_exp"/>
+            </row>
+        </col>
+        
+        <col class="form-group separator">
+            <row class="form custom">
+                <C1_CheckoutOrderCell_iPhone class="CheckoutOrderCell" id="order_cell"/>
+            </row>
+        </col>
+        <!--
+        <col class="form-group separator">
+            <row class="form switch single">
+                <image class="background"/>
+                <label class="title">@{push_notification}</label>
+                <switch class="switchr" id="push_notification"/>
+            </row>
+        </col>
+        -->
+    </col>
+    
+    <style>
+        .CheckoutOrderCell { width: 100%; height: auto; }
+        .CheckoutHeader { width: 100%; height: 110px; }
+    </style>
+    
+</ui>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ui namespace="B0_IndexRecommendGoodsCell_iPhone">
+
+    <row id="mask" class="goods-wrapper">
+        <image id="recommend-goods-bg"/>
+        <image id="recommend-goods-image"/>
+        <row class="inner-wrapper">
+            <col class="price-wrapper">
+                <image id="recommend-goods-price-bg"/>
+                <label id="recommend-goods-price"></label>
+                <!--row class="goods-subprice-group">
+                    <label id="goods-subprice"></label>
+                    <view id="goods-subprice-line"></view>
+                </row-->
+            </col>
+            <col class="icon-wrapper">
+                <image id="recommend-goods-sale-bg"/>
+                <label id="recommend-goods-sale">特价</label>
+            </col>
+        </row>
+    </row>
+	
+    <style>
+        
+        .inner-wrapper {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            width: auto;
+            height: auto;
+        }
+        
+        .price-wrapper {
+            width: auto;
+            height: auto;
+            v-float: center;
+        }
+        
+        .icon-wrapper {
+            width: 36px;
+            height: 36px;
+            margin-left: -15px;
+        }
+        
+        .goods-wrapper {
+			width: 100%;
+			height: 160px;
+        }
+
+		#recommend-goods-bg {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			image: url(body_cont_bg.png);
+			image-mode: stretch;
+			padding: 4px;
+        }
+
+        #recommend-goods-image {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			border-radius: 10;
+			padding: 12px;
+			image-mode: fit;
+			image-loading: gray;
+        }
+
+		#recommend-goods-sale-bg {
+			image: url(index_hot_icon.png);
+			position: absolute;
+			left: 0px;
+			top: 0px;
+            width:100%;
+            height: 100%;
+        }
+
+        #recommend-goods-sale {
+			width: 100%;
+			height: 20px;
+			font-size: 11px;
+			font-weight: bold;
+			text-align: center;
+			color: #fff;
+            v-float:center;
+        }
+        
+        #recommend-goods-price {
+			width: auto;
+			height: 20px;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: left;
+            margin:0px 15px 0px 2px;
+        }
+        
+        #recommend-goods-price-bg {
+            position: absolute;
+			left: 0px;
+			top: 0px;
+            width: 100%;
+            height: 100%;
+            image-src: url(item_grid_body_price_bg_red.png);
+            image-mode: stretch;
+        }
+
+        .goods-subprice-group {
+			margin-left: 3px;
+			width: auto;
+			height: 18px;
+        }
+        
+        #goods-subprice-line {
+			height: 1px;
+			width: 100%;
+			background-color: #666;
+			position: absolute;
+			top: 8px;
+			left: 0px;
+        }
+		
+        #goods-subprice {
+			width: auto;
+			height: 18px;
+			background-color: #eee 0.8;
+			color: #666;
+			text-align: center;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: left;
+			border-radius: 2px;
+        }
+
+    </style>
+</ui>

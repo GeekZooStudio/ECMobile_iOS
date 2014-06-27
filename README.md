@@ -59,8 +59,6 @@ QQ群: [329673575](329673575)
 
 ## 关于我们
 
-[![Geek-Zoo](http://geek-zoo.com/images/logo-01.png)](http://www.geek-zoo.com)
-
-[geek-zoo.com](http://www.geek-zoo.com)
+[![Geek-Zoo](http://www.geek-zoo.com/img/images/logo_2.png)](http://www.geek-zoo.com)
 
 Geek Zoo Studio成立于2009是一家以创新为核心的专业互联网及移动应用开发公司，具有国际化品牌的服务经验以及专业资深的互联网、移动应用开发经验，客户从初创公司到世界500强，遍及世界各地。我们为客户提供从产品设计、信息架构、逻辑流程、用户体验、视觉设计、前端开发、程序架构以及自主框架、产品体系，为用户提供一整套互联网解决方案及服务项目。

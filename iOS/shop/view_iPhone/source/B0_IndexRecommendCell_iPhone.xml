@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B0_IndexRecommendCell_iPhone">
+	<col class="wrapper">
+		<row class="line">
+			<view id="goods-1" type="B0_IndexRecommendGoodsCell_iPhone" class="cell-left"/>
+			<view id="goods-2" type="B0_IndexRecommendGoodsCell_iPhone" class="cell-right"/>
+		</row>
+		<row class="line">
+			<view id="goods-3" type="B0_IndexRecommendGoodsCell_iPhone" class="cell-left"/>
+			<view id="goods-4" type="B0_IndexRecommendGoodsCell_iPhone" class="cell-right"/>
+		</row>
+	</col>
+    <style>
+        .wrapper {
+			width: 100%;
+			height: auto;
+			align: center;
+			margin-top: 5px;
+        }
+        
+        .line {
+			width: 100%;
+			height: auto;
+			v-align: center;
+        }
+        
+        .cell-left {
+			width: 50%;
+			height: 160px;
+			padding-left: 2px;
+        }
+
+		.cell-right {
+			width: 50%;
+			height: 160px;
+			padding-right: 2px;
+        }
+	</style>
+</ui>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="B1_ProductListSearchBarCell_iPhone">
+    <row class="container">
+        <row class="search-input-wrapper">
+            <image class="search-input-bg"/>
+            <image class="search-icon"/>
+            <input id="search-input" placeholder="@{search_input}"></input>
+        </row>
+    </row>
+    
+    <style>
+        
+        .container {
+            width: 100%;
+            height: 100%;
+            v-align: center;
+        }
+    
+        .search-input-wrapper {
+            width: 100%;
+            height: 29px;
+            v-align: center;
+        }
+        
+        .search-icon {
+            width: 14px;
+            height: 15px;
+            margin-left: 5px;
+            image: url(searcher_new_search_icon.png);
+        }
+        
+        #search-input {
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            margin-left: 5px;
+            input-clear: editing;
+            input-return-key: search;
+        }
+        
+        .search-input-bg {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 29px;
+            position: absolute;
+            background-image: url(searcher_new_search_box.png);
+            background-mode: stretch;
+            
+        }
+        
+        .search-voice-button {
+            width: 46px;
+            height: 29px;
+            margin-left: 6px;
+            button-image: url(searcher_new_voice_btn.png);
+        }
+    
+        </style>
+    
+</ui>

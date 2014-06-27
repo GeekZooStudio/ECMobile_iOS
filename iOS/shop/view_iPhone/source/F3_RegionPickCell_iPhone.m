@@ -1,0 +1,42 @@
+//
+//                       __
+//                      /\ \   _
+//    ____    ____   ___\ \ \_/ \           _____    ___     ___
+//   / _  \  / __ \ / __ \ \    <     __   /\__  \  / __ \  / __ \
+//  /\ \_\ \/\  __//\  __/\ \ \\ \   /\_\  \/_/  / /\ \_\ \/\ \_\ \
+//  \ \____ \ \____\ \____\\ \_\\_\  \/_/   /\____\\ \____/\ \____/
+//   \/____\ \/____/\/____/ \/_//_/         \/____/ \/___/  \/___/
+//     /\____/
+//     \/___/
+//
+//	Powered by BeeFramework
+//
+
+#import "F3_RegionPickCell_iPhone.h"
+
+#pragma mark -
+
+@implementation F3_RegionPickCell_iPhone
+
+SUPPORT_AUTOMATIC_LAYOUT( YES )
+SUPPORT_RESOURCE_LOADING( YES )
+
+- (void)load
+{
+}
+
+- (void)unload
+{
+}
+
+- (void)dataDidChanged
+{
+    if ( self.data )
+    {
+        REGION * region = self.data;
+        self.title.data = region.name;
+    }
+    
+    self.accessory.hidden = YES;
+}
+@end

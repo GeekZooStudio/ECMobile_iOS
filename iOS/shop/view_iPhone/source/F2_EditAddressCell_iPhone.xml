@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ui namespace="F2_EditAddressCell_iPhone">
+    <col class="list-wrapper-group">
+        <row class="list-item-header">
+            <image class="list-item-header-bg"/>
+            <input id="name" class="input" placeholder="@{address_consignee}"></input>
+        </row>
+        
+        <row class="list-item">
+            <image class="list-item-bg"/>
+            <input id="tel" class="input" placeholder="@{address_phone}"></input>
+        </row>
+        
+        <row class="list-item">
+            <image class="list-item-bg"/>
+            <input id="email" class="input" placeholder="@{address_email}"></input>
+        </row>
+        
+        <row class="list-item">
+            <image class="list-item-bg"/>
+            <input id="zipcode" class="input" placeholder="@{address_zip}"></input>
+        </row>
+        
+        <row class="list-item">
+            <image class="list-item-bg"/>
+            <label class="list-title">@{address_area}</label>
+            <label id="location-label" class="list-subtitle">@{please_select}</label>
+            <image class="list-indictor"/>
+            <button id="location" class="fill"/>
+        </row>
+        
+        <row class="list-item-footer">
+            <image class="list-item-footer-bg"/>
+            <input id="address" class="input" placeholder="@{address_address}"></input>
+        </row>
+    </col>
+    
+    <row class="button-wrapper-group">
+        <button class="button-large button-orange" id="setdefault">@{manage2_set}</button>
+        <button class="button-large button-red" id="delete">@{manage2_delete}</button>
+    </row>
+    
+    <style type="text/css">
+        
+        .button-wrapper-group {
+        margin-top: 10px;
+        width: 100%;
+        height: 44px;
+        }
+        
+        .button-large {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        width: 123px;
+        height: 40px;
+        line-height: 28px;
+        background-style: stretch;
+        background-insets: 10;
+        }
+        
+        .button-blue {
+        background-image: url(button_blue.png);
+        }
+        
+        .button-red {
+        background-image: url(button_red.png);
+        }
+        
+        .button-orange {
+        background-image: url(button_orange.png);
+        }
+        
+        
+        #setdefault {
+        margin-left: 25px;
+        }
+        
+        #delete {
+        margin-left: 20px;
+        }
+        
+        #add {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(button_blue.png);
+        }
+        
+        .button-label {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        height: 40px;
+        width: auto;
+        }
+        
+        .button-image {
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+        image-src: url(address_empty_body_add_icon.png);
+        }
+        
+        #name {
+        input-return-key: next;
+        }
+        
+        #tel {
+        input-keyboard: pin;
+        input-return-key: next;
+        }
+        
+        #email {
+        input-keyboard: email;
+        input-return-key: next;
+        }
+        
+        #zipcode {
+        input-keyboard: pin;
+        input-return-key: next;
+        }
+        
+        #location {
+        input-return-key: next;
+        }
+        
+        #address {
+        maxlength: 200;
+        input-return-key: done;
+        }
+        
+        #signin {
+        margin-top: 20px;
+        float: center;
+        height: 30px;
+        width: 100px;
+        float: center;
+        margin-right: 20;
+        button-title-color: #333;
+        button-title: 会员登录;
+        }
+        
+        .input {
+        margin-left: 10px;
+        height: 35px;
+        width: 285px;
+        line-height: 35px;
+        font-size: 14px;
+        input-clear: editing;
+        }
+        
+        
+        .list-wrapper {
+        width: 100%;
+        align: center;
+        height: 44px;
+        }
+        
+        .list-wrapper-group {
+        margin-left: 10px;
+        width: 300;
+        align: center;
+        height: auto;
+        }
+        
+        .list-item {
+        width: 100%;
+        height: 44px;
+        v-align: center;
+        }
+        
+        .list-item-header {
+        margin-top: 10px;
+        width: 100%;
+        height: 44px;
+        v-align: center;
+        }
+        
+        .list-item-footer {
+        width: 100%;
+        height: 44px;
+        v-align: center;
+        }
+        
+        .list-item-header-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-mode: stretch;
+        background-insets: 10px;
+        background-image: url(cell_bg_header.png);
+        }
+        
+        .list-item-footer-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-mode: stretch;
+        background-insets: 10px;
+        background-image: url(cell_bg_footer.png);
+        }
+        
+        .fill {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        
+        .list-item-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-mode: stretch;
+        background-insets: 10px;
+        background-image: url(cell_bg_content.png);
+        }
+        
+        .list-title {
+        margin-left: 10px;
+        font: 16px;
+        color: #333;
+        width: 110px;
+        text-align: left;
+        height: 20px;
+        }
+        
+        .list-subtitle {
+        font: 14px;
+        color: #333;
+        width: 150px;
+        text-align: right;
+        height: 20px;
+        }
+        
+        .list-indictor {
+        margin-left: 10px;
+        width: 6px;
+        height: 10px;
+        image: url(accsessory_arrow_right.png);
+        }
+        
+    </style>
+</ui>

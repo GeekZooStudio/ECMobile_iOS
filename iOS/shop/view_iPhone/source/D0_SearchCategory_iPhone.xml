@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="D0_SearchCategory_iPhone">
+    
+    <row id="mask" class="container">
+		<label id="title" class="title"/>
+		<image id="arrow" class="arrow"/>
+		<view class="bottom-line"/>
+    </row>
+    
+    <style>
+        .container {
+        width: 100%;
+        height: 44px;
+        }
+        
+        .title {
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 14px;
+        padding-right: 14px;
+        color: #333;
+        width: 90%;
+        height: 100%;
+        text-align: left;
+        }
+        
+		.bottom-line {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 43px;
+        left: 0px;
+        background-color: #333 0.2;
+		}
+        
+		.arrow {
+        width: 10%;
+        height: 100%;
+        image-src: url(accsessory_arrow_right.png);
+		}
+        
+		.mask {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+		}
+        
+    </style>
+</ui>

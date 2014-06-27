@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="E0_ProfileBoard_iPhone">
+    <list id="list" class="col-md-6"/>
+	<style type="text/css">
+        #list {
+            insets: 0 0 44 0;
+		}
+	</style>
+</ui>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="D0_SearchRecoder_iPhone">
+    
+    <col class="container">
+        <image class="container-bg"/>
+        <col class="voice-search-wrapper">
+            <image class="voice-search-wrapper-bg"/>
+            <button id="voice" class="voice-search-animation"/>
+            <label id="voice-tips" class="voice-search-title">@{click_to_speak}</label>
+            <button id="cancel" class="voice-search-cancel button button-large-red">@{dialog_cancel}</button>
+        </col>
+    </col>
+    
+    <style type="text/css">
+        
+        .container {
+        width: 100%;
+        height: 100%;
+        align: center;
+        }
+    
+		.voice-search-wrapper {
+			margin-top: 60px;
+			width: 200px;
+			height: 230px;
+			align: center;
+		}
+
+		@media(device:iphone5)
+		{
+			.voice-search-wrapper {
+				margin-top: 110px;
+			}
+		}
+
+        .voice-search-animation {
+			margin-top: 40px;
+			width: 82px;
+			height: 82px;
+			background-image: url(searcher_new_voice_cont_voice_icon.png);
+        }
+        
+        .voice-search-title {
+        margin-top: 10px;
+        color: #333;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-size: 14px;
+        line-num: 2;
+        text-align: center;
+        }
+        
+        .voice-search-cancel {
+        margin-top: 20px;
+        button-title: 取消;
+        font: 14px, bold;
+        color: #fff;
+        }
+        
+        .voice-search-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(searcher_new_voice_cont_bg.png);
+        border-radius: 5px;
+        }
+        
+        .button-large-red {
+        width: 182px;
+        height: 33px;
+        background-image: url(searcher_new_cont_btn_red.png);
+        text-align: center;
+        font-size: 15px;
+        color: #fff;
+        line-height: 33px;
+        }
+        
+    </style>
+</ui>

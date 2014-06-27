@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="OrderCellHeader_iPhone">
+    
+    <col class="order-wrapper">
+        
+        <image class="order-wrapper-bg"/>
+        
+        <row class="order-group">
+            <label id="order-number-label"></label>
+            <label id="order-number"></label>
+        </row>
+        
+        <row class="order-group">
+            <label id="order-date-label"></label>
+            <label id="order-date"></label>
+        </row>
+        
+    </col>
+    
+    <style type="text/css">
+        
+        .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        }
+        
+        .order-wrapper {
+        margin-left: 3px;
+        margin-top: 3px;
+        width: 314px;
+        height: 50px;
+        }
+        
+        .order-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 20px;
+        image: url(shopping_checkout_body_bg.png);
+        }
+        
+        .order-group {
+        width: 100%;
+        height: 25px;
+        }
+        
+        #order-date-label {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: auto;
+        height: 14px;
+        color: #333;
+        font-size: 12px;
+        text-align: left;
+        }
+        
+        #order-date {
+        margin-left: 5px;
+        margin-top: 10px;
+        width: 200px;
+        height: 14px;
+        color: #333;
+        font-size: 12px;
+        text-align: left;
+        }
+        
+        #order-number-label {
+        margin-top: 15px;
+        margin-left: 20px;
+        width: auto;
+        height: 14px;
+        color: #333;
+        font-size: 12px;
+        text-align: left;
+        }
+        
+        #order-number {
+        margin-top: 15px;
+        margin-left: 5px;
+        width: 200px;
+        height: 14px;
+        color: #333;
+        font-size: 12px;
+        text-align: left;
+        }
+        
+        
+    </style>
+</ui>

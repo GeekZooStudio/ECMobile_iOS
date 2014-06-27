@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="A1_SignupCell_iPhone">
+
+	<row class="list-item-header">
+        <image id="background" class="background"/>
+        <input id="input" class="input"></input>
+    </row>
+   
+	<style type="text/css">
+        .input {
+        margin-left: 20px;
+        height: 35px;
+        width: 285px;
+        line-height: 35px;
+        font: 16px;
+        input-clear: editing;
+		input-capitalization: none;
+		input-return-key: next;
+		input-keyboard: abc;
+		input-correction: false;
+        }
+        
+        .list-item-header {
+        width: 100%;
+        height: 44px;
+        v-align: center;
+        }
+        
+        .background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-mode: stretch;
+        background-insets: 10px;
+        }
+        
+	</style>
+</ui>

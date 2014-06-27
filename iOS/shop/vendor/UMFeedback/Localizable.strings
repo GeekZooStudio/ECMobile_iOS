@@ -1,0 +1,15 @@
+/****************************************************************************/
+/* Localization file */
+
+"Release_to_refresh" = "松开即可刷新...";
+"Last_updated" = "最后更新";
+"Fill in the Contact1" = "填写联系信息";
+"Fill in the Contact2" = "请留下您的QQ，邮箱，电话等联系方式";
+"a_m" = "上午";
+"p_m" = "下午";
+"Send" = "发送";
+"Feedback" = "意见反馈";
+"Close" = "关闭";
+"Your contact information" = "您的联系方式";
+"Pull down to refresh" = "下拉可以刷新...";
+"Loading" = "刷新中";

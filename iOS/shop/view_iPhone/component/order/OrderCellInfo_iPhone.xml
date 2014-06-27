@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="OrderCellInfo_iPhone">
+    
+    <col class="order-cell-wrapper">
+        
+        <image class="order-cell-wrapper-bg"/>
+        
+        <row class="order-info-item">
+            <label class="order-info-title" id="ship-title">@{balance_transportation}</label>
+            <label class="order-info-content" id="ship"></label>
+        </row>
+        s
+        <row class="order-info-item">
+            <label class="order-info-title" id="bonus-title">@{balance_redpocket}</label>
+            <label class="order-info-content" id="bonus"></label>
+        </row>
+        
+        <row class="order-info-item">
+            <label class="order-info-title" id="integral-title">@{balance_exp}</label>
+            <label class="order-info-content" id="integral"></label>
+        </row>
+    </col>
+    
+    <style type="text/css">
+        
+        .order-cell-wrapper {
+        margin-left: 3px;
+        width: 314px;
+        height: 70px;
+        }
+        
+        .order-cell-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 20px;
+        image: url(shopping_cart_body_bg_03.png);
+        }
+        
+        .order-info-item {
+        margin-top: 10px;
+        margin-left: 15px;
+        width: 280px;
+        height: 10px;
+        }
+        
+        .order-info-title {
+        width: 100px;
+        height: 14px;
+        color: #333;
+        font: 12px;
+        text-align: left;
+        }
+        
+        .order-info-content {
+        text: ￥0.00;
+        width: 185px;
+        height: 10px;
+        font: 12px;
+        text-align: right;
+        }
+        
+        #bonus {
+        color: #090;
+        }
+        
+        #integral {
+        color: #090;
+        }
+        
+        #ship {
+        color: #f00;
+        }
+        
+    </style>
+</ui>

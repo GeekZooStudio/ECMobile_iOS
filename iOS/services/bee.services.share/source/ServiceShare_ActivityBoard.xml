@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="ServiceShare_ActivityBoard">
+
+	<col class="wrapper">
+		<iamge id="bg"/>
+		<row class="activities">
+			<col id="sina_weibo" class="activity">
+                <!--<image class="activity-bg"/>-->
+				<image class="activity-icon" src="url(ServiceShare.bundle/share-icon-sina.png)"/>
+				<!--<label class="activity_label">新浪微博</label>-->
+			</col>
+			<col id="tencent_weibo" class="activity">
+				<!--<image class="activity-bg"/>-->
+				<image class="activity-icon" src="url(ServiceShare.bundle/share-icon-tencent.png)"/>
+				<!--<label class="activity_label">腾讯微博</label>-->
+			</col>
+			<col id="weixin_friend" class="activity">
+				<!--<image class="activity-bg"/>-->
+				<image class="activity-icon" src="url(ServiceShare.bundle/share-icon-wx-friend.png)"/>
+				<!--<label class="activity_label">微信</label>-->
+			</col>
+			<col id="weixin_timeline" class="activity">
+				<!--<image class="activity-bg"/>-->
+				<image class="activity-icon" src="url(ServiceShare.bundle/share-icon-wx-timeline.png)"/>
+				<!--<label class="activity_label">朋友圈</label>-->
+			</col>
+		</row>
+		<button id="cancel">取消</button>
+	</col>
+
+	<style type="text/css">
+
+		.wrapper {
+			width: 100%;
+			height: 100%;
+		}
+	
+		#bg {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+		}
+
+		.activities {
+			width: 100%;
+			height: 60%;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	
+		.activity {
+			width: 25%;
+			height: 100%;
+		}
+		
+		.activity-bg {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			image-src: url(ServiceShare.bundle/share-bg.png);
+			image-mode: center;
+		}
+
+		.activity-icon {
+			width: 100%;
+			height: 100%;
+			image-mode: center;
+			padding-top: 0px;
+		}
+
+		.activity_label {
+			width: 100%;
+			height: 30%;
+			color: #666;
+			font-size: 12px;
+			font-weight: lighter;
+			text-align: center;
+			padding-bottom: 14px;
+		}
+
+		#cancel {
+			padding: 6px;
+			border-radius: 4px;
+			border-width: 2px;
+			border-color: #ccc;
+			width: 100%;
+			height: 40%;
+			font-weight: lighter;
+			font-size: 16px;
+			color: blue 0.8;
+		}
+	</style>
+	
+</ui>

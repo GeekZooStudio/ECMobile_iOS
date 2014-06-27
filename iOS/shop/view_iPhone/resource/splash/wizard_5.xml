@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ui namespace="ServiceWizard_Cell">
+    
+	<linear orientation="v" class="wrapper">
+        <linear orientation="v" class="header-wrapper">
+            <label id="h1" class="title">@{excellent_service}</label>
+        </linear>
+        <linear orientation="v" class="inner-wrapper">
+            <image id="img-1" class="abs" src="tuitional_img_5_1.png"/>
+            <image id="img-2" class="abs" src="tuitional_img_5_2.png"/>
+        </linear>
+        <linear orientation="v" class="footer-wrapper">
+            <label id="h2" class="subtitle">@{excellent_parter}</label>
+        </linear>
+    </linear>
+	<button id="wizard-close"/>
+
+    <style href="wizard.css" media="iPhone4"/>
+    <style href="wizard-568h.css" media="iPhone5"/>
+	
+	<style type="text/css" media="iPhone4">
+		#img-1 {
+			top: 10px;
+			left: 40px;
+			width: 160px;
+			height: 280px;
+			mode: fit;
+        }
+        
+        #img-2 {
+            left: 80px;
+            top: 120px;
+			width: 210px;
+            height: 205px;
+        }
+	</style>
+    <style type="text/css" media="iPhone5">
+        #img-1 {
+			top: 10px;
+			left: 40px;
+			width: 160px;
+			height: 280px;
+			mode: fit;
+        }
+        #img-2 {
+			left: 80px;
+			top: 150px;
+			width: 210px;
+			height: 245px;
+        }
+	</style>
+	
+</ui>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ui namespace="ServiceWizard_Cell">
+
+    <linear orientation="v" class="wrapper">
+        <linear orientation="v" class="header-wrapper">
+            <label id="h1" class="title">@{two_main_os}</label>
+        </linear>
+        <linear orientation="v" class="inner-wrapper">
+            <image id="img-1" class="abs" src="tuitional_img_2_1.png"/>
+            <image id="img-2" class="abs" src="tuitional_img_2_2.png"/>
+            <image id="img-3" class="abs" src="tuitional_img_2_3.png"/>
+            <image id="img-4" class="abs" src="tuitional_img_2_4.png"/>
+        </linear>
+        <linear orientation="v" class="footer-wrapper">
+            <label id="h2" class="subtitle">@{special_app_for_cellphone}</label>
+        </linear>
+    </linear>
+
+    <style href="wizard.css" media="iPhone4"/>
+    <style href="wizard-568h.css" media="iPhone5"/>
+
+    <style type="text/css" media="iPhone4">
+        #img-1 {
+			top: 0px;
+			left: 77px;
+			width: 165px;
+			height: 121px;
+			image-mode: fit;
+        }
+		
+        #img-2 {
+			top: 70px;
+			left: 120px;
+			width: 122px;
+			height: 240px;
+			image-mode: fit;
+        }
+		
+        #img-3 {
+			top: 105px;
+			left: 75px;
+			width: 122px;
+			height: 212px;
+			image-mode: fit;
+        }
+		
+        #img-4 {
+			top: 0px;
+			left: 80px;
+			width: 167px;
+			height: 158px;
+			image-mode: fit;
+        }        
+    </style>
+    <style type="text/css" media="iPhone5">
+
+        #img-1 {
+			top: 0px;
+			left: 77px;
+			width: 165px;
+			height: 121px;
+			image-mode: fit;
+        }
+		
+        #img-2 {
+			top: 70px;
+			left: 120px;
+			width: 122px;
+			height: 260px;
+			image-mode: fit;
+        }
+
+        #img-3 {
+			top: 105px;
+			left: 75px;
+			width: 122px;
+			height: 232px;
+			image-mode: fit;
+        }
+		
+        #img-4 {
+			top: 0px;
+			left: 80px;
+			width: 167px;
+			height: 158px;
+			image-mode: fit;
+        }
+    </style>
+</ui>

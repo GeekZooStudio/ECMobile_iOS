@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="A1_SignupBoard_iPhone">
+    
+    <list id="list" class="col-md-6"/>
+    
+    <!--linear orientation="v" class="list-wrapper-group">
+        <linear orientation="h" class="list-item-header">
+            <image class="list-item-header-bg"/>
+            <input id="username" class="input" placeholder="@{login_username}"></input>
+        </linear>
+        
+        <linear orientation="h" class="list-item-header">
+            <image class="list-item-body-bg"/>
+            <input id="email" class="input" placeholder="@{register_email}"></input>
+        </linear>
+        
+        <linear orientation="h" class="list-item-header">
+            <image class="list-item-body-bg"/>
+            <input id="password" class="input" placeholder="@{login_password}"></input>
+        </linear>
+        
+        <linear orientation="h" class="list-item-footer">
+            <image class="list-item-footer-bg"/>
+            <input id="password2" class="input done" placeholder="@{register_confirm}"></input>
+        </linear>
+    </linear-->
+    
+    <style type="text/css">
+        
+        #list { insets: 10 0 10 0; }
+        
+    </style>
+</ui>

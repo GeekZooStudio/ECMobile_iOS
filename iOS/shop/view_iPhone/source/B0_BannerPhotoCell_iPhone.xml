@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="B0_BannerPhotoCell_iPhone">
+    
+	<col id="mask" orientation="v" class="wrapper">
+        <image id="photo"/>        
+    </col>
+   
+	<style type="text/css">
+
+		#photo {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            image-mode: fill;
+            image-loading: white;
+		}
+        
+	</style>
+</ui>

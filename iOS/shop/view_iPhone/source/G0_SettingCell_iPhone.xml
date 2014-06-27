@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="G0_SettingCell_iPhone">
+    <col class="form-container">
+        <!-- 图片质量 -->
+        <label class="form-group-caption">@{setting_picture}</label>
+        <col class="form-group">
+            <row class="form option">
+                <image class="background"/>
+                <label class="title">@{setting_smartmode}</label>
+                <image class="accessory" id="setting_smartmode_accessory"/>
+                <button class="mask" id="setting_smartmode"/>
+            </row>
+            <row class="form option">
+                <image class="background"/>
+                <label class="title">@{setting_hqpicture}</label>
+                <image class="accessory" id="setting_hqpicture_accessory"/>
+                <button class="mask" id="setting_hqpicture"/>
+            </row>
+            <row class="form option">
+                <image class="background"/>
+                <label class="title">@{setting_normal}</label>
+                <image class="accessory" id="setting_normal_accessory"/>
+                <button class="mask" id="setting_normal"/>
+            </row>
+        </col>
+        <!-- 账号管理 -->
+        <label class="form-group-caption">@{setting_account}</label>
+        <col class="form-group">
+            <row class="form switch">
+                <image class="background"/>
+                <label class="title">@{sina_weibo}</label>
+                <switch class="switchr" id="sina_weibo"/>
+            </row>
+            <row class="form switch">
+                <image class="background"/>
+                <label class="title">@{tencent_weibo}</label>
+                <switch class="switchr" id="tencent_weibo"/>
+            </row>
+        </col>
+        <!-- 官方信息 -->
+        <label class="form-group-caption">@{setting_official}</label>
+        <col class="form-group">
+			
+            <row class="form nextor first">
+                <image class="background"/>
+                <label class="title">@{setting_service}</label>
+                <image class="accessory"/>
+                <button class="mask" id="setting_service"/>
+            </row>
+            
+            <row class="form nextor last">
+                <image class="background"/>
+                <label class="title">@{setting_website}</label>
+                <image class="accessory"/>
+                <button class="mask" id="setting_website"/>
+            </row>
+        </col>
+        <!-- 技术支持 -->
+        <label class="form-group-caption">@{setting_tech}</label>
+        <col class="form-group">
+            <row class="form single nextor">
+                <image class="background"/>
+                <label class="title">@{setting_geekzoo}</label>
+                <image class="accessory"/>
+                <button class="mask" id="setting_geekzoo"/>
+            </row>
+        </col>
+        <col class="form-group">
+            <row class="form custom">
+                <image class="background logout"/>
+                <label class="title logout">@{setting_logout}</label>
+                <button class="mask logout" id="setting_logout"/>
+            </row>
+        </col>
+    </col>
+
+    <style>
+        .custom { padding: 0px 10px; margin: 10px 0;}
+        .logout.title { height: 44px; width: 100%; margin-left: 0; text-align: center; font-size: 20px; color: #fff; }
+        .logout.background { image: url(button_red.png); mode: stretch; }
+    </style>
+</ui>

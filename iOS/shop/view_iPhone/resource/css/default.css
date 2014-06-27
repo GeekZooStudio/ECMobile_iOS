@@ -1,0 +1,137 @@
+/********************
+ * helper
+ ********************/
+.mask,
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/********************
+ * default
+ ********************/
+list { height: 100%; }
+row { width: 100%; }
+row label { height: 100%; width: auto; }
+col { width: 100%; height: auto; }
+
+/********************
+ * form-group
+ ********************/
+.form-container { height: auto; }
+.form-group { height: auto; }
+.form-group.separator { margin-top: 10px; }
+.form-group-caption,
+.form-group .caption { height: 44px; width: 90%; font-size: 15px; font-weight: bold; color: #369; margin-left: 10px; }
+
+/********************************
+ * form
+ ********************************/
+.form { width: 100%; }
+.form .title { width: auto; margin-left: 20px; font-size: 14px; color: #000; }
+.form .subtitle { width: 150px; text-align: right; margin-left: 10px; font-size: 12px; color: #333; position: absolute; right: 50px; }
+/*.form .title { background-color: #ff0 0.5; }*/
+/*.form .subtitle { background-color: #f0f 0.5; }*/
+.form .title.disable { color: #aeaeae }
+.form .background { image: url(cell_bg_content.png); }
+.form .accessory { position: absolute; right: 20px; }
+.form.last .background { image: url(cell_bg_footer.png); }
+.form.first .background { image: url(cell_bg_header.png); }
+.form.single .background { image: url(cell_bg_single.png); }
+
+.form:last-child .background { image: url(cell_bg_footer.png); }
+.form:first-child .background { image: url(cell_bg_header.png); }
+
+.form.plain .background { image: url(cell_bg_content.png); mode: stretch; }
+.form.plain.input { margin-top: 20px; }
+/*.form:nth-child(2) .title { color: #f00; }*/
+
+/********************************
+ * form > option
+ ********************************/
+.option { height: 45px; }
+.option .accessory { width: 13px; height: 100%; image: url(accsessory_check.png);  /* display: none; */  }
+.option.plain .accessory { width: 13px; height: 100%; image: url(accsessory_check.png);  display: block;  }
+.option .active .accessory { display: block; }
+.option2 .title { font-size: 16px; }
+
+/********************************
+ * form > nextor
+ ********************************/
+.nextor { height: 45px; }
+.nextor .accessory { width: 13px; height: 100%; image: url(accsessory_arrow_right.png); }
+
+/********************************
+ * form > ex-nextor
+ ********************************/
+.ex-nextor { height: 44px; }
+.ex-nextor .necessory { width: 24px; height: 100%; margin-left: 5px; margin-top: 2px; image: url(icon_necessary.png); }
+.ex-nextor .accessory { width: 13px; height: 100%; image: url(accsessory_arrow_right.png); }
+
+/********************************
+ * form > input
+ ********************************/
+.input { height: 44px; }
+.input .textfield { width: 290px; margin-left: 20px; font-size: 16px; }
+
+/********************************
+ * form > custom
+ ********************************/
+.custom { height: auto; }
+
+/********************************
+ * form > normal
+ ********************************/
+.normal { height: 44px; }
+/********************************
+ * form > button
+ ********************************/
+.button { height: 45px; width: 300px; margin-left: 10px; }
+.button .title { width: 100%; margin-left: 0; text-align: center; font-size: 20px; color: #fff; }
+.button.red .background { image: url(button_red.png); mode: stretch; }
+.button.blue .background{ image: url(button_blue.png); mode: stretch; }
+
+/********************************
+ * form > switch
+ ********************************/
+.switch { height: 44px; }
+.switch .switchr { position: absolute; right: 15px; margin-top: 9px; width: 78px; height: 27px; }
+
+@media(device:iOS7) {
+  .switch .switchr { position: absolute; right: 20px; margin-top: 7px; width: 48px; height: 30px; }
+}
+
+
+/********************
+ * badge
+ ********************/
+
+/********************
+ * Grid
+ ********************/
+.col-md-6 {
+    width: 100%;
+}
+.col-md-5 {
+    width: 83.33333333333334%;
+}
+.col-md-4 {
+    width: 66.66666666666666%;
+}
+.col-md-3 {
+    width: 50%;
+}
+.col-md-2 {
+    width: 33.33333333333333%;
+}
+.col-md-1 {
+    width: 16.666666666666664%;
+}

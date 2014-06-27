@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ui namespace="A0_SigninBoard_iPhone">
+    <col class="list-wrapper-group">
+        <row class="list-item-header">
+            <image class="list-item-header-bg" />
+            <image class="input-icon-user" />
+            <input id="username" class="signin-input" placeholder="@{login_username}"></input>
+        </row>
+        <row class="list-item-footer">
+            <image class="list-item-footer-bg" />
+            <image class="input-icon-password" />
+            <input id="password" class="signin-input done" placeholder="@{login_password}"></input>
+        </row>
+        <col class="signup-wrapper">
+            <button id="signup">@{login_register}</button>
+            <view class="line" />
+        </col>
+    </col>
+    <style type="text/css">
+		.input-icon-user {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 18px;
+			height: 18px;
+			image-src: url(log_in_user_name_icon.png);
+			image-mode: center;
+		}
+		.input-icon-password {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 18px;
+			height: 18px;
+			image-src: url(log_in_key_icon.png);
+			image-mode: fit;
+		}
+		.signup-wrapper {
+			width: 100%;
+			height: auto;
+		}
+		#signup {
+			margin-top: 20px;
+			float: center;
+			height: 20px;
+			width: 50%;
+			float: center;
+			margin-right: 20;
+			button-title-color: #666;
+		}
+		.line {
+			margin-top: 1px;
+			float: center;
+			height: 1px;
+			width: 40%;
+			background-color: #666;
+		}
+		.signin-input {
+			height: 35px;
+			width: 255px;
+			line-height: 35px;
+			font: 16px;
+			input-clear: editing;
+			input-capitalization: none;
+			input-return-key: next;
+			input-correction: false;
+		}
+		.done {
+			input-secure: yes;
+			input-return-key: done;
+		}
+		#password {
+			input-secure: yes;
+			input-keyboard: abc;
+		}
+		.list-wrapper {
+			width: 100%;
+			align: center;
+			height: 44px;
+		}
+		.list-wrapper-group {
+			margin-left: 10px;
+			margin-top: 14px;
+			width: 300px;
+			align: center;
+			height: 100px;
+		}
+		.list-item {
+			margin-top: 10px;
+			width: 100%;
+			height: 44px;
+			v-align: center;
+		}
+		.list-item-header {
+			width: 100%;
+			height: 44px;
+			v-align: center;
+		}
+		.list-item-footer {
+			width: 100%;
+			height: 44px;
+			v-align: center;
+		}
+		.list-item-header-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-mode: stretch;
+			background-insets: 10px;
+			background-image: url(cell_bg_header.png);
+		}
+		.list-item-footer-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-mode: stretch;
+			background-insets: 10px;
+			background-image: url(cell_bg_footer.png);
+		}
+		.list-item-bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-mode: stretch;
+			background-insets: 10px;
+			background-image: url(cell_bg_single.png);
+		}
+    </style>
+
+</ui>

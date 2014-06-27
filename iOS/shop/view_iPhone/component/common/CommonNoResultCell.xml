@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="CommonPullLoader">
+
+	<row class="wrapper">
+		<label id="text">@{no_result}</label>
+		<image id="logo"/>
+	</row>
+
+	<style type="text/css">
+		
+		.wrapper {
+			width: 100%;
+			height: 100%;
+		}
+
+		#text {
+			font-size: 20;
+			font-weight: lighter;
+			color: #666;
+			line-num: 2;
+			line-break: word-wrap;
+			position: absolute;
+			left: 0px;
+			top: 160px;
+			width: 100%;
+			height: 26;
+			text-align: center;
+		}
+		
+		#logo {
+			image-src: url(searcher_no_result_empty_icon.png);
+			image-mode: center;
+			position: absolute;
+			left: 0px;
+			top: 190px;
+			width: 100%;
+			height: 150px;
+		}
+
+	</style>
+
+</ui>

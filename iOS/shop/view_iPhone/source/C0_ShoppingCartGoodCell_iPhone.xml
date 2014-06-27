@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="C0_ShoppingCartGoodCell_iPhone">
+    
+    <col class="cart-cell-wrapper">
+        <col class="cart-goods-wrapper">
+            <row class="cart-goods-header">
+                <label id="cart-goods-price"/>
+                <button id="action">@{modify}</button>
+            </row>
+            
+            <view class="line"></view>
+            
+            <row class="cart-cell-body">
+                <col class="cart-goods-photo-wrapper">
+                    <image class="cart-goods-photo-wrapper-bg"/>
+                    <image id="cart-goods-photo"/>
+                </col>
+                <col class="cart-cell-detail">
+                    <label id="cart-goods-title"></label>
+                    <label id="cart-goods-info"></label>
+                </col>
+            </row>
+        </col>
+    </col>
+    
+    <style type="text/css">
+        
+        .line {
+        margin-left: 10px;
+        width: 275px;
+        height: 1px;
+        background-color: #eeeeee;
+        }
+        
+        .cart-cell-wrapper {
+        width: 306px;
+        height: 150px;
+        margin-left: 3px;
+        }
+        
+        .cart-cell-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        image-mode: stretch;
+        image-insets: 20px;
+        image: url(shopping_cart_body_bg_03.png);
+        }
+        
+        .cart-goods-wrapper {
+        margin-left: 3px;
+        width: 280px;
+        height: 170px;
+        }
+        
+        .cart-goods-header {
+        margin-left: 10px;
+        height: 40px;
+        width: 275px;
+        v-align: center;
+        }
+        
+        #cart-goods-price {
+        font: 20px;
+        color: #cc0b00;
+        text: ￥ 2000;
+        height: 20px;
+        width: 200px;
+        text-align: left;
+        }
+        
+        #action {
+        width: 54px;
+        height: 30px;
+        background-image: url(shopping_cart_modify_btn_grey.png);
+        button-title-color: #666;
+        font: 12px;
+        float: right;
+        }
+        
+        .cart-goods-photo-wrapper {
+        width: 70px;
+        height: 70px;
+        }
+        
+        .cart-goods-photo-wrapper-bg {
+        width: 100%;
+        height: 100%;
+        border-width: 1px;
+        border-color: #ddd;
+        position: absolute;
+        top: 0;
+        left: 0;
+        }
+        
+        #cart-goods-photo {
+        margin-left: 5px;
+        margin-top: 5px;
+        width: 60px;
+        height: 60px;
+        image-mode: fit;
+        }
+        
+        .cart-cell-body {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 200px;
+        height: 130px;
+        }
+        
+        .cart-cell-detail {
+        margin-left: 10px;
+        width: 190px;
+        height: 60px;
+        }
+        
+        #cart-goods-title {
+        width: 100%;
+        line-num: 2;
+        height: 30px;
+        color: #333;
+        font: 14px;
+        text-align: left;
+        }
+        
+        #cart-goods-info {
+        width: 100%;
+        line-num: 2;
+        height: 30px;
+        color: #666;
+        font: 12px;
+        text-align: left;
+        }
+        
+    </style>
+
+</ui>

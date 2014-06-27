@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ui namespace="B2_ProductSpecifyBoard_iPhone">
+    
+	<col class="wrapper">
+        <button id="mask"/>
+        <list id="list"/>
+    </col>
+   
+	<style type="text/css">
+        
+        .wrapper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #mask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        #list {
+            width: 300px;
+            height: auto;
+            v-float: center;
+            float: center;
+            max-height: 60%;
+        }
+        
+	</style>
+</ui>
