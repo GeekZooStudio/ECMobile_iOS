@@ -87,14 +87,19 @@
 		{
 			if ( [view respondsToSelector:@selector(selected)] )
 			{
-				BOOL flag = (BOOL)objc_msgSend( view, @selector(selected) );
+				// TODO: CY
+				BOOL flag =	[self performMsgSendWithTarget:view sel:@selector(selected)];
+//				BOOL flag = (BOOL)objc_msgSend( view, @selector(selected) );
 				if ( flag )
 					return YES;
 			}
 
 			if ( [view respondsToSelector:@selector(state)] )
 			{
-				UIControlState state = (BOOL)objc_msgSend( view, @selector(state) );
+				// TODO: CY
+				UIControlState state =	[self performMsgSendWithTarget:view sel:@selector(state)];
+
+//				UIControlState state = (BOOL)objc_msgSend( view, @selector(state) );
 				if ( state & UIControlStateSelected )
 					return YES;
 			}
@@ -110,12 +115,14 @@
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-	
+
 	for ( UIView * view in self.views )
 	{
 		if ( view && [view respondsToSelector:@selector(isFirstResponder)] )
 		{
-			BOOL flag = (BOOL)objc_msgSend( view, @selector(isFirstResponder) );
+			// TODO: CY
+			BOOL flag =	[self performMsgSendWithTarget:view sel:@selector(isFirstResponder)];
+//			BOOL flag = (BOOL)objc_msgSend( view, @selector(isFirstResponder) );
 			if ( flag )
 				return YES;
 		}
@@ -136,12 +143,15 @@
 			
 			if ( [v respondsToSelector:@selector(setEnabled:)] )
 			{
-				objc_msgSend( v, @selector(setEnabled:), YES );
+				// TODO: CY
+				BOOL i = YES;
+				[self performMsgSendWithTarget:v sel:@selector(setEnabled:) signal:(void *)&i];
+//				objc_msgSend( v, @selector(setEnabled:), YES );
 			}
 		}
 		return self;
 	};
-	
+
 	return [[block copy] autorelease];
 }
 
@@ -155,7 +165,10 @@
 			
 			if ( [v respondsToSelector:@selector(setEnabled:)] )
 			{
-				objc_msgSend( v, @selector(setEnabled:), NO );
+				// TODO: CY
+				BOOL i = NO;
+				[self performMsgSendWithTarget:v sel:@selector(setEnabled:) signal:(void *)&i];
+//				objc_msgSend( v, @selector(setEnabled:), NO );
 			}
 		}
 		return self;
@@ -210,7 +223,10 @@
 		{
 			if ( [v respondsToSelector:@selector(setSelected:)] )
 			{
-				objc_msgSend( v, @selector(setSelected:), YES );
+				// TODO: CY
+				BOOL i = YES;
+				[self performMsgSendWithTarget:v sel:@selector(setSelected:) signal:(void *)&i];
+//				objc_msgSend( v, @selector(setSelected:), YES );
 			}
 		}
 		
@@ -228,7 +244,10 @@
 		{
 			if ( [v respondsToSelector:@selector(setSelected:)] )
 			{
-				objc_msgSend( v, @selector(setSelected:), NO );
+				// TODO: CY
+				BOOL i = NO;
+				[self performMsgSendWithTarget:v sel:@selector(setSelected:) signal:(void *)&i];
+//				objc_msgSend( v, @selector(setSelected:), NO );
 			}
 		}
 		

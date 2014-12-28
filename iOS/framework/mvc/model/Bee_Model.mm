@@ -106,12 +106,12 @@ static NSMutableArray *	__models = nil;
 + (id)modelWithObserver:(id)observer
 {
 	BeeModel * model = nil;
-	
+
 	if ( [self respondsToSelector:@selector(sharedInstance)] )
 	{
 		model = (BeeModel *)[[self class] sharedInstance];
 	}
-	
+
 	if ( nil == model || NO == [model isKindOfClass:[BeeModel class]] )
 	{
 		model = [[[[self class] alloc] init] autorelease];
@@ -121,7 +121,7 @@ static NSMutableArray *	__models = nil;
 	{
 		[model addObserver:observer];
 	}
-	
+
 	return model;
 }
 
@@ -134,7 +134,7 @@ static NSMutableArray *	__models = nil;
 {
 	if ( 0 == __models.count )
 		return nil;
-	
+
 	NSMutableArray * array = [NSMutableArray array];
 	
 	for ( BeeModel * model in __models )

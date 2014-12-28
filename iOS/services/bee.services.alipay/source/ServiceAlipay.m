@@ -115,13 +115,14 @@ DEF_NOTIFICATION( FAILED )
 - (void)serviceDidActived
 {
 	[self.order clear];
-	
+
 	NSURL * url = [self.launchParameters objectForKey:@"url"];
+
 	if ( nil == url )
 	{
 		return;
 	}
-	
+
 	AlixPay * alixpay = [AlixPay shared];
 	if ( nil == alixpay )
 	{
@@ -151,12 +152,12 @@ DEF_NOTIFICATION( FAILED )
 				[self notifyFailed];
 				return;
 			}
-			
+
 			BOOL succeed = [verifier verifyString:result.resultString withSign:result.signString];
 			if ( NO == succeed )
 			{
 				INFO( @"Alipay, invalid signature" );
-				
+
 				[self notifyFailed];
 				return;
 			}
@@ -278,8 +279,8 @@ DEF_NOTIFICATION( FAILED )
 
 - (BOOL)pay
 {
-    
 	NSString * appSchema = [BeeSystemInfo appSchema:@"default"];
+
 	if ( nil == appSchema )
 	{
 		appSchema = [BeeSystemInfo appSchema];
@@ -317,7 +318,7 @@ DEF_NOTIFICATION( FAILED )
 	}
 
 	int ret = [alixpay pay:order applicationScheme:appSchema];
-	
+
 	if ( ret == kSPErrorAlipayClientNotInstalled )
 	{
 		ERROR( @"install Alipay first" );

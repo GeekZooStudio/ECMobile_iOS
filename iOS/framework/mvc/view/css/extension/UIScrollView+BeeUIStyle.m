@@ -56,14 +56,20 @@
 		{
 			if ( [self respondsToSelector:@selector(setHorizontal:)] )
 			{
-				objc_msgSend( self, @selector(setHorizontal:), YES );
+				// TODO: CY
+				BOOL i = YES;
+				[self performMsgSendWithTarget:self sel:@selector(setHorizontal:) signal:(void *)&i];
+//				objc_msgSend( self, @selector(setHorizontal:), YES );
 			}
 		}
 		else
 		{
 			if ( [self respondsToSelector:@selector(setVertical:)] )
 			{
-				objc_msgSend( self, @selector(setVertical:), YES );
+				// TODO: CY
+				BOOL i = YES;
+				[self performMsgSendWithTarget:self sel:@selector(setVertical:) signal:(void *)&i];
+//				objc_msgSend( self, @selector(setVertical:), YES );
 			}
 		}
 	}
@@ -71,7 +77,10 @@
 	{
 		if ( [self respondsToSelector:@selector(setVertical:)] )
 		{
-			objc_msgSend( self, @selector(setVertical:), YES );
+			// TODO: CY
+			BOOL i = YES;
+			[self performMsgSendWithTarget:self sel:@selector(setVertical:) signal:(void *)&i];
+//			objc_msgSend( self, @selector(setVertical:), YES );
 		}
 	}
 }
@@ -88,12 +97,17 @@
 			if ( [scrollInsets matchAnyOf:@[@"auto"]] )
 			{
 				UIEdgeInsets insets = [BeeUIConfig sharedInstance].baseInsets;
-				objc_msgSend( self, @selector(setExtInsets:), insets );
+				
+				// TODO: CY
+				[self performMsgSendWithTarget:self sel:@selector(setExtInsets:) signal:(void *)&insets];
+//				objc_msgSend( self, @selector(setExtInsets:), insets );
 			}
 			else
 			{
 				UIEdgeInsets insets = UIEdgeInsetsFromStringEx( scrollInsets );
-				objc_msgSend( self, @selector(setExtInsets:), insets);
+				// TODO: CY
+				[self performMsgSendWithTarget:self sel:@selector(setExtInsets:) signal:(void *)&insets];
+//				objc_msgSend( self, @selector(setExtInsets:), insets);
 			}
 		}
 	}
@@ -114,7 +128,9 @@
 				lineCount = 1;
 			}
 			
-			objc_msgSend( self, @selector(setLineCount:), lineCount);
+			// TODO: CY
+			[self performMsgSendWithTarget:self sel:@selector(setLineCount:) signal:(void *)&lineCount];
+//			objc_msgSend( self, @selector(setLineCount:), lineCount);
 		}
 	}
 }

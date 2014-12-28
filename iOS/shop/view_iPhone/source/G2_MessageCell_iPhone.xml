@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ui namespace="G2_MessageCell_iPhone">
+    
+    <col id="mask" class="notifi-wrapper">
+        <image id="background" class="background"/>
+        <label id="notifi-content"></label>
+        <label id="notifi-time"></label>
+		<view class="bottom-line"/>
+    </col>
+    
+    <style type="text/css">
+        
+        .notifi-wrapper {
+			width: 100%;
+			height: auto;
+        }
+      
+        #background {
+      image: url(cell_bg_content.png);
+      mode: stretch;
+        }
+
+        #notifi-content {
+			width: 280px;
+			height: 20px;
+			color: #333;
+			font-size: 16px;
+			margin-top: 10px;
+			margin-bottom: 3px;
+			margin-left: 6px;
+			text-align: left;
+        }
+        
+		#notifi-time {
+			width: 280px;
+			height: 14px;
+			color: #666;
+			font-size: 12px;
+			margin-bottom: 12px;
+			margin-left: 6px;
+			text-align: left;
+        }
+		
+		.bottom-line {
+			width: 100%;
+			height: 1px;
+			background-color: #333 0.2;
+		}
+
+    </style>
+</ui>

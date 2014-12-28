@@ -15,5 +15,4 @@ id<DataSigner> CreateRSADataSigner(NSString *privateKey) {
 	id signer = nil;
 	signer = [[RSADataSigner alloc] initWithPrivateKey:privateKey];
 	return [signer autorelease];
-	
 }

@@ -296,17 +296,42 @@ DEF_SINGLETON( BeeUISignalBus )
 	
 	if ( [BeeUIConfig sharedInstance].ASR )
 	{
+		// NSInvocation 调用  TODO: CY
+
+		ImpFuncType prevImp = NULL;
+
 		Method method = class_getInstanceMethod( clazz, sel );
+		
 		if ( method )
 		{
-			IMP imp = method_getImplementation( method );
+			ImpFuncType imp = (ImpFuncType)method_getImplementation( method );
+
 			if ( imp )
 			{
+//				if ( imp == prevImp )
+//				{
+//					continue;
+//				}
+
 				imp( target, sel, signal );
 				
+				prevImp = imp;
+
 				performed = YES;
 			}
 		}
+		
+//		Method method = class_getInstanceMethod( clazz, sel );
+//		if ( method )
+//		{
+//			IMP imp = method_getImplementation( method );
+//			if ( imp )
+//			{
+//				imp( target, sel, signal );
+//
+//				performed = YES;
+//			}
+//		}
 	}
 	else
 	{

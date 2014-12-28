@@ -60,6 +60,7 @@
 		{
 			self.FROM_NAME( [self UIResourceName] );
 		}
+
 		// 没有layout的，不需要去加载xml
 		if ( nil == self.layout )
 		{
@@ -72,7 +73,7 @@
 					if ( nil != self.layout )
 						break;
 				}
-				
+
 				viewClass = class_getSuperclass( viewClass );
 				if ( nil == viewClass || viewClass == [UIResponder class] )
 					break;
@@ -133,7 +134,7 @@
 		[self setTemplateFile:file];
 		return self;
 	};
-	
+
 	return [[block copy] autorelease];
 }
 

@@ -19,6 +19,11 @@
 	NSString * _amount;
 	NSString * _notifyURL;
 	NSMutableDictionary * _extraParams;
+	NSString * _service;
+	NSString * _paymentType;
+	NSString * _inputCharset;
+	NSString * _itBPay;
+	NSString * _showUrl;
 }
 
 @property(nonatomic, copy) NSString * partner;
@@ -28,6 +33,11 @@
 @property(nonatomic, copy) NSString * productDescription;
 @property(nonatomic, copy) NSString * amount;
 @property(nonatomic, copy) NSString * notifyURL;
+@property(nonatomic, copy) NSString * service;
+@property(nonatomic, copy) NSString * paymentType;
+@property(nonatomic, copy) NSString * inputCharset;
+@property(nonatomic, copy) NSString * itBPay;
+@property(nonatomic, copy) NSString * showUrl;
 @property(nonatomic, readonly) NSMutableDictionary * extraParams;
 
 @end
