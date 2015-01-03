@@ -1865,7 +1865,7 @@ static NSOperationQueue *sharedQueue = nil;
 			[invocation setArgument:&object atIndex:argumentNumber];
 			argumentNumber++;
 		}
-		
+
 		// For the amount we'll just pass the pointer directly so NSInvocation will call the method using the number itself rather than a pointer to it
 		if (amount) {
 			[invocation setArgument:amount atIndex:argumentNumber];

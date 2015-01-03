@@ -243,7 +243,7 @@ DEF_NUMBER( ERROR_NOT_SUPPORT, -101 )
 		self.errorDesc = @"Please install weixin";
 		return NO;
 	}
-	
+
 	BOOL support = [WXApi isWXAppSupportApi];
 	if ( NO == support )
 	{

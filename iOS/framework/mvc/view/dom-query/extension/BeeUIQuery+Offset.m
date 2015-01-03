@@ -33,7 +33,6 @@
 
 #import "BeeUIQuery+Offset.h"
 #import "UIView+Metrics.h"
-#import "UIView+BeeUILayout.h"
 
 #pragma mark -
 

@@ -57,7 +57,7 @@ DEF_SINGLETON( ServiceAlipay_Order )
 	order.partner	= [ServiceAlipay_Config sharedInstance].parnter;
 	order.seller	= [ServiceAlipay_Config sharedInstance].seller;
 	order.notifyURL	= [ServiceAlipay_Config sharedInstance].notifyURL;
-    
+
 	if ( self.no && self.no.length )
 	{
 		order.tradeNO = self.no;
@@ -94,10 +94,13 @@ DEF_SINGLETON( ServiceAlipay_Order )
 		order.amount = @"0.00";
 	}
 
+//	order.service = @"mobile.securitypay.pay";
+
 	NSString *		orderDesc = [order description];
+
 	id<DataSigner>	signer = CreateRSADataSigner( [ServiceAlipay_Config sharedInstance].privateKey );
-	
 	NSString * signedString = [signer signString:orderDesc];
+
 	if ( nil == signedString )
 	{
 		ERROR( @"failed to generate order string" );

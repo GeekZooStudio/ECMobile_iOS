@@ -57,7 +57,7 @@ DEF_SINGLETON( BeeUserDefaults )
 {
 	if ( nil == key )
 		return nil;
-	
+
 	id value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
 	return value;
 }

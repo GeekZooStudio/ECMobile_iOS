@@ -65,7 +65,7 @@
 		return nil;
 
 	key = [self persistenceKey:key];
-	
+
 	return [[BeeUserDefaults sharedInstance] objectForKey:key];
 }
 
@@ -166,7 +166,8 @@
 	if ( nil == jsonString || NO == [jsonString isKindOfClass:[NSString class]] )
 		return nil;
 
-	NSObject * decodedObject = [jsonString objectFromJSONStringWithParseOptions:JKParseOptionValidFlags error:nil];
+	NSError * error = [[NSError alloc] init];
+	NSObject * decodedObject = [jsonString objectFromJSONStringWithParseOptions:JKParseOptionValidFlags error:&error];
 	if ( nil == decodedObject )
 		return nil;
 	

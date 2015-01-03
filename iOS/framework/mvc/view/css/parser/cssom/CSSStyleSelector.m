@@ -74,7 +74,7 @@
             return element.classes && [element.classes containsObject:selector.value];
         
         if ( selector.match == MatchId )
-            return element.hash && [element.hash isEqualToString:selector.value];
+            return [element hash] && [[element hash] isEqualToString:selector.value];
         
         // TODO: attribute check
     }
@@ -299,9 +299,9 @@ DEF_SINGLETON( CSSStyleSelector );
 - (void)matchRules:(CSSRuleSet *)ruleSet
 {
     // #id
-    if ( self.element.hash )
+    if ( [self.element hash] )
     {
-        [self matchRulesForList:[ruleSet getIDRules:self.element.hash]];
+        [self matchRulesForList:[ruleSet getIDRules:[self.element hash]]];
     }
     // .class
     for ( NSString * className in self.element.classes )

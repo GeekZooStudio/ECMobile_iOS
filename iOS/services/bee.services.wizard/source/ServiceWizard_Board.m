@@ -88,12 +88,14 @@ ON_CREATE_VIEWS( signal )
 
 	self.list.pagingEnabled = YES;
 	self.list.reuseEnable = NO;
+	self.list.horizontal = YES;
+
 	self.list.whenReloading = ^
 	{
 		@normalize(self);
-		
+
 		self.list.total = service.config.splashes.count;
-		
+
 		for ( BeeUIScrollItem * item in self.list.items )
 		{
 			id cellData = [service.config.splashes objectAtIndex:item.index];
@@ -102,7 +104,7 @@ ON_CREATE_VIEWS( signal )
 			{
 				NSString * resourceName = (NSString *)cellData;
 				NSString * resourceExt = [resourceName pathExtension];
-				
+
 				if ( [resourceExt matchAnyOf:@[@"png", @"jpg", @"jpeg"]] )
 				{
 					item.clazz = [ServiceWizard_PhotoCell class];

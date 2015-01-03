@@ -48,6 +48,7 @@ DEF_SINGLETON( ServiceAlipay_Config )
 - (void)load
 {
 	NSDictionary * config = [[NSString fromResource:@"alipay.json"] objectFromJSONString];
+
 	if ( config )
 	{
 		self.parnter	 = [config objectForKey:@"partner"];
