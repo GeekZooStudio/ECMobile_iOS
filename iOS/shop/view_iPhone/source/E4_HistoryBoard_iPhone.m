@@ -167,7 +167,7 @@ ON_SIGNAL2( E4_HistoryCell_iPhone, signal )
 {
     E4_HistoryCell_iPhone * cell = (E4_HistoryCell_iPhone *)signal.source;
     
-    if ( [ExpressModel kuaidi100Key] )
+	if ( [ExpressModel kuaidi100Key] )
 	{
 		E6_ShippingStatusBoard_iPhone * board = [E6_ShippingStatusBoard_iPhone board];
 		board.expressModel.order = cell.order;

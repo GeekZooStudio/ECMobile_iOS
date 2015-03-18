@@ -58,31 +58,31 @@ ON_CREATE_VIEWS( signal )
 {
     self.navigationBarShown = YES;
     self.navigationBarTitle = __TEXT(@"ecmobile");
-
+    
     /**
      * BeeFramework中scrollView使用方式由0.4.0改为0.5.0
      * 将board中BeeUIScrollView对应的signal转换为block的实现方式
      * BeeUIScrollView的block方式写法可以从它对应的delegate方法中转换而来
      */
-    
+
     @weakify(self);
 
     self.list.headerClass = [CommonPullLoader class];
     self.list.headerShown = YES;
-    
+
     self.list.lineCount = 1;
     self.list.animationDuration = 0.25f;
-    
+
     self.list.whenReloading = ^
     {
         @normalize(self);
-        
+
         self.list.total = self.bannerModel.banners.count ? 1 : 0;
         self.list.total += self.bannerModel.goods.count ? 1 : 0;
         self.list.total += self.categoryModel.categories.count;
-    
+
         int offset = 0;
-            
+		
         if ( self.bannerModel.banners.count )
         {
             BeeUIScrollItem * banner = self.list.items[offset];
@@ -91,7 +91,7 @@ ON_CREATE_VIEWS( signal )
             banner.size = CGSizeMake( self.list.width, 150.0f);
             banner.rule = BeeUIScrollLayoutRule_Line;
             banner.insets = UIEdgeInsetsMake(0, 0, 0, 0);
-			
+
             offset += 1;
         }
 
@@ -304,7 +304,7 @@ ON_SIGNAL3( B0_IndexRecommendGoodsCell_iPhone, mask, signal )
 	}
 }
 
-#pragma mark -
+#pragma mark - 
 
 ON_MESSAGE3( API, home_data, msg )
 {

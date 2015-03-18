@@ -42,7 +42,7 @@ SUPPORT_RESOURCE_LOADING( YES )
         $(@"#cart-goods-price").TEXT(@"0.00");
     }
 	
-    if ( [ExpressModel kuaidi100Key] )
+	if ( [ExpressModel kuaidi100Key] )
 	{
 		$(@"#shipping").SHOW();
 	}

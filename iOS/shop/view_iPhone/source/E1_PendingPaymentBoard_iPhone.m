@@ -316,13 +316,14 @@ ON_SIGNAL3( E1_PendingPaymentBoard_iPhone, PAY_WAP, signal )
 	ORDER * order = (ORDER *)signal.object;
 	
 	ALIAS( bee.services.alipay,	alipay );
+
 	// 待付款
 	H1_PayBoard_iPhone * board = [H1_PayBoard_iPhone board];
 	board.backBoard 		   = self;
 	board.orderID 			   = order.order_id;
 	board.order_info 		   = order.order_info;
 	board.wapCallBackURL 	   = alipay.config.wapCallBackURL;
-	
+
 	[self.stack pushBoard:board animated:YES];
 }
 

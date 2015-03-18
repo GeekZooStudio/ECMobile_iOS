@@ -65,16 +65,16 @@ ON_CREATE_VIEWS( signal )
     self.list.whenReloading = ^
     {
         @normalize(self);
-        
+
         self.list.total = 1;
-        
+
         BeeUIScrollItem * item = self.list.items[0];
         item.clazz = [F1_NewAddressCell_iPhone class];
         item.size = self.list.size;
         item.data = self.address;
         item.rule = BeeUIScrollLayoutRule_Tile;
     };
-    
+
     [self observeNotification:BeeUIKeyboard.HIDDEN];
     [self observeNotification:BeeUIKeyboard.HEIGHT_CHANGED];
     [self observeNotification:BeeUIKeyboard.SHOWN];
@@ -104,13 +104,19 @@ ON_DID_APPEAR( signal )
     {
         [self presentMessageTips:__TEXT(@"non_address")];
     }
-    
+
     [self.list reloadData];
-    
-    UIView * item = ((BeeUIScrollItem *)self.list.items[0]).view;
+
+	UIView * item = nil;
+
+	if ( self.list.items.count )
+	{
+		item = ((BeeUIScrollItem *)self.list.items[0]).view;
+	}
+	
     if ( nil == item )
 		return;
-    
+
     $(item).FIND(@"#location-label").TEXT( self.address.region );
     
     $(item).FIND(@"email").DATA( [UserModel sharedInstance].user.email );

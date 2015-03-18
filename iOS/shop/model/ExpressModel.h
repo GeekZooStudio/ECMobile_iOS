@@ -24,6 +24,5 @@
 @property (nonatomic, retain) NSMutableArray *	content;
 
 + (NSString *)kuaidi100Key;
-+ (void)setKuaidi100Key:(NSString *)key;
 
 @end

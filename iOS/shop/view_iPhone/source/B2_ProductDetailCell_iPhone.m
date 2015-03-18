@@ -90,6 +90,8 @@ DEF_OUTLET( BeeUIScrollView, list )
         if ( goodsModel.goods.pictures && goodsModel.goods.pictures.count > 0 )
         {
             _pictures = goodsModel.goods.pictures;
+            
+            $(@"#list").SHOW();
         }
         else
         {

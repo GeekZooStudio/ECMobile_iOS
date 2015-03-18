@@ -421,7 +421,7 @@ ON_NOTIFICATION3( UserModel, UPDATED, notification )
             [self.list showHeaderLoader:NO animated:NO];
         }
 	}
-    
+
 	[self.list reloadData];
 }
 

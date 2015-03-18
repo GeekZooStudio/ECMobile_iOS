@@ -38,7 +38,7 @@ DEF_OUTLET( BeeUISwitch, tencent_weibo )
         
         [self setLogin:[self.data[@"user_online"] boolValue]];
         [self setPhotoMode:[self.data[@"setting_picture"] integerValue]];
-								
+												
         self.sina_weibo.on = [self.data[@"sina_weibo"] boolValue];
         self.tencent_weibo.on = [self.data[@"tencent_weibo"] boolValue];
     }
