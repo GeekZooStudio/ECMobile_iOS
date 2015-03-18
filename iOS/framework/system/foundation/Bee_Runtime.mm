@@ -555,7 +555,6 @@ DEF_SINGLETON( BeeRuntime )
 
 		[results addObject:classType];
 	}
-	
 	return results;
 }
 
