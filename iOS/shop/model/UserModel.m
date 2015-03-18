@@ -54,7 +54,7 @@ DEF_NOTIFICATION( UPDATED )
 - (UIImage *)avatar
 {
     NSString * avatarPath = [NSString stringWithFormat:@"%@/avatar-u-%@.png", [BeeSandbox libCachePath], self.user.id];
-    
+
     if ( [[NSFileManager defaultManager] fileExistsAtPath:avatarPath] )
     {
         NSData * data = [NSData dataWithContentsOfFile:avatarPath];

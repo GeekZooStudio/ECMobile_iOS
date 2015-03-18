@@ -69,8 +69,8 @@ DEF_MODEL( UserModel,	userModel )
 #pragma mark -
 
 - (void)load
-{
-	self.configModel = [ConfigModel modelWithObserver:self];
+{	
+    self.configModel = [ConfigModel modelWithObserver:self];
 	self.userModel = [UserModel modelWithObserver:self];
 }
 
@@ -92,7 +92,7 @@ ON_SIGNAL2( BeeUIBoard, signal )
 		bee.ui.router[self.TAB_SEARCH]	= [D0_SearchBoard_iPhone class];
 		bee.ui.router[self.TAB_CART]	= [C0_ShoppingCartBoard_iPhone class];
 		bee.ui.router[self.TAB_USER]	= [E0_ProfileBoard_iPhone sharedInstance];
-		
+
 		[self.view addSubview:bee.ui.router.view];
 		[self.view addSubview:bee.ui.tabbar];
 
@@ -102,6 +102,7 @@ ON_SIGNAL2( BeeUIBoard, signal )
 		[self observeNotification:UserModel.LOGIN];
 		[self observeNotification:UserModel.LOGOUT];
 		[self observeNotification:UserModel.KICKOUT];
+
 //		[self observeNotification:BeeNetworkReachability.WIFI_REACHABLE];
 //		[self observeNotification:BeeNetworkReachability.WLAN_REACHABLE];
 //		[self observeNotification:BeeNetworkReachability.UNREACHABLE];
@@ -153,7 +154,7 @@ ON_SIGNAL2( BeeUIBoard, signal )
 
 ON_SIGNAL3( AppBoard_iPhone, EXPIRE_TOUCHED, signal )
 {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.ecmobile.me"]];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.ecmobile.cn"]];
 }
 
 #pragma mark -

@@ -219,6 +219,7 @@ ON_MESSAGE3( API, order_pay, msg )
 	if ( msg.succeed )
 	{
 		STATUS * status = msg.GET_OUTPUT( @"status" );
+
 		if ( NO == status.succeed.boolValue )
 		{
 			msg.failed = YES;

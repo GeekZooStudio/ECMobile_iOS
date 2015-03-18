@@ -90,7 +90,6 @@ ON_CREATE_VIEWS(signal)
     self.list.reuseEnable = NO;
     self.list.whenReloading = ^
     {
-        
         @normalize(self);
         
         self.list.total = 1;

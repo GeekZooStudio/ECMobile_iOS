@@ -34,13 +34,13 @@ DEF_OUTLET( BeeUIPageControl, pager )
      */
 
     @weakify(self);
-    
+
     self.list.animationDuration = 0.25f;
-    
-    self.list.whenReloading = ^
+
+	self.list.whenReloading = ^
     {
         @normalize(self);
-        
+
         NSArray * datas = (NSArray *)self.data;
         
         self.list.total = datas.count;

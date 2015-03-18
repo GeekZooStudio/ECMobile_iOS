@@ -584,7 +584,7 @@ DEF_MESSAGE_( address_list, msg )
 
 //		NSString * requestURI = @"http://shop.ecmobile.me/ecmobile/?url=address/list";
 		NSString * requestURI = [NSString stringWithFormat:@"%@/address/list", [ServerConfig sharedInstance].url];
-		
+
 		msg.HTTP_POST( requestURI ).PARAM( @"json", requestBody.objectToString );
 	}
 	else if ( msg.succeed )
@@ -601,7 +601,6 @@ DEF_MESSAGE_( address_list, msg )
 
 		msg.OUTPUT( @"status", status );
 		msg.OUTPUT( @"data", data );
-
 	}
 	else if ( msg.failed )
 	{

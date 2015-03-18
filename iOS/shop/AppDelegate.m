@@ -52,7 +52,7 @@
 	[UserModel			sharedInstance];
 
 	// 配置ECSHOP
-	[ServerConfig sharedInstance].url = @"http://shop.ecmobile.me/ecmobile/?url=";
+	[ServerConfig sharedInstance].url = @"http://shop.ecmobile.cn/ecmobile/?url=";
 
 	// 配置闪屏
 	bee.services.wizard.config.showBackground = YES;
@@ -92,7 +92,7 @@
 			[BeeUINavigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg.png"]];
 		}
 	}
-	
+		
 	[self updateConfig];
 	
 	self.window.rootViewController = [AppBoard_iPhone sharedInstance];
@@ -119,40 +119,37 @@
 	ALIAS( bee.services.location,			lbs );
 
 	// 配置微信
-	weixin.config.appId			= @"<Your weixinID>";
-	weixin.config.appKey		= @"<Your weixinKey>";
-	
+	weixin.config.appId			= @"Your weixinID";
+	weixin.config.appKey		= @"Your weixinKey";
+
 	// 配置新浪
-	sweibo.config.appKey		= @"<Your sinaWeiboKey>";
-	sweibo.config.appSecret		= @"<Your sinaWeiboSecret>";
-	sweibo.config.redirectURI	= @"<Your sinaWeiboCallback>";
-	
+	sweibo.config.appKey		= @"Your sinaWeiboKey";
+	sweibo.config.appSecret		= @"Your sinaWeiboSecret";
+	sweibo.config.redirectURI	= @"Your sinaWeiboCallback";
+
 	// 配置腾讯
-	tweibo.config.appKey		= @"<Your tencentWeiboKey>";
-	tweibo.config.appSecret		= @"<Your tencentWeiboSecret>";
-	tweibo.config.redirectURI	= @"<Your tencentWeiboCallback>";
-	
+	tweibo.config.appKey		= @"Your tencentWeiboKey";
+	tweibo.config.appSecret		= @"Your tencentWeiboSecret";
+	tweibo.config.redirectURI	= @"Your tencentWeiboCallback";
+
 	// 配置支付宝
-	alipay.config.parnter		= @"<Your alipayPartnerID>";
-	alipay.config.seller		= @"<Your alipaySeller>";
-	alipay.config.privateKey	= @"<Your alipayPrivateKey>";
-	alipay.config.publicKey		= @"<Your alipayPublicKey>";
-	alipay.config.notifyURL		= @"<Your alipayCallback>";
-	alipay.config.wapCallBackURL	= @"<Your alipayWapURL>";
+	alipay.config.parnter		= @"Your alipayPartnerID";
+	alipay.config.seller		= @"Your alipaySeller";
+	alipay.config.privateKey	= @"Your alipayPrivateKey";
+	alipay.config.publicKey		= @"Your alipayPublicKey";
+	alipay.config.notifyURL		= @"Your alipayCallback";
+	alipay.config.wapCallBackURL = @"http://shop.ecmobile.cn/ecmobile/payment/app_callback.php?err=";
 
 	// 配置语音识别
 	siri.config.showUI			= NO;
-	siri.config.appID			= @"<Your iflyKey>";
+	siri.config.appID			= @"Your iflyKey";
 
 	// 配置友盟
 	[MobClick setAppVersion:[BeeSystemInfo appShortVersion]];
 	[MobClick setCrashReportEnabled:YES];
 	[MobClick setLatitude:lbs.location.coordinate.latitude longitude:lbs.location.coordinate.longitude];
 	[MobClick setLocation:lbs.location];
-	[MobClick startWithAppkey:@"<Your umengKey>" reportPolicy:BATCH channelId:nil];
-	
-	// 配置快递100
-	[ExpressModel setKuaidi100Key:@"<Your kuaidi100Key>"];
+	[MobClick startWithAppkey:@"Your umengKey" reportPolicy:BATCH channelId:nil];
 }
 
 @end

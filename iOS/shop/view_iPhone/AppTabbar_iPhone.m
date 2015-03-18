@@ -36,7 +36,7 @@ SUPPORT_RESOURCE_LOADING( YES )
 
 	$(@"#badge-bg").HIDE();
 	$(@"#badge").HIDE();
-	
+
 	[self selectHome];
 }
 
@@ -115,7 +115,7 @@ ON_NOTIFICATION3( UserModel, LOGOUT, notification )
 ON_NOTIFICATION3( UserModel, LOGIN, notification )
 {
 	NSUInteger count = 0;
-	
+
 	for ( CART_GOODS * goods in [CartModel sharedInstance].goods )
 	{
 		count += goods.goods_number.intValue;
