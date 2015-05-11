@@ -29,7 +29,7 @@ AS_SIGNAL( TAPPED )
 /**
  * 个人中心-我的收藏-商品，收藏被取消时执行该事件
  */
-AS_SIGNAL( DELETE )
+AS_SIGNAL( REMOVE )
 @property (nonatomic, assign) BOOL isEditing;
 
 @end

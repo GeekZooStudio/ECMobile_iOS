@@ -41,7 +41,7 @@ static AlixPay * safepayClient = nil;
 	
 	//采用SBjson将params转化为json格式的字符串
 	NSString * jsonString = [oderParams JSONString];
-
+	
 	//将数据拼接成符合alipay规范的Url
     //注意：这里优先接入独立快捷支付客户端
 	NSString * urlSafypayString = [NSString stringWithFormat:@"safepay://alipayclient/?%@", 

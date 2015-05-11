@@ -105,9 +105,15 @@ ON_DID_APPEAR( signal )
         [self presentMessageTips:__TEXT(@"non_address")];
     }
     
+	UIView * item = nil;
+
+	if ( self.list.items.count )
+	{
+		item = ((BeeUIScrollItem *)self.list.items[0]).view;
+	}
+
     [self.list reloadData];
     
-    UIView * item = ((BeeUIScrollItem *)self.list.items[0]).view;
     if ( nil == item )
 		return;
     

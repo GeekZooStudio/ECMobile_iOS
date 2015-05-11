@@ -62,7 +62,6 @@
 		6324A4241754FC7700372FD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A4161754FC7700372FD7 /* UIKit.framework */; };
 		6324A91E1755AA8300372FD7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A91D1755AA8300372FD7 /* AudioToolbox.framework */; };
 		9D67C6041A4A7BBC003ABA05 /* bee.services.alipay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C21C1A4A7BBA003ABA05 /* bee.services.alipay.m */; };
-		9D67C6051A4A7BBC003ABA05 /* bee.services.alipay.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C21D1A4A7BBA003ABA05 /* bee.services.alipay.md */; };
 		9D67C6061A4A7BBC003ABA05 /* ServiceAlipay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2201A4A7BBA003ABA05 /* ServiceAlipay.m */; };
 		9D67C6071A4A7BBC003ABA05 /* ServiceAlipay_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2221A4A7BBA003ABA05 /* ServiceAlipay_Config.m */; };
 		9D67C6081A4A7BBC003ABA05 /* ServiceAlipay_Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2241A4A7BBA003ABA05 /* ServiceAlipay_Order.m */; };
@@ -75,14 +74,11 @@
 		9D67C60F1A4A7BBC003ABA05 /* MD5DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2361A4A7BBA003ABA05 /* MD5DataSigner.m */; };
 		9D67C6101A4A7BBC003ABA05 /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2381A4A7BBA003ABA05 /* RSADataSigner.m */; };
 		9D67C6111A4A7BBC003ABA05 /* openssl_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2661A4A7BBA003ABA05 /* openssl_wrapper.m */; };
-		9D67C6121A4A7BBC003ABA05 /* libalixpay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D67C2891A4A7BBA003ABA05 /* libalixpay.a */; };
 		9D67C6131A4A7BBC003ABA05 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D67C28A1A4A7BBA003ABA05 /* libcrypto.a */; };
 		9D67C6141A4A7BBC003ABA05 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D67C28B1A4A7BBA003ABA05 /* libssl.a */; };
 		9D67C6151A4A7BBC003ABA05 /* bee.services.location.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C28E1A4A7BBA003ABA05 /* bee.services.location.m */; };
-		9D67C6161A4A7BBC003ABA05 /* bee.services.location.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C28F1A4A7BBA003ABA05 /* bee.services.location.md */; };
 		9D67C6171A4A7BBC003ABA05 /* ServiceLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2921A4A7BBA003ABA05 /* ServiceLocation.m */; };
 		9D67C6181A4A7BBC003ABA05 /* bee.services.push.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2951A4A7BBA003ABA05 /* bee.services.push.m */; };
-		9D67C6191A4A7BBC003ABA05 /* bee.services.push.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2961A4A7BBA003ABA05 /* bee.services.push.md */; };
 		9D67C61A1A4A7BBC003ABA05 /* ServicePush.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2991A4A7BBA003ABA05 /* ServicePush.m */; };
 		9D67C61B1A4A7BBC003ABA05 /* ServicePush_Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C29B1A4A7BBA003ABA05 /* ServicePush_Notification.m */; };
 		9D67C61C1A4A7BBC003ABA05 /* bee.services.share.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C29E1A4A7BBB003ABA05 /* bee.services.share.m */; };
@@ -97,24 +93,20 @@
 		9D67C6251A4A7BBC003ABA05 /* ServiceShare_Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2AE1A4A7BBB003ABA05 /* ServiceShare_Utility.m */; };
 		9D67C6261A4A7BBC003ABA05 /* ServiceShare_Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2B01A4A7BBB003ABA05 /* ServiceShare_Window.m */; };
 		9D67C6271A4A7BBC003ABA05 /* bee.services.share.sinaweibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2B31A4A7BBB003ABA05 /* bee.services.share.sinaweibo.m */; };
-		9D67C6281A4A7BBC003ABA05 /* bee.services.share.sinaweibo.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2B41A4A7BBB003ABA05 /* bee.services.share.sinaweibo.md */; };
 		9D67C6291A4A7BBC003ABA05 /* ServiceShare_SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2B71A4A7BBB003ABA05 /* ServiceShare_SinaWeibo.m */; };
 		9D67C62A1A4A7BBC003ABA05 /* ServiceShare_SinaWeibo_API.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2B91A4A7BBB003ABA05 /* ServiceShare_SinaWeibo_API.m */; };
 		9D67C62B1A4A7BBC003ABA05 /* ServiceShare_SinaWeibo_AuthorizeBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2BB1A4A7BBB003ABA05 /* ServiceShare_SinaWeibo_AuthorizeBoard.m */; };
 		9D67C62C1A4A7BBC003ABA05 /* ServiceShare_SinaWeibo_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2BD1A4A7BBB003ABA05 /* ServiceShare_SinaWeibo_Config.m */; };
 		9D67C62D1A4A7BBC003ABA05 /* bee.services.share.tencentweibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2C01A4A7BBB003ABA05 /* bee.services.share.tencentweibo.m */; };
-		9D67C62E1A4A7BBC003ABA05 /* bee.services.share.tencentweibo.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2C11A4A7BBB003ABA05 /* bee.services.share.tencentweibo.md */; };
 		9D67C62F1A4A7BBC003ABA05 /* ServiceShare_TencentWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2C41A4A7BBB003ABA05 /* ServiceShare_TencentWeibo.m */; };
 		9D67C6301A4A7BBC003ABA05 /* ServiceShare_TencentWeibo_API.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2C61A4A7BBB003ABA05 /* ServiceShare_TencentWeibo_API.m */; };
 		9D67C6311A4A7BBC003ABA05 /* ServiceShare_TencentWeibo_AuthorizeBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2C81A4A7BBB003ABA05 /* ServiceShare_TencentWeibo_AuthorizeBoard.m */; };
 		9D67C6321A4A7BBC003ABA05 /* ServiceShare_TencentWeibo_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2CA1A4A7BBB003ABA05 /* ServiceShare_TencentWeibo_Config.m */; };
 		9D67C6331A4A7BBC003ABA05 /* bee.services.share.weixin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2CD1A4A7BBB003ABA05 /* bee.services.share.weixin.m */; };
-		9D67C6341A4A7BBC003ABA05 /* bee.services.share.weixin.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2CE1A4A7BBB003ABA05 /* bee.services.share.weixin.md */; };
 		9D67C6351A4A7BBC003ABA05 /* ServiceShare_Weixin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2D11A4A7BBB003ABA05 /* ServiceShare_Weixin.m */; };
 		9D67C6361A4A7BBC003ABA05 /* ServiceShare_Weixin_Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2D31A4A7BBB003ABA05 /* ServiceShare_Weixin_Config.m */; };
 		9D67C6371A4A7BBC003ABA05 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D67C2D61A4A7BBB003ABA05 /* libWeChatSDK.a */; };
 		9D67C6381A4A7BBC003ABA05 /* bee.services.siri.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2DB1A4A7BBB003ABA05 /* bee.services.siri.m */; };
-		9D67C6391A4A7BBC003ABA05 /* bee.services.siri.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2DC1A4A7BBB003ABA05 /* bee.services.siri.md */; };
 		9D67C63A1A4A7BBC003ABA05 /* ServiceSiri.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2DF1A4A7BBB003ABA05 /* ServiceSiri.m */; };
 		9D67C63B1A4A7BBC003ABA05 /* ServiceSiri_Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2E11A4A7BBB003ABA05 /* ServiceSiri_Board.m */; };
 		9D67C63C1A4A7BBC003ABA05 /* ServiceSiri_Board.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9D67C2E21A4A7BBB003ABA05 /* ServiceSiri_Board.xml */; };
@@ -125,7 +117,6 @@
 		9D67C6411A4A7BBC003ABA05 /* ServiceUPPayPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2EE1A4A7BBB003ABA05 /* ServiceUPPayPlugin.m */; };
 		9D67C6421A4A7BBC003ABA05 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D67C2F01A4A7BBB003ABA05 /* libUPPayPlugin.a */; };
 		9D67C6431A4A7BBC003ABA05 /* bee.services.wizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2F51A4A7BBB003ABA05 /* bee.services.wizard.m */; };
-		9D67C6441A4A7BBC003ABA05 /* bee.services.wizard.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2F61A4A7BBB003ABA05 /* bee.services.wizard.md */; };
 		9D67C6451A4A7BBC003ABA05 /* ServiceWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2F91A4A7BBB003ABA05 /* ServiceWizard.m */; };
 		9D67C6461A4A7BBC003ABA05 /* ServiceWizard_Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D67C2FB1A4A7BBB003ABA05 /* ServiceWizard_Board.m */; };
 		9D67C6471A4A7BBC003ABA05 /* ServiceWizard_Board.xml in Resources */ = {isa = PBXBuildFile; fileRef = 9D67C2FC1A4A7BBB003ABA05 /* ServiceWizard_Board.xml */; };
@@ -908,6 +899,7 @@
 		CB9C242718BB3B0C00DDA501 /* H0_BrowserBoard_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9C228F18BB3B0C00DDA501 /* H0_BrowserBoard_iPhone.m */; };
 		CB9C242818BB3B0C00DDA501 /* H1_PayBoard_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9C229118BB3B0C00DDA501 /* H1_PayBoard_iPhone.m */; };
 		CBA7147518ADC9560079B2A7 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA7147418ADC9560079B2A7 /* SettingModel.m */; };
+		E91795051B00A81D00179802 /* WXPayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E91795041B00A81D00179802 /* WXPayModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1084,7 +1076,6 @@
 		9D67C2851A4A7BBA003ABA05 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
 		9D67C2861A4A7BBA003ABA05 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
 		9D67C2871A4A7BBA003ABA05 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
-		9D67C2891A4A7BBA003ABA05 /* libalixpay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libalixpay.a; sourceTree = "<group>"; };
 		9D67C28A1A4A7BBA003ABA05 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		9D67C28B1A4A7BBA003ABA05 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		9D67C28D1A4A7BBA003ABA05 /* bee.services.location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bee.services.location.h; sourceTree = "<group>"; };
@@ -2460,6 +2451,8 @@
 		CB9C229118BB3B0C00DDA501 /* H1_PayBoard_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H1_PayBoard_iPhone.m; sourceTree = "<group>"; };
 		CBA7147318ADC9560079B2A7 /* SettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
 		CBA7147418ADC9560079B2A7 /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
+		E91795031B00A81D00179802 /* WXPayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPayModel.h; sourceTree = "<group>"; };
+		E91795041B00A81D00179802 /* WXPayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPayModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2475,7 +2468,6 @@
 				6324A41A1754FC7700372FD7 /* AVFoundation.framework in Frameworks */,
 				9D67C6371A4A7BBC003ABA05 /* libWeChatSDK.a in Frameworks */,
 				6324A41B1754FC7700372FD7 /* CFNetwork.framework in Frameworks */,
-				9D67C6121A4A7BBC003ABA05 /* libalixpay.a in Frameworks */,
 				1848BD7E18B4D8690007238A /* libMobClickLibrary.a in Frameworks */,
 				6324A41C1754FC7700372FD7 /* CoreMedia.framework in Frameworks */,
 				6324A41D1754FC7700372FD7 /* CoreVideo.framework in Frameworks */,
@@ -2867,7 +2859,6 @@
 		9D67C2881A4A7BBA003ABA05 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				9D67C2891A4A7BBA003ABA05 /* libalixpay.a */,
 				9D67C28A1A4A7BBA003ABA05 /* libcrypto.a */,
 				9D67C28B1A4A7BBA003ABA05 /* libssl.a */,
 			);
@@ -4517,6 +4508,8 @@
 				CB81D0CA18ABB3EE00F277EA /* UserModel.m */,
 				CB81D0CB18ABB3EE00F277EA /* ValidateModel.h */,
 				CB81D0CC18ABB3EE00F277EA /* ValidateModel.m */,
+				E91795031B00A81D00179802 /* WXPayModel.h */,
+				E91795041B00A81D00179802 /* WXPayModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -5193,11 +5186,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "geek-zoo studio";
-				TargetAttributes = {
-					63249C9A1754E07900372FD7 = {
-						DevelopmentTeam = 26R8TYMFHL;
-					};
-				};
 			};
 			buildConfigurationList = 63249C961754E07900372FD7 /* Build configuration list for PBXProject "shop" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -5595,7 +5583,6 @@
 				9D67CBDD1A4A7EAB003ABA05 /* CXMLElement.m in Sources */,
 				9D67CB651A4A7EAB003ABA05 /* UIView+BeeUITemplate.m in Sources */,
 				CB9C23C618BB3B0C00DDA501 /* C2_PaymentCell_iPhone.m in Sources */,
-				9D67C6051A4A7BBC003ABA05 /* bee.services.alipay.md in Sources */,
 				9D67CACB1A4A7EAA003ABA05 /* BeeUIStyle+Property.m in Sources */,
 				6302390D177C1676004C052D /* controller.m in Sources */,
 				9D67CBCA1A4A7EAB003ABA05 /* ASIDataDecompressor.m in Sources */,
@@ -5667,7 +5654,6 @@
 				9D67CB3A1A4A7EAA003ABA05 /* UITextField+BeeUILayout.m in Sources */,
 				9D67CB941A4A7EAB003ABA05 /* Bee_UnitTest.m in Sources */,
 				9D67CAB11A4A7EAA003ABA05 /* UIImage+BeeExtension.m in Sources */,
-				9D67C6391A4A7BBC003ABA05 /* bee.services.siri.md in Sources */,
 				9D67CB001A4A7EAA003ABA05 /* Bee_UIPickerView.m in Sources */,
 				9D67CB4C1A4A7EAB003ABA05 /* BeeUIQuery+Manipulation.m in Sources */,
 				9D67CB3F1A4A7EAA003ABA05 /* UIImageView+LayoutParser.m in Sources */,
@@ -5713,7 +5699,6 @@
 				CB9C238718BB3B0C00DDA501 /* B1_ProductListLargeCell_Phone.m in Sources */,
 				9D67CBB91A4A7EAB003ABA05 /* Bee_HTTPServerConfig2.m in Sources */,
 				CB9C23D118BB3B0C00DDA501 /* D0_SearchBoard_iPhone.m in Sources */,
-				9D67C6441A4A7BBC003ABA05 /* bee.services.wizard.md in Sources */,
 				CB81D26718ABB3F000F277EA /* CollectionModel.m in Sources */,
 				9D67CBD91A4A7EAB003ABA05 /* CXHTMLDocument.m in Sources */,
 				CB9C23C418BB3B0C00DDA501 /* C2_PaymentBoard_iPhone.m in Sources */,
@@ -5812,7 +5797,6 @@
 				9D67C6481A4A7BBC003ABA05 /* ServiceWizard_Config.m in Sources */,
 				CB9C22AA18BB3B0C00DDA501 /* FormPlainInputCell.m in Sources */,
 				CB81D26118ABB3F000F277EA /* ArticleGroupModel.m in Sources */,
-				9D67C6191A4A7BBC003ABA05 /* bee.services.push.md in Sources */,
 				9D67CAD11A4A7EAA003ABA05 /* UIPageControl+BeeUIStyle.m in Sources */,
 				9D67C6311A4A7BBC003ABA05 /* ServiceShare_TencentWeibo_AuthorizeBoard.m in Sources */,
 				9D67C6261A4A7BBC003ABA05 /* ServiceShare_Window.m in Sources */,
@@ -5922,7 +5906,6 @@
 				CB9C22A118BB3B0C00DDA501 /* UIViewController+ErrorTips.m in Sources */,
 				9D67CADE1A4A7EAA003ABA05 /* Bee_UIAnimation.m in Sources */,
 				CB9C23A718BB3B0C00DDA501 /* C0_ShoppingCartBoard_iPhone.m in Sources */,
-				9D67C6161A4A7BBC003ABA05 /* bee.services.location.md in Sources */,
 				9D67CAEF1A4A7EAA003ABA05 /* UIView+BeeExtension.m in Sources */,
 				9D67CB741A4A7EAB003ABA05 /* Bee_SystemConfig.mm in Sources */,
 				9D67CACD1A4A7EAA003ABA05 /* UIButton+BeeUIStyle.m in Sources */,
@@ -5932,7 +5915,6 @@
 				9D67CB8B1A4A7EAB003ABA05 /* Bee_Foundation.mm in Sources */,
 				9D67C6181A4A7BBC003ABA05 /* bee.services.push.m in Sources */,
 				CB9C23AC18BB3B0C00DDA501 /* C0_ShoppingCartEditCell_iPhone.m in Sources */,
-				9D67C6281A4A7BBC003ABA05 /* bee.services.share.sinaweibo.md in Sources */,
 				9D67C6251A4A7BBC003ABA05 /* ServiceShare_Utility.m in Sources */,
 				CB9C241718BB3B0C00DDA501 /* F3_RegionPickBoard_iPhone.m in Sources */,
 				9D67CAA81A4A7EAA003ABA05 /* NSObject+BeeMessage.mm in Sources */,
@@ -6014,7 +5996,6 @@
 				9D67CAC11A4A7EAA003ABA05 /* UIViewController+LifeCycle.m in Sources */,
 				CB81D9D118ABB4C000F277EA /* ADDRESS+Region.m in Sources */,
 				9D67CB5A1A4A7EAB003ABA05 /* BeeUISignal+SourceModel.m in Sources */,
-				9D67C6341A4A7BBC003ABA05 /* bee.services.share.weixin.md in Sources */,
 				9D67C6041A4A7BBC003ABA05 /* bee.services.alipay.m in Sources */,
 				9D67CB131A4A7EAA003ABA05 /* UIView+Metrics.m in Sources */,
 				9D67CA9B1A4A7EAA003ABA05 /* Bee_Version.mm in Sources */,
@@ -6024,6 +6005,7 @@
 				9D67CBDB1A4A7EAB003ABA05 /* CXMLDocument_CreationExtensions.m in Sources */,
 				9D67CB4B1A4A7EAB003ABA05 /* BeeUIQuery+Events.m in Sources */,
 				9D67CB261A4A7EAA003ABA05 /* BeeUIZoomImageView+BeeUIStyle.m in Sources */,
+				E91795051B00A81D00179802 /* WXPayModel.m in Sources */,
 				CB9C238918BB3B0C00DDA501 /* B1_ProductListSearchBarCell_iPhone.m in Sources */,
 				9D67CB791A4A7EAB003ABA05 /* Bee_Keychain.mm in Sources */,
 				CB81D27A18ABB3F000F277EA /* SearchKeywordsModel.m in Sources */,
@@ -6053,7 +6035,6 @@
 				9D67CBD31A4A7EAB003ABA05 /* FMDatabaseQueue.m in Sources */,
 				9D67CB841A4A7EAB003ABA05 /* Bee_SQLITE.m in Sources */,
 				9D67CAE21A4A7EAA003ABA05 /* Bee_UIAnimationStyling.m in Sources */,
-				9D67C62E1A4A7BBC003ABA05 /* bee.services.share.tencentweibo.md in Sources */,
 				9D67CAFA1A4A7EAA003ABA05 /* Bee_UIKeyboard.m in Sources */,
 				CB9C241318BB3B0C00DDA501 /* F2_EditAddressBoard_iPhone.m in Sources */,
 				9D67CB8C1A4A7EAB003ABA05 /* Bee_Log.mm in Sources */,
@@ -6182,8 +6163,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Donglin Li (C57FZJKD84)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Donglin Li (C57FZJKD84)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/services/bee.services.siri/vendor",
@@ -6207,8 +6188,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ECMobile;
-				PROVISIONING_PROFILE = "1de2cfd1-da71-4c8a-9764-016fafb221eb";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1de2cfd1-da71-4c8a-9764-016fafb221eb";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
@@ -6221,8 +6202,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Donglin Li (C57FZJKD84)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Donglin Li (C57FZJKD84)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/services/bee.services.siri/vendor",
@@ -6246,8 +6227,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ECMobile;
-				PROVISIONING_PROFILE = "1de2cfd1-da71-4c8a-9764-016fafb221eb";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1de2cfd1-da71-4c8a-9764-016fafb221eb";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -6289,8 +6270,8 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Donglin Li (C57FZJKD84)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Donglin Li (C57FZJKD84)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/services/bee.services.siri/vendor",
@@ -6314,8 +6295,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ECMobile;
-				PROVISIONING_PROFILE = "1de2cfd1-da71-4c8a-9764-016fafb221eb";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1de2cfd1-da71-4c8a-9764-016fafb221eb";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;

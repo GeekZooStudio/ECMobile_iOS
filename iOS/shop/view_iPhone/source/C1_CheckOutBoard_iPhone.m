@@ -31,14 +31,14 @@
 #import "E2_PendingShippedBoard_iPhone.h"
 
 #import "bee.services.alipay.h"
-#import "bee.services.uppayplugin.h"
+#import "bee.services.share.weixin.h"
 
 #pragma mark -
 
 @interface C1_CheckOutBoard_iPhone()
 {
     NSUInteger    _lastSlectedBonusIndex;
-    BOOL _shouldCheckOrder;
+    BOOL          _shouldCheckOrder;
 }
 @property (nonatomic, retain) NSArray * avaliableBonus;
 @end
@@ -60,10 +60,12 @@ DEF_SIGNAL( CANCEL_APP )
 
 DEF_MODEL( FlowModel, flowModel )
 DEF_MODEL( OrderModel, orderModel )
+DEF_MODEL( WXPayModel, wxpayModel )
 
 - (void)load
 {
     self.flowModel = [FlowModel modelWithObserver:self];
+    self.wxpayModel = [WXPayModel modelWithObserver:self];
 	self.orderModel = [OrderModel modelWithObserver:self];
 	self.orderModel.type = ORDER_LIST_AWAIT_PAY;
 }
@@ -72,6 +74,7 @@ DEF_MODEL( OrderModel, orderModel )
 {
 	SAFE_RELEASE_MODEL( self.flowModel );
 	SAFE_RELEASE_MODEL( self.orderModel );
+    SAFE_RELEASE_MODEL( self.wxpayModel );
 }
 
 #pragma mark -
@@ -188,16 +191,75 @@ ON_SIGNAL3( C1_CheckOutBoard_iPhone, ACTION_PAY, signal )
 			board.orderID				= self.flowModel.order_id;
 			board.order_info			= self.flowModel.order_info;
 			[self.stack pushBoard:board animated:YES];
-		}
-		else if ( NSOrderedSame == [order_info.pay_code compare:@"paypal" options:NSCaseInsensitiveSearch] )
-		{
-			H1_PayBoard_iPhone * board	= [H1_PayBoard_iPhone board];
-			board.backBoard				= self.previousBoard;
-			board.orderID				= self.flowModel.order_id;
-			board.order_info			= self.flowModel.order_info;
-			[self.stack pushBoard:board animated:YES];
-		}
+        }
+        else if ( NSOrderedSame == [order_info.pay_code compare:@"paypal" options:NSCaseInsensitiveSearch] )
+        {
+            H1_PayBoard_iPhone * board	= [H1_PayBoard_iPhone board];
+            board.backBoard				= self.previousBoard;
+            board.orderID				= self.flowModel.order_id;
+            board.order_info			= self.flowModel.order_info;
+            [self.stack pushBoard:board animated:YES];
+        }
+        else if ( NSOrderedSame == [order_info.pay_code compare:@"wxpay" options:NSCaseInsensitiveSearch] )
+        {
+            self.wxpayModel.order_id = self.flowModel.order_id;
+            [self.wxpayModel pay];
+        }
 	}
+}
+
+ON_SIGNAL3( WXPayModel, RELOADING, signal )
+{
+    [self presentMessageTips:@"加载支付信息"];
+}
+
+ON_SIGNAL3( WXPayModel, RELOADED, signal )
+{
+    ALIAS( bee.services.share.weixin,	wxpay );
+    
+    if ( wxpay.installed )
+    {
+        @weakify(self);
+        
+        wxpay.config.nonceStr = self.wxpayModel.pay_info.noncestr;
+        wxpay.config.timestamp = self.wxpayModel.pay_info.timestamp;
+        wxpay.config.package = self.wxpayModel.pay_info.package;
+        wxpay.config.prepayId = self.wxpayModel.pay_info.prepayid;
+        wxpay.config.sign = self.wxpayModel.pay_info.sign;
+        wxpay.whenWaiting = ^
+        {
+            
+        };
+        
+        wxpay.whenSucceed = ^
+        {
+            @normalize(self);
+            [self didPaySuccess];
+        };
+		wxpay.whenCannelled = ^
+		{
+			@normalize(self);
+			[self didPayFail];
+		};
+        wxpay.whenFailed = ^
+        {
+            @normalize(self);
+            [self didPayFail];
+        };
+        wxpay.PAY();
+    }
+    else
+    {
+        BeeUIAlertView * alert = [BeeUIAlertView spawn];
+        alert.message = @"请先安装微信客户端";
+        [alert addCancelTitle:__TEXT(@"button_ignore") signal:self.CANCEL_APP];
+        [alert showInViewController:self];
+    }
+}
+
+ON_SIGNAL3( WXPayModel, FAILED, signal )
+{
+    [self presentMessageTips:@"微信支付失败"];
 }
 
 ON_SIGNAL3( C1_CheckOutBoard_iPhone, ACTION_BACK, signal )

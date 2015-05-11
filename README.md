@@ -10,8 +10,6 @@ ECMobile
 3. PHP: [https://github.com/GeekZooStudio/ECMobile_PHP](https://github.com/GeekZooStudio/ECMobile_PHP)
 4. BeeFramework: [https://github.com/gavinkwoe/BeeFramework](https://github.com/gavinkwoe/BeeFramework)
 
-[![Geek-Zoo](http://ecmobile.me/images/index/banner-phone-icon-2.png)](http://www.geek-zoo.com)
-
 ## 技术文档
 
 请查看 `/doc` 目录中的相关技术手册

@@ -31,6 +31,8 @@ AS_OUTLET( BeeUIScrollView, list )
 
 AS_MODEL( OrderModel, orderModel )
 
+AS_MODEL( WXPayModel, wxpayModel )
+
 /**
  * 个人中心-待付款订单，订单被取消时触发该事件
  */

@@ -680,10 +680,10 @@
 - (NSUInteger)countFromIndex:(NSUInteger)from inCharset:(NSCharacterSet *)charset
 {
 	if ( 0 == self.length )
-		return nil;
+		return 0;
 	
 	if ( from >= self.length )
-		return nil;
+		return 0;
 	
 	NSCharacterSet * reversedCharset = [charset invertedSet];
 

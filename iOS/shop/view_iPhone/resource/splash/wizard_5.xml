@@ -17,8 +17,24 @@
 	<button id="wizard-close"/>
 
     <style href="wizard.css" media="iPhone4"/>
-    <style href="wizard-568h.css" media="iPhone5"/>
-	
+    <style href="wizard-568h.css"/>
+    
+    <style type="text/css">
+        #img-1 {
+        top: 10px;
+        left: 40px;
+        width: 160px;
+        height: 280px;
+        mode: fit;
+        }
+        #img-2 {
+        left: 80px;
+        top: 150px;
+        width: 210px;
+        height: 245px;
+        }
+    </style>
+    
 	<style type="text/css" media="iPhone4">
 		#img-1 {
 			top: 10px;
@@ -33,21 +49,6 @@
             top: 120px;
 			width: 210px;
             height: 205px;
-        }
-	</style>
-    <style type="text/css" media="iPhone5">
-        #img-1 {
-			top: 10px;
-			left: 40px;
-			width: 160px;
-			height: 280px;
-			mode: fit;
-        }
-        #img-2 {
-			left: 80px;
-			top: 150px;
-			width: 210px;
-			height: 245px;
         }
 	</style>
 	

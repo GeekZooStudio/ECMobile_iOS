@@ -36,6 +36,7 @@
 #import "SettingModel.h"
 #import "UserModel.h"
 #import "ValidateModel.h"
+#import "WXPayModel.h"
 
 #import "ADDRESS+Region.h"
 #import "NSObject+TagList.h"

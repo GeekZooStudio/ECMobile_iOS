@@ -52,7 +52,7 @@
 	[UserModel			sharedInstance];
 
 	// 配置ECSHOP
-	[ServerConfig sharedInstance].url = @"http://shop.ecmobile.me/ecmobile/?url=";
+	[ServerConfig sharedInstance].url = @"http://shop.ecmobile.cn/ecmobile/?url=";
 
 	// 配置闪屏
 	bee.services.wizard.config.showBackground = YES;
@@ -119,8 +119,11 @@
 	ALIAS( bee.services.location,			lbs );
 
 	// 配置微信
-	weixin.config.appId			= @"<Your weixinID>";
+	weixin.config.appId		= @"<Your weixinID>";
 	weixin.config.appKey		= @"<Your weixinKey>";
+	weixin.config.partnerId         = @"<Your weixinPartnerID>";
+        weixin.config.payUrl            = @"<Your weixinPaymentURL, eg:payment/wxpay/beforepay.php>";
+
 	
 	// 配置新浪
 	sweibo.config.appKey		= @"<Your sinaWeiboKey>";

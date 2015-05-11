@@ -59,6 +59,13 @@ AS_NUMBER( ERROR_NOT_SUPPORT )
 @property (nonatomic, readonly) BeeServiceBlock				OPEN_WEIXIN;
 @property (nonatomic, readonly) BeeServiceBlock				OPEN_STORE;
 
+@property (nonatomic, readonly) BeeServiceBlock				PAY;
+
+@property (nonatomic, copy) BeeServiceBlock				whenWaiting;
+@property (nonatomic, copy) BeeServiceBlock				whenSucceed;
+@property (nonatomic, copy) BeeServiceBlock				whenFailed;
+@property (nonatomic, copy) BeeServiceBlock				whenCannelled;
+
 @end
 
 #endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

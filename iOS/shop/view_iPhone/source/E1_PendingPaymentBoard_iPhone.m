@@ -25,6 +25,7 @@
 
 #import "bee.services.alipay.h"
 #import "bee.services.uppayplugin.h"
+#import "bee.services.share.weixin.h"
 
 #import "CommonNoResultCell.h"
 #import "CommonPullLoader.h"
@@ -40,6 +41,7 @@ SUPPORT_AUTOMATIC_LAYOUT( YES );
 DEF_OUTLET( BeeUIScrollView, list )
 
 DEF_MODEL( OrderModel, orderModel )
+DEF_MODEL( WXPayModel, wxpayModel )
 
 DEF_SIGNAL( ORDER_CANCELED )
 DEF_SIGNAL( PAY_SDK )
@@ -50,11 +52,13 @@ DEF_SIGNAL( INSTALLATION_APP )
 {
     self.orderModel = [OrderModel modelWithObserver:self];
 	self.orderModel.type = ORDER_LIST_AWAIT_PAY;
+    self.wxpayModel = [WXPayModel modelWithObserver:self];
 }
 
 - (void)unload
 {
 	SAFE_RELEASE_MODEL( self.orderModel );
+    SAFE_RELEASE_MODEL( self.wxpayModel );
 }
 
 #pragma mark -
@@ -247,8 +251,75 @@ ON_SIGNAL3( E1_PendingPaymentCell_iPhone, ORDER_PAY, signal )
 			board.orderID				= order.order_id;
 			board.order_info			= order.order_info;
 			[self.stack pushBoard:board animated:YES];
-		}
-	}
+        }
+        else if ( NSOrderedSame == [order.order_info.pay_code compare:@"wxpay" options:NSCaseInsensitiveSearch] )
+        {
+            self.wxpayModel.order_id = order.order_id;
+            [self.wxpayModel pay];
+        }
+    }
+}
+
+ON_SIGNAL3( WXPayModel, RELOADING, signal )
+{
+    [self presentMessageTips:@"加载支付信息"];
+}
+
+ON_SIGNAL3( WXPayModel, RELOADED, signal )
+{
+    ALIAS( bee.services.share.weixin,	wxpay );
+    
+    if ( wxpay.installed )
+    {
+        @weakify(self);
+        
+        wxpay.config.nonceStr = self.wxpayModel.pay_info.noncestr;
+        wxpay.config.timestamp = self.wxpayModel.pay_info.timestamp;
+        wxpay.config.package = self.wxpayModel.pay_info.package;
+        wxpay.config.prepayId = self.wxpayModel.pay_info.prepayid;
+        wxpay.config.sign = self.wxpayModel.pay_info.sign;
+        wxpay.whenWaiting = ^
+        {
+            
+        };
+        
+        wxpay.whenSucceed = ^
+        {
+            @normalize(self);
+            [self.orderModel firstPage];
+            [self didPaySuccess];
+        };
+        
+        wxpay.whenCannelled = ^
+        {
+            @normalize(self);
+			[self presentMessageTips:__TEXT(@"pay_failed")];
+        };
+        
+        wxpay.whenFailed = ^
+        {
+            @normalize(self);
+			[self presentMessageTips:__TEXT(@"pay_failed")];
+        };
+        wxpay.PAY();
+    }
+    else
+    {
+        BeeUIAlertView * alert = [BeeUIAlertView spawn];
+        alert.message = @"请先安装微信客户端";
+        [alert addCancelTitle:__TEXT(@"button_ignore")];
+        [alert showInViewController:self];
+    }
+}
+
+ON_SIGNAL3( WXPayModel, FAILED, signal )
+{
+    [self presentMessageTips:@"微信支付失败"];
+}
+
+ON_SIGNAL3( C1_CheckOutBoard_iPhone, ACTION_BACK, signal )
+{
+    [self.stack popBoardAnimated:YES];
 }
 
 #pragma mark -
@@ -316,13 +387,14 @@ ON_SIGNAL3( E1_PendingPaymentBoard_iPhone, PAY_WAP, signal )
 	ORDER * order = (ORDER *)signal.object;
 	
 	ALIAS( bee.services.alipay,	alipay );
+
 	// 待付款
 	H1_PayBoard_iPhone * board = [H1_PayBoard_iPhone board];
 	board.backBoard 		   = self;
 	board.orderID 			   = order.order_id;
 	board.order_info 		   = order.order_info;
 	board.wapCallBackURL 	   = alipay.config.wapCallBackURL;
-	
+
 	[self.stack pushBoard:board animated:YES];
 }
 

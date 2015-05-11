@@ -22,7 +22,7 @@ SUPPORT_AUTOMATIC_LAYOUT( YES )
 SUPPORT_RESOURCE_LOADING( YES )
 
 DEF_SIGNAL( TAPPED )
-DEF_SIGNAL( DELETE )
+DEF_SIGNAL( REMOVE )
 
 - (void)load
 {
@@ -67,7 +67,7 @@ ON_SIGNAL3( E5_CollectionCell_iPhone, delete, signal )
 {
     if ( [signal is:BeeUIButton.TOUCH_UP_INSIDE] )
     {
-        [self sendUISignal:self.DELETE];
+        [self sendUISignal:self.REMOVE];
     }
 }
 

@@ -108,12 +108,12 @@ DEF_OUTLET( BeeUIScrollView, list )
     
     for ( CART_GOODS * goods in model.goods_list )
     {
-        sumprice += goods.goods_price.floatValue * goods.goods_number.integerValue;
+        sumprice += goods.goods_price.doubleValue * goods.goods_number.integerValue;
     }
     
-    sumprice += model.done_shipping.shipping_fee.floatValue;
-    sumprice -= model.data_integral.floatValue;
-    sumprice -= model.data_bonus.type_money.floatValue;
+    sumprice += model.done_shipping.shipping_fee.doubleValue;
+    sumprice -= model.data_integral.doubleValue;
+    sumprice -= model.data_bonus.type_money.doubleValue;
     
     return @(sumprice);
 }

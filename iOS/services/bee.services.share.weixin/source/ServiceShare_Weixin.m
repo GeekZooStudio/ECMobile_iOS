@@ -232,6 +232,32 @@ DEF_NUMBER( ERROR_NOT_SUPPORT, -101 )
 	return [[block copy] autorelease];
 }
 
+- (BeeServiceBlock)PAY
+{
+    BeeServiceBlock block = ^ void ( void )
+    {
+        [self pay];
+    };
+    
+    return [[block copy] autorelease];
+}
+
+- (void)pay
+{
+    if ( self.config.prepayId )
+    {
+        PayReq *request   = [[PayReq alloc] init];
+        request.openID    = self.config.appId;
+        request.partnerId = self.config.partnerId;
+        request.prepayId  = self.config.prepayId;
+        request.package   = self.config.package;
+        request.nonceStr  = self.config.nonceStr;
+        request.timeStamp = self.config.timestamp.intValue;
+        request.sign      = self.config.sign;
+        [WXApi safeSendReq:request];
+    }
+}
+
 #pragma mark -
 
 - (BOOL)checkInstalled
@@ -245,6 +271,7 @@ DEF_NUMBER( ERROR_NOT_SUPPORT, -101 )
 	}
 
 	BOOL support = [WXApi isWXAppSupportApi];
+    
 	if ( NO == support )
 	{
 		self.errorCode = self.ERROR_NOT_SUPPORT;
@@ -474,6 +501,57 @@ DEF_NUMBER( ERROR_NOT_SUPPORT, -101 )
 	self.state = self.STATE_IDLE;
 }
 
+#pragma mark - Pay
+
+
+#pragma mark -
+
+- (void)clearOrder
+{
+    
+}
+
+- (void)notifyPayBegin
+{
+    if ( self.whenWaiting )
+    {
+        self.whenWaiting();
+    }
+}
+
+- (void)notifyPaySucceed
+{
+    if ( self.whenSucceed )
+    {
+        self.whenSucceed();
+    }
+    
+    [self clearError];
+    [self clearOrder];
+}
+
+- (void)notifyPayFailed
+{
+    ERROR( @"Failed to share, errorCode = %@, errorDesc = %@", self.errorCode, self.errorDesc );
+    
+    if ( self.whenFailed )
+    {
+        self.whenFailed();
+    }
+    
+    [self clearOrder];
+}
+
+- (void)notifyPayCancelled
+{
+    if ( self.whenCannelled )
+    {
+        self.whenCannelled();
+    }
+    
+    [self clearOrder];
+}
+
 #pragma mark - WXApiDelegate
 
 - (void)onReq:(BaseReq*)req
@@ -500,6 +578,28 @@ DEF_NUMBER( ERROR_NOT_SUPPORT, -101 )
 			
 			[self notifyShareFailed];
 		}
+    }
+    
+    if( [resp isKindOfClass:[PayResp class]] )
+    {
+        if ( WXSuccess == resp.errCode )
+        {
+			[self notifyPaySucceed];
+        }
+		else if ( WXErrCodeUserCancel == resp.errCode )
+        {
+            self.errorCode = [NSNumber numberWithInt:resp.errCode];
+            self.errorDesc = @"支付取消";
+            
+			[self notifyPayCancelled];
+        }
+        else
+        {
+            self.errorCode = [NSNumber numberWithInt:resp.errCode];
+            self.errorDesc = resp.errStr;
+            
+            [self notifyPayFailed];
+        }
     }
 }
 

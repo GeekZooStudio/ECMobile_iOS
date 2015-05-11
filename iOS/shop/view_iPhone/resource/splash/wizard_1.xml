@@ -15,17 +15,9 @@
     </linear>
 
     <style href="wizard.css" media="iPhone4"/>
-    <style href="wizard-568h.css" media="iPhone5"/>
+    <style href="wizard-568h.css"/>
 
-    <style type="text/css" media="iPhone4">
-		#img-1 {
-			top: 10px;
-			left: 82px;
-			width: 155px;
-			height: 325px;
-		}
-	</style>
-    <style type="text/css" media="iPhone5">
+    <style type="text/css">
         #img-1 {
 			top: 20px;
 			left: 82px;
@@ -33,4 +25,13 @@
 			height: 325px;
         }
 	</style>
+    
+    <style type="text/css" media="iPhone4">
+        #img-1 {
+        top: 10px;
+        left: 82px;
+        width: 155px;
+        height: 325px;
+        }
+    </style>
 </ui>

@@ -37,9 +37,6 @@
 
 @implementation ServiceShare_Weixin_Config
 
-@synthesize appId = _appId;
-@synthesize appKey = _appKey;
-
 @end
 
 #endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

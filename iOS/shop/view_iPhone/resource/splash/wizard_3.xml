@@ -17,8 +17,33 @@
     </linear>
 
     <style href="wizard.css" media="iPhone4"/>
-    <style href="wizard-568h.css" media="iPhone5"/>
-	
+    <style href="wizard-568h.css"/>
+    
+    <style type="text/css">
+        #img-1 {
+        top: 160px;
+        left: 132px;
+        width: 155px;
+        height: 120px;
+        image-mode: fit;
+        }
+        
+        #img-2 {
+        top: 20px;
+        left: 40px;
+        width: 135px;
+        height: 288px;
+        image-mode: fit;
+        }
+        
+        #img-3 {
+        top: 220px;
+        left: 225px;
+        width: 45px;
+        height: 45px;
+        image-mode: fit;
+        }
+    </style>
     <style type="text/css" media="iPhone4">
 		#img-1 {
 			top: 150px;
@@ -38,31 +63,6 @@
 		
         #img-3 {
 			top: 210px;
-			left: 225px;
-			width: 45px;
-			height: 45px;
-			image-mode: fit;
-        }
-	</style>
-    <style type="text/css" media="iPhone5">
-        #img-1 {
-			top: 160px;
-			left: 132px;
-			width: 155px;
-			height: 120px;
-			image-mode: fit;
-        }
-
-        #img-2 {
-			top: 20px;
-			left: 40px;
-			width: 135px;
-			height: 288px;
-			image-mode: fit;
-        }
-		
-        #img-3 {
-			top: 220px;
 			left: 225px;
 			width: 45px;
 			height: 45px;
