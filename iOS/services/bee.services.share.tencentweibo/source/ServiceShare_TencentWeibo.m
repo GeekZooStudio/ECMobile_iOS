@@ -365,6 +365,10 @@ DEF_SINGLETON( ServiceShare_TencentWeibo )
 - (void)clearPost
 {
 	[self.post clear];
+	
+	self.whenShareCancelled = nil;
+	self.whenShareSucceed = nil;
+	self.whenShareFailed = nil;
 }
 
 - (void)clearError

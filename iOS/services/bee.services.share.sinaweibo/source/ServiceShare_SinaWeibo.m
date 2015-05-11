@@ -357,6 +357,10 @@ DEF_SINGLETON( ServiceShare_SinaWeibo )
 - (void)clearPost
 {
 	[self.post clear];
+	
+	self.whenShareCancelled = nil;
+	self.whenShareSucceed = nil;
+	self.whenShareFailed = nil;
 }
 
 - (void)clearKey

@@ -426,6 +426,9 @@ DEF_NUMBER( ERROR_NOT_SUPPORT, -101 )
 - (void)clearPost
 {
 	[self.post clear];
+	self.whenShareCancelled = nil;
+	self.whenShareSucceed = nil;
+	self.whenShareFailed = nil;
 }
 
 - (void)clearError
@@ -503,12 +506,14 @@ DEF_NUMBER( ERROR_NOT_SUPPORT, -101 )
 
 #pragma mark - Pay
 
-
 #pragma mark -
 
 - (void)clearOrder
 {
-    
+	self.whenCannelled = nil;
+	self.whenWaiting = nil;
+	self.whenSucceed = nil;
+	self.whenFailed = nil;
 }
 
 - (void)notifyPayBegin
