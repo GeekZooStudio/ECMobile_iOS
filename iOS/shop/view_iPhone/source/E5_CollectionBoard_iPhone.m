@@ -29,6 +29,8 @@
 SUPPORT_AUTOMATIC_LAYOUT( YES )
 SUPPORT_RESOURCE_LOADING( YES )
 
+DEF_SIGNAL( UNFAVOURITE )
+
 DEF_OUTLET( BeeUIScrollView, list )
 
 DEF_MODEL( CollectionModel, collectionModel )
@@ -177,9 +179,22 @@ ON_SIGNAL3( E5_CollectionCell_iPhone, TAPPED, signal )
 /**
  * 个人中心-我的收藏-商品，收藏取消事件触发时执行的操作
  */
-ON_SIGNAL3( E5_CollectionCell_iPhone, DELETE, signal )
+ON_SIGNAL3( E5_CollectionCell_iPhone, delete, signal )
 {
-    COLLECT_GOODS * goods = ((E5_CollectionCell_iPhone *)signal.source).data;
+    COLLECT_GOODS * goods = ((E5_CollectionCell_iPhone *)signal.sourceCell).data;
+    
+    BeeUIAlertView * alert = [BeeUIAlertView spawn];
+    alert.title = @"确定删除收藏?";
+    [alert addButtonTitle:@"确定" signal:self.UNFAVOURITE object:goods];
+    [alert addCancelTitle:@"取消"];
+    [alert showInViewController:self];
+}
+
+#pragma mark -
+
+ON_SIGNAL3( E5_CollectionBoard_iPhone , UNFAVOURITE, signal )
+{
+    COLLECT_GOODS * goods = signal.object;
     [self.collectionModel uncollect:goods];
 }
 

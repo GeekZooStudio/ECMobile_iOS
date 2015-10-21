@@ -30,73 +30,18 @@
 //
 
 #import "ServiceAlipay.h"
-
-#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
-
-#import "AlixPay.h"
-#import "AlixPayOrder.h"
-#import "AlixPayResult.h"
+#import "Order.h"
+#import "DataSigner.h"
 #import "DataVerifier.h"
-
-#pragma mark -
-
-@interface ServiceAlipay()
-- (void)notifyWaiting;
-- (void)notifySucceed;
-- (void)notifyFailed;
-@end
-
-#pragma mark -
+#import <AlipaySDK/AlipaySDK.h>
 
 @implementation ServiceAlipay
-
-SERVICE_AUTO_LOADING( YES );
-SERVICE_AUTO_POWERON( YES )
-
-DEF_INT( ERROR_SUCCEED,		9000 )
-DEF_INT( ERROR_SYS_ERROR,	4000 )
-DEF_INT( ERROR_BAD_FORMAT,	4001 )
-DEF_INT( ERROR_BAD_ACCOUNT,	4003 )
-DEF_INT( ERROR_UNBINDED,	4004 )
-DEF_INT( ERROR_CANNOT_BIND,	4005 )
-DEF_INT( ERROR_CANNOT_PAY,	4006 )
-DEF_INT( ERROR_EXPIRED,		4010 )
-DEF_INT( ERROR_MAINTENANCE,	6000 )
-DEF_INT( ERROR_USER_CANCEL,	6001 )
-
-DEF_INT( ERROR_INVALID_DATA,	-1 )
-DEF_INT( ERROR_INSTALL_ALIPAY,	-2 )
-DEF_INT( ERROR_SIGNATURE,		-3 )
 
 DEF_NOTIFICATION( WAITING )
 DEF_NOTIFICATION( SUCCEED )
 DEF_NOTIFICATION( FAILED )
 
-@dynamic order;
-@dynamic config;
-
-@dynamic ready;
-@dynamic installed;
-@synthesize errorCode = _errorCode;
-@synthesize errorDesc = _errorDesc;
-
-@synthesize whenWaiting = _whenWaiting;
-@synthesize whenSucceed = _whenSucceed;
-@synthesize whenFailed = _whenFailed;
-
-@dynamic PAY;
-
-- (void)load
-{
-}
-
-- (void)unload
-{
-	self.whenWaiting = nil;
-	self.whenSucceed = nil;
-	self.whenFailed = nil;
-	self.errorDesc = nil;
-}
+DEF_SINGLETON( ServiceAlipay )
 
 #pragma mark -
 
@@ -114,65 +59,20 @@ DEF_NOTIFICATION( FAILED )
 
 - (void)serviceDidActived
 {
-	[self.order clear];
-
-	NSURL * url = [self.launchParameters objectForKey:@"url"];
-
-	if ( nil == url )
-	{
-		return;
-	}
-
-	AlixPay * alixpay = [AlixPay shared];
-	if ( nil == alixpay )
-	{
-		ERROR( @"failed to get AlixPay instance" );
-		
-		self.errorCode = self.ERROR_INSTALL_ALIPAY;
-		self.errorDesc = @"请先安装支付宝";
-		[self notifyFailed];
-		return;
-	}
-	
-	AlixPayResult * result = [alixpay handleOpenURL:url];
-	if ( result )
-	{
-		INFO( @"alipay, status = %d, %@", result.statusCode, result.statusMessage );
-		
-		self.errorCode = result.statusCode;
-		self.errorDesc = result.statusMessage;
-		
-		if ( 9000 == result.statusCode )
-		{
-			id<DataVerifier> verifier = CreateRSADataVerifier( [ServiceAlipay_Config sharedInstance].publicKey );
-			if ( nil == verifier )
-			{
-				INFO( @"Alipay, failed to pay" );
-				
-				[self notifyFailed];
-				return;
-			}
-
-			BOOL succeed = [verifier verifyString:result.resultString withSign:result.signString];
-			if ( NO == succeed )
-			{
-				INFO( @"Alipay, invalid signature" );
-
-				[self notifyFailed];
-				return;
-			}
-			
-			INFO( @"Alipay, succeed" );
-			
-			[self notifySucceed];
-		}
-		else
-		{
-			INFO( @"Alipay, failed to pay" );
-			
-			[self notifyFailed];
-		}
-	}
+    
+    NSURL * url = [self.launchParameters objectForKey:@"url"];
+    
+    if ( nil == url )
+    {
+        return;
+    }
+    if ([url.host isEqualToString:@"safepay"])
+    {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url
+                                                  standbyCallback:^(NSDictionary *resultDic) {
+                                                      NSLog(@"result = %@",resultDic);
+                                                  }];
+    }
 }
 
 - (void)serviceWillDeactive
@@ -187,163 +87,150 @@ DEF_NOTIFICATION( FAILED )
 
 - (void)notifyWaiting
 {
-	[self postNotification:ServiceAlipay.WAITING];
-	
-	if ( self.whenWaiting )
-	{
-		self.whenWaiting();
-	}
+    [self postNotification:ServiceAlipay.WAITING];
+    
+    if ( self.whenWaiting )
+    {
+        self.whenWaiting();
+    }
 }
 
 - (void)notifySucceed
 {
-	[self postNotification:ServiceAlipay.SUCCEED];
-	
-	if ( self.whenSucceed )
-	{
-		self.whenSucceed();
-	}
+    [self postNotification:ServiceAlipay.SUCCEED];
+    
+    if ( self.whenSucceed )
+    {
+        self.whenSucceed();
+    }
 }
 
 - (void)notifyFailed
 {
-	[self postNotification:ServiceAlipay.FAILED];
-	
-	if ( self.whenFailed )
-	{
-		self.whenFailed();
-	}
-}
-
-- (ServiceAlipay_Order *)order
-{
-	return [ServiceAlipay_Order sharedInstance];
-}
-
-- (ServiceAlipay_Config *)config
-{
-	return [ServiceAlipay_Config sharedInstance];
-}
-
-- (BeeServiceBlock)PAY
-{
-	BeeServiceBlock block = ^ void ( void )
-	{
-		[self pay];
-	};
-	
-	return [[block copy] autorelease];
+    [self postNotification:ServiceAlipay.FAILED];
+    
+    if ( self.whenFailed )
+    {
+        self.whenFailed();
+    }
 }
 
 #pragma mark -
 
-- (BOOL)ready
+- (ServiceAlipayConfig *)config
 {
-	ServiceAlipay_Config * config = [ServiceAlipay_Config sharedInstance];
-
-	if ( config.privateKey && config.publicKey && config.parnter && config.seller && config.notifyURL )
-	{
-		return YES;
-	}
-
-	return NO;
+    return [ServiceAlipayConfig sharedInstance];
 }
 
-- (BOOL)installed
+#pragma mark -
+
+- (BeeServiceBlock)PAY
 {
-	AlixPay * alixpay = [AlixPay shared];
-	if ( nil == alixpay )
-	{
-		return NO;
-	}
-
-	NSString *	urlSafypayString = [NSString stringWithFormat:@"safepay://alipayclient"];
-    NSString *	urlAlipayString = [NSString stringWithFormat:@"alipay://alipayclient"];
-
-	NSURL *		safepayUrl = [NSURL URLWithString:urlSafypayString];
-    NSURL *		alipayUrl = [NSURL URLWithString:urlAlipayString];
-
-	if ( [[UIApplication sharedApplication] canOpenURL:safepayUrl] )
-	{
-		return YES;
-	}
-	else if ( [[UIApplication sharedApplication] canOpenURL:alipayUrl] )
-	{
-		return YES;
-	}
-	else
-	{
-		return NO;
-	}
+    BeeServiceBlock block = ^ void ( void )
+    {
+        [self pay];
+    };
+    
+    return [block copy];
 }
 
-- (BOOL)pay
+#pragma mark -
+
+- (void)pay
 {
-	NSString * appSchema = [BeeSystemInfo appSchema:@"default"];
+    Order * order = [[Order alloc] init];
+    order.partner = self.config.partner;
+    order.seller = self.config.seller;
+    order.tradeNO = self.config.tradeNO; //订单ID(由商家自行制定)
+    order.productName = self.config.productName; //商品标题
+    order.productDescription = self.config.productDescription; //商品描述
+    order.amount = self.config.amount; //商品价格
+    order.notifyURL = self.config.notifyURL; //回调URL
+    
+    // 参见接入与使用（3技术接入规则）、支付宝钱包支付接口开发包（5请求参数说明）
+    order.service = @"mobile.securitypay.pay";
+    order.paymentType = @"1";
+    order.inputCharset = @"utf-8";
+//    order.itBPay = @"30m";
+    //应用注册scheme,在AlixPayDemo-Info.plist定义URL types
+    NSString * appScheme = [BeeSystemInfo appSchema:@"alipay"];
+    
+    //将商品信息拼接成字符串
+    NSString * orderSpec = [order description];
+    NSLog(@"orderSpec = %@",orderSpec);
+    //获取私钥并将商户信息签名,外部商户可以根据情况存放私钥和签名,只需要遵循 RSA 签名规范, 并将签名字符串 base64 编码和 UrlEncode
+    
+    id<DataSigner> signer = CreateRSADataSigner(self.config.privateKey);
+     NSString * signedString = [signer signString:orderSpec];
+    //将签名成功字符串格式化为订单字符串,请严格按照该格式
+    NSString * orderString = nil;
+    if ( signedString != nil )
+    {
+        orderString = [NSString stringWithFormat:@"%@&sign=\"%@\"&sign_type=\"%@\"",
+                       orderSpec, signedString, @"RSA"];
+        [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary * resultDic) {
+            //【callback 处理支付结果】
+            NSLog(@"reslut = %@",resultDic);
+            
+            // 通知返回时验证签名
+            NSNumber * resultStatus = resultDic[@"resultStatus"];
+            NSString * resultStr = resultDic[@"result"];
+            
+            NSString * verifierStr ; // 同步通知待签名字符串
+            NSString * signedStr ; // 支付宝通知返回参数中的sign
+            NSString * successStr = [NSString stringWithFormat:@"success=\"%@\"",@"true"]; // success="true"
+            BOOL success; // result中是否包含success="true"
 
-	if ( nil == appSchema )
-	{
-		appSchema = [BeeSystemInfo appSchema];
-		if ( nil == appSchema )
-		{
-			ERROR( @"failed to retrieve application schema" );
-
-			self.errorCode = self.ERROR_INVALID_DATA;
-			self.errorDesc = @"订单数据无效";
-			[self notifyFailed];
-			return NO;
-		}
-	}
-
-	NSString * order = [[ServiceAlipay_Order sharedInstance] generate];
-	if ( nil == order )
-	{
-		ERROR( @"failed to create order" );
-
-		self.errorCode = self.ERROR_INVALID_DATA;
-		self.errorDesc = @"订单数据无效";
-		[self notifyFailed];
-		return NO;
-	}
-
-	AlixPay * alixpay = [AlixPay shared];
-	if ( nil == alixpay )
-	{
-		ERROR( @"failed to get AlixPay instance" );
-
-		self.errorCode = self.ERROR_INSTALL_ALIPAY;
-		self.errorDesc = @"请先安装支付宝";
-		[self notifyFailed];
-		return NO;
-	}
-
-	int ret = [alixpay pay:order applicationScheme:appSchema];
-
-	if ( ret == kSPErrorAlipayClientNotInstalled )
-	{
-		ERROR( @"install Alipay first" );
-
-		self.errorCode = self.ERROR_INSTALL_ALIPAY;
-		self.errorDesc = @"请先安装支付宝";
-		[self notifyFailed];
-		return NO;
-	}
-	else if ( ret == kSPErrorSignError )
-	{
-		ERROR( @"failed to sign" );
-
-		self.errorCode = self.ERROR_SIGNATURE;
-		self.errorDesc = @"签名错误，无法支付";
-		[self notifyFailed];
-		return NO;
-	}
-
-	INFO( @"Alipay, processing.." );
-
-	[self notifyWaiting];
-	return YES;
+            if ( resultStatus.intValue == 9000 )
+            {
+                if ( resultStr && resultStr.length )
+                {
+                    NSRange range = [resultStr rangeOfString:successStr];
+                    if ( range.length == [successStr length] )
+                    {
+                        success = YES;
+                    }
+                    else
+                    {
+                        success = NO;
+                    }
+                    
+                    NSArray * items = [resultStr componentsSeparatedByString:[NSString stringWithFormat:@"&sign_type=\"%@\"&sign=",@"RSA"]];
+                    if ( items && items.count )
+                    {
+                        verifierStr = items[0];
+                        signedStr = items[1];
+                        signedStr = [signedStr stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+                        
+                        id<DataVerifier> verifier = CreateRSADataVerifier(self.config.publicKey);
+                        BOOL result  = [verifier verifyString:verifierStr withSign:signedStr];
+                        
+                        if ( success && result )
+                        {
+                            if ( self.whenSucceed )
+                            {
+                                self.whenSucceed();
+                            }
+                        }
+                        else
+                        {
+                            if ( self.whenFailed )
+                            {
+                                self.whenFailed();
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if ( self.whenFailed )
+                {
+                    self.whenFailed();
+                }
+            }
+        }];
+    }
 }
 
 @end
-
-#endif  // #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

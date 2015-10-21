@@ -38,6 +38,7 @@ DEF_MODEL( RegionModel,			regionModel )
     self.regionModel = [RegionModel modelWithObserver:self];
     
     self.address = [[[ADDRESS alloc] init] autorelease];
+    self.address.email = [UserModel sharedInstance].user.email;
 }
 
 - (void)unload

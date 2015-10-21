@@ -30,12 +30,12 @@
 //
 
 #import "Bee.h"
-#import "ServiceUPPayPlugin.h"
+#import "ServiceUnionPay.h"
 
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 
 #pragma mark -
 
-AS_SERVICE( ServiceUPPayPlugin, uppayplugin )
+AS_SERVICE( ServiceUnionPay, uppayplugin )
 
 #endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

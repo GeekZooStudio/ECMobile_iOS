@@ -100,7 +100,7 @@ ON_CREATE_VIEWS( signal )
             BeeUIScrollItem * recommendGoods = self.list.items[offset];
             recommendGoods.clazz = [B0_IndexRecommendCell_iPhone class];
             recommendGoods.data = self.bannerModel.goods;
-            recommendGoods.size = CGSizeAuto; // TODO:
+            recommendGoods.size = CGSizeAuto; 
             recommendGoods.rule = BeeUIScrollLayoutRule_Line;
             recommendGoods.insets = UIEdgeInsetsMake(0, 0, 0, 0);
             

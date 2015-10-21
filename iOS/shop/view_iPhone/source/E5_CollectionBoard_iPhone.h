@@ -27,6 +27,8 @@
 
 @property (nonatomic, assign) BOOL isEditing;
 
+AS_SIGNAL( UNFAVOURITE )
+
 AS_OUTLET( BeeUIScrollView, list )
 
 AS_MODEL( CollectionModel, collectionModel )

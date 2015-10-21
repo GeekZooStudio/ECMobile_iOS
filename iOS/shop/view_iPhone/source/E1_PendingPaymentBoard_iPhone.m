@@ -345,38 +345,27 @@ ON_SIGNAL3( E1_PendingPaymentBoard_iPhone, PAY_SDK, signal )
 
 	ALIAS( bee.services.alipay,	alipay );
 
-	if ( alipay.installed )
-	{
-		@weakify(self);
-
-		alipay.order.no		= order.order_sn;
-		alipay.order.name	= order.order_info.subject;
-		alipay.order.desc	= order.order_info.desc;
-		alipay.order.price	= order.order_info.order_amount;
-
-		alipay.whenWaiting = ^
-		{
-		};
-		alipay.whenSucceed = ^
-		{
-			@normalize(self);
-			[self.orderModel firstPage];
-			[self didPaySuccess];
-		};
-		alipay.whenFailed = ^
-		{
-			[self presentMessageTips:__TEXT(@"pay_failed")];
-		};
-		alipay.PAY();
-	}
-	else
-	{
-		BeeUIAlertView * alert = [BeeUIAlertView spawn];
-		alert.message = @"未安装支付宝,是否安装";
-		[alert addCancelTitle:__TEXT(@"button_ignore")];
-		[alert addButtonTitle:__TEXT(@"button_forward") signal:self.INSTALLATION_APP];
-		[alert showInViewController:self];
-	}
+    @weakify(self);
+    
+    alipay.config.tradeNO		= order.order_sn;
+    alipay.config.productName	= order.order_info.subject;
+    alipay.config.productDescription	= order.order_info.desc;
+    alipay.config.amount	= order.order_info.order_amount;
+    
+    alipay.whenWaiting = ^
+    {
+    };
+    alipay.whenSucceed = ^
+    {
+        @normalize(self);
+        [self.orderModel firstPage];
+        [self didPaySuccess];
+    };
+    alipay.whenFailed = ^
+    {
+        [self presentMessageTips:__TEXT(@"pay_failed")];
+    };
+    alipay.PAY();
 }
 
 /**
@@ -503,7 +492,7 @@ ON_MESSAGE3( API, order_pay, msg )
 
 		if ( msg.GET_OUTPUT( @"upop_tn" ) )
 		{
-			uppayplugin.payData	= msg.GET_OUTPUT( @"upop_tn" );
+			uppayplugin.config.tn	= msg.GET_OUTPUT( @"upop_tn" );
 		}
 		else
 		{
@@ -529,7 +518,7 @@ ON_MESSAGE3( API, order_pay, msg )
 			// 支付成功
 			[self didPaySuccess];
 		};
-		uppayplugin.PAY();
+        [uppayplugin payInViewController:self];
 	}
 	else if ( msg.failed )
 	{

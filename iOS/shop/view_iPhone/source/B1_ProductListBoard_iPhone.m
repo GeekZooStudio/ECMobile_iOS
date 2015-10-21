@@ -198,6 +198,8 @@ ON_WILL_APPEAR( signal )
     
     [self updateViews];
     
+    [[self currentModel] firstPage];
+    
     [[CartModel sharedInstance] addObserver:self];
     
     [[CartModel sharedInstance] reload];

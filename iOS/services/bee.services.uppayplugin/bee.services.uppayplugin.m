@@ -35,6 +35,6 @@
 
 #pragma mark -
 
-DEF_SERVICE( ServiceUPPayPlugin, uppayplugin )
+DEF_SERVICE( ServiceUnionPay, uppayplugin )
 
 #endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

@@ -572,6 +572,8 @@ ON_SIGNAL3( B2_ProductDetailTabCell_iPhone, cart, signal)
     board.whenSpecified = ^( NSArray * specs, NSNumber * count ) {
         @normalize(self);
 
+        [self.goodsModel reload];
+        
 		[self.specs removeAllObjects];
 		[self.specs addObjectsFromArray:specs];
 

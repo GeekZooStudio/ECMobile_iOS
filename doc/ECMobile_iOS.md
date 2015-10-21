@@ -19,7 +19,7 @@ tweibo.config.appSecret		= @"<Your information>";
 tweibo.config.redirectURI	= @"<Your information>";
 
 // 配置支付宝
-alipay.config.parnter		= @"<Your information>";
+alipay.config.partner		= @"<Your information>";
 alipay.config.seller		= @"<Your information>";
 alipay.config.privateKey	= @"<Your information>";
 alipay.config.publicKey		= @"<Your information>";

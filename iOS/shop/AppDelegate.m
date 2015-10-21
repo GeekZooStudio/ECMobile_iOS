@@ -53,7 +53,7 @@
 
 	// 配置ECSHOP
 	[ServerConfig sharedInstance].url = @"http://shop.ecmobile.cn/ecmobile/?url=";
-
+    
 	// 配置闪屏
 	bee.services.wizard.config.showBackground = YES;
 	bee.services.wizard.config.showPageControl = YES;
@@ -120,10 +120,9 @@
 
 	// 配置微信
 	weixin.config.appId		= @"<Your weixinID>";
-	weixin.config.appKey		= @"<Your weixinKey>";
-	weixin.config.partnerId         = @"<Your weixinPartnerID>";
-        weixin.config.payUrl            = @"<Your weixinPaymentURL, eg:payment/wxpay/beforepay.php>";
-
+	weixin.config.appKey	= @"<Your weixinKey>";
+	weixin.config.partnerId = @"<Your weixinPartnerID>";
+    weixin.config.payUrl    = @"<Your weixinPaymentURL, eg:payment/wxpay/beforepay.php>";
 	
 	// 配置新浪
 	sweibo.config.appKey		= @"<Your sinaWeiboKey>";
@@ -136,12 +135,12 @@
 	tweibo.config.redirectURI	= @"<Your tencentWeiboCallback>";
 	
 	// 配置支付宝
-	alipay.config.parnter		= @"<Your alipayPartnerID>";
+	alipay.config.partner		= @"<Your alipayPartnerID>";
 	alipay.config.seller		= @"<Your alipaySeller>";
 	alipay.config.privateKey	= @"<Your alipayPrivateKey>";
 	alipay.config.publicKey		= @"<Your alipayPublicKey>";
 	alipay.config.notifyURL		= @"<Your alipayCallback>";
-	alipay.config.wapCallBackURL	= @"<Your alipayWapURL>";
+	alipay.config.wapCallBackURL  = @"<Your alipayWapURL>";
 
 	// 配置语音识别
 	siri.config.showUI			= NO;

@@ -31,8 +31,7 @@
 
 #import "Bee.h"
 #import "ServiceAlipay.h"
-#import "ServiceAlipay_Config.h"
-#import "ServiceAlipay_Order.h"
+#import "ServiceAlipayConfig.h"
 
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
 

@@ -27,6 +27,7 @@ SUPPORT_RESOURCE_LOADING( YES )
     {
         ADDRESS * address = self.data;
         $(@"#location-label").TEXT( address.region );
+        $(@"#email").TEXT( [UserModel sharedInstance].user.email );
     }
 }
 

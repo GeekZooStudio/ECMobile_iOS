@@ -165,33 +165,38 @@ DEF_NOTIFICATION( CHANGED )
 
 - (BOOL)setCurrentLanguageName:(NSString *)name
 {
-	BeeLanguage * lang = [self findLanguage:name];
-	if ( nil == lang )
-	{
-		NSString * langPath = [[NSBundle mainBundle] pathForResource:name ofType:@"xml"];
-		NSString * langPath2 = [[NSBundle mainBundle] pathForResource:name ofType:@"lang"];
-		
-		NSString * content = [NSString stringWithContentsOfFile:langPath encoding:NSUTF8StringEncoding error:NULL];
-		if ( nil == content )
-		{
-			content = [NSString stringWithContentsOfFile:langPath2 encoding:NSUTF8StringEncoding error:NULL];
-		}
-		
-		if ( content )
-		{
-			lang = [BeeLanguage language:content];
-		}
-	}
-
-	if ( lang )
-	{
-		lang.name = name;
-		
-		[self applyLanguage:lang];
-		return YES;
-	}
-	
-	return NO;
+    BeeLanguage * lang = [self findLanguage:name];
+    if ( nil == lang )
+    {
+        NSString * langPath = [[NSBundle mainBundle] pathForResource:name ofType:@"xml"];
+        NSString * langPath2 = [[NSBundle mainBundle] pathForResource:name ofType:@"lang"];
+        
+        NSLog(@"%@ %@", langPath, langPath2);
+        
+        NSString * content = [NSString stringWithContentsOfFile:langPath encoding:NSUTF8StringEncoding error:NULL];
+        if ( nil == content )
+        {
+            content = [NSString stringWithContentsOfFile:langPath2 encoding:NSUTF8StringEncoding error:NULL];
+        }
+        
+        if ( content == nil )
+        {
+            NSString * defaultlangePath = [[NSBundle mainBundle] pathForResource:@"zh-Hans" ofType:@"lang"];
+            content = [NSString stringWithContentsOfFile:defaultlangePath encoding:NSUTF8StringEncoding error:NULL];
+        }
+        
+        lang = [BeeLanguage language:content];
+    }
+    
+    if ( lang )
+    {
+        lang.name = name;
+        
+        [self applyLanguage:lang];
+        return YES;
+    }
+    
+    return NO;
 }
 
 + (BOOL)setSystemLanguage

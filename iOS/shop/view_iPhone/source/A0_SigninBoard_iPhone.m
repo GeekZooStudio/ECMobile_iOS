@@ -86,17 +86,15 @@ ON_RIGHT_BUTTON_TOUCHED( signal )
 
 ON_SIGNAL3( BeeUITextField, RETURN, signal )
 {
-	if ( $(@"username").focusing )
+    if ( signal.source == $(@"username").view )
 	{
 		$(@"password").FOCUS();
-		return;
 	}
-	else
+    else if ( signal.source == $(@"password").view )
 	{
 		[self doLogin];
-	}
-	
 	[self.view endEditing:YES];
+}
 }
 
 #pragma mark - SigninBoard_iPhone
