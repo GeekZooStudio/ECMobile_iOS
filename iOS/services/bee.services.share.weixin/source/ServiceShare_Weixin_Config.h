@@ -41,16 +41,6 @@
 @property (nonatomic, retain) NSString *	appKey;
 @property (nonatomic, retain) NSString *	payUrl;
 
-@property (nonatomic, retain) NSString *	appSecret; // 微信开放平台和商户约定的密钥
-@property (nonatomic, retain) NSString *	partnerKey; // 微信开放平台和商户约定的支付密钥
-@property (nonatomic, retain) NSString *	partnerId;
-@property (nonatomic, retain) NSString *	prepayId;
-@property (nonatomic, retain) NSString *	package;
-@property (nonatomic, retain) NSString *	nonceStr;
-@property (nonatomic, retain) NSString *    timestamp;
-@property (nonatomic, retain) NSString *    traceId;
-@property (nonatomic, retain) NSString *    sign;
-
 @end
 
 #endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

@@ -23,10 +23,6 @@
 
 #import "OrderCell_iPhone.h"
 
-#import "bee.services.alipay.h"
-#import "bee.services.uppayplugin.h"
-#import "bee.services.share.weixin.h"
-
 #import "CommonNoResultCell.h"
 #import "CommonPullLoader.h"
 #import "CommonFootLoader.h"
@@ -126,10 +122,6 @@ ON_CREATE_VIEWS( signal )
         
         [self.orderModel nextPage];
     };
-    
-    [self observeNotification:ServiceAlipay.WAITING];
-    [self observeNotification:ServiceAlipay.SUCCEED];
-    [self observeNotification:ServiceAlipay.FAILED];
 }
 
 ON_DELETE_VIEWS( signal )
@@ -267,49 +259,6 @@ ON_SIGNAL3( WXPayModel, RELOADING, signal )
 
 ON_SIGNAL3( WXPayModel, RELOADED, signal )
 {
-    ALIAS( bee.services.share.weixin,	wxpay );
-    
-    if ( wxpay.installed )
-    {
-        @weakify(self);
-        
-        wxpay.config.nonceStr = self.wxpayModel.pay_info.noncestr;
-        wxpay.config.timestamp = self.wxpayModel.pay_info.timestamp;
-        wxpay.config.package = self.wxpayModel.pay_info.package;
-        wxpay.config.prepayId = self.wxpayModel.pay_info.prepayid;
-        wxpay.config.sign = self.wxpayModel.pay_info.sign;
-        wxpay.whenWaiting = ^
-        {
-            
-        };
-        
-        wxpay.whenSucceed = ^
-        {
-            @normalize(self);
-            [self.orderModel firstPage];
-            [self didPaySuccess];
-        };
-        
-        wxpay.whenCannelled = ^
-        {
-            @normalize(self);
-			[self presentMessageTips:__TEXT(@"pay_failed")];
-        };
-        
-        wxpay.whenFailed = ^
-        {
-            @normalize(self);
-			[self presentMessageTips:__TEXT(@"pay_failed")];
-        };
-        wxpay.PAY();
-    }
-    else
-    {
-        BeeUIAlertView * alert = [BeeUIAlertView spawn];
-        alert.message = @"请先安装微信客户端";
-        [alert addCancelTitle:__TEXT(@"button_ignore")];
-        [alert showInViewController:self];
-    }
 }
 
 ON_SIGNAL3( WXPayModel, FAILED, signal )
@@ -341,31 +290,6 @@ ON_SIGNAL3( E1_PendingPaymentBoard_iPhone, ORDER_CANCELED, signal )
  */
 ON_SIGNAL3( E1_PendingPaymentBoard_iPhone, PAY_SDK, signal )
 {
-	ORDER * order = (ORDER *)signal.object;
-
-	ALIAS( bee.services.alipay,	alipay );
-
-    @weakify(self);
-    
-    alipay.config.tradeNO		= order.order_sn;
-    alipay.config.productName	= order.order_info.subject;
-    alipay.config.productDescription	= order.order_info.desc;
-    alipay.config.amount	= order.order_info.order_amount;
-    
-    alipay.whenWaiting = ^
-    {
-    };
-    alipay.whenSucceed = ^
-    {
-        @normalize(self);
-        [self.orderModel firstPage];
-        [self didPaySuccess];
-    };
-    alipay.whenFailed = ^
-    {
-        [self presentMessageTips:__TEXT(@"pay_failed")];
-    };
-    alipay.PAY();
 }
 
 /**
@@ -373,18 +297,6 @@ ON_SIGNAL3( E1_PendingPaymentBoard_iPhone, PAY_SDK, signal )
  */
 ON_SIGNAL3( E1_PendingPaymentBoard_iPhone, PAY_WAP, signal )
 {
-	ORDER * order = (ORDER *)signal.object;
-	
-	ALIAS( bee.services.alipay,	alipay );
-
-	// 待付款
-	H1_PayBoard_iPhone * board = [H1_PayBoard_iPhone board];
-	board.backBoard 		   = self;
-	board.orderID 			   = order.order_id;
-	board.order_info 		   = order.order_info;
-	board.wapCallBackURL 	   = alipay.config.wapCallBackURL;
-
-	[self.stack pushBoard:board animated:YES];
 }
 
 /**
@@ -483,47 +395,6 @@ ON_MESSAGE3( API, order_cancel, msg )
 
 ON_MESSAGE3( API, order_pay, msg )
 {
-	// 银联SDK支付
-	if ( msg.succeed )
-	{
-		ALIAS( bee.services.uppayplugin, uppayplugin );
-
-		@weakify(self);
-
-		if ( msg.GET_OUTPUT( @"upop_tn" ) )
-		{
-			uppayplugin.config.tn	= msg.GET_OUTPUT( @"upop_tn" );
-		}
-		else
-		{
-			// 返回的流水号为空的时候，提示支付失败
-			[self presentMessageTips:__TEXT(@"pay_failed")];
-		}
-
-		uppayplugin.whenCancel = ^
-		{
-			// 取消操作
-			@normalize(self);
-			[self presentMessageTips:__TEXT(@"pay_failed")];
-		};
-		uppayplugin.whenFailed = ^
-		{
-			// 支付失败
-			@normalize(self);
-			[self presentMessageTips:__TEXT(@"pay_failed")];
-		};
-		uppayplugin.whenSucceed = ^
-		{
-			@normalize(self);
-			// 支付成功
-			[self didPaySuccess];
-		};
-        [uppayplugin payInViewController:self];
-	}
-	else if ( msg.failed )
-	{
-		[self presentMessageTips:__TEXT(@"pay_failed")];
-	}
 }
 
 @end

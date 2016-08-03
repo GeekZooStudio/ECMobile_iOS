@@ -106,11 +106,11 @@ ON_LAYOUT_VIEWS( signal )
 ON_WILL_APPEAR( signal )
 {
     [self setupFields];
-	[self.list reloadData];
 }
 
 ON_DID_APPEAR( signal )
 {
+    [self.list reloadData];
 }
 
 ON_WILL_DISAPPEAR( signal )

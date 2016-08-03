@@ -32,7 +32,6 @@
 
 #import "UIViewController+ErrorTips.h"
 
-#import "bee.services.alipay.h"
 #import "bee.services.share.weixin.h"
 #import "bee.services.share.sinaweibo.h"
 #import "bee.services.share.tencentweibo.h"

@@ -21,14 +21,12 @@
 #import "ecmobile.h"
 #import "MobClick.h"
 
-#import "bee.services.alipay.h"
 #import "bee.services.location.h"
 #import "bee.services.share.weixin.h"
 #import "bee.services.share.sinaweibo.h"
 #import "bee.services.share.tencentweibo.h"
 #import "bee.services.wizard.h"
 #import "bee.services.siri.h"
-#import "bee.services.uppayplugin.h"
 
 @implementation AppDelegate
 
@@ -114,15 +112,12 @@
 	ALIAS( bee.services.share.weixin,		weixin );
 	ALIAS( bee.services.share.tencentweibo,	tweibo );
 	ALIAS( bee.services.share.sinaweibo,	sweibo );
-	ALIAS( bee.services.alipay,				alipay );
-	ALIAS( bee.services.siri,				siri );
+    ALIAS( bee.services.siri,				siri );
 	ALIAS( bee.services.location,			lbs );
 
 	// 配置微信
 	weixin.config.appId		= @"<Your weixinID>";
 	weixin.config.appKey	= @"<Your weixinKey>";
-	weixin.config.partnerId = @"<Your weixinPartnerID>";
-    weixin.config.payUrl    = @"<Your weixinPaymentURL, eg:payment/wxpay/beforepay.php>";
 	
 	// 配置新浪
 	sweibo.config.appKey		= @"<Your sinaWeiboKey>";
@@ -133,14 +128,6 @@
 	tweibo.config.appKey		= @"<Your tencentWeiboKey>";
 	tweibo.config.appSecret		= @"<Your tencentWeiboSecret>";
 	tweibo.config.redirectURI	= @"<Your tencentWeiboCallback>";
-	
-	// 配置支付宝
-	alipay.config.partner		= @"<Your alipayPartnerID>";
-	alipay.config.seller		= @"<Your alipaySeller>";
-	alipay.config.privateKey	= @"<Your alipayPrivateKey>";
-	alipay.config.publicKey		= @"<Your alipayPublicKey>";
-	alipay.config.notifyURL		= @"<Your alipayCallback>";
-	alipay.config.wapCallBackURL  = @"<Your alipayWapURL>";
 
 	// 配置语音识别
 	siri.config.showUI			= NO;

@@ -30,9 +30,6 @@
 #import "E1_PendingPaymentBoard_iPhone.h"
 #import "E2_PendingShippedBoard_iPhone.h"
 
-#import "bee.services.alipay.h"
-#import "bee.services.share.weixin.h"
-
 #pragma mark -
 
 @interface C1_CheckOutBoard_iPhone()
@@ -215,46 +212,6 @@ ON_SIGNAL3( WXPayModel, RELOADING, signal )
 
 ON_SIGNAL3( WXPayModel, RELOADED, signal )
 {
-    ALIAS( bee.services.share.weixin,	wxpay );
-    
-    if ( wxpay.installed )
-    {
-        @weakify(self);
-        
-        wxpay.config.nonceStr = self.wxpayModel.pay_info.noncestr;
-        wxpay.config.timestamp = self.wxpayModel.pay_info.timestamp;
-        wxpay.config.package = self.wxpayModel.pay_info.package;
-        wxpay.config.prepayId = self.wxpayModel.pay_info.prepayid;
-        wxpay.config.sign = self.wxpayModel.pay_info.sign;
-        wxpay.whenWaiting = ^
-        {
-            
-        };
-        
-        wxpay.whenSucceed = ^
-        {
-            @normalize(self);
-            [self didPaySuccess];
-        };
-		wxpay.whenCannelled = ^
-		{
-			@normalize(self);
-			[self didPayFail];
-		};
-        wxpay.whenFailed = ^
-        {
-            @normalize(self);
-            [self didPayFail];
-        };
-        wxpay.PAY();
-    }
-    else
-    {
-        BeeUIAlertView * alert = [BeeUIAlertView spawn];
-        alert.message = @"请先安装微信客户端";
-        [alert addCancelTitle:__TEXT(@"button_ignore") signal:self.CANCEL_APP];
-        [alert showInViewController:self];
-    }
 }
 
 ON_SIGNAL3( WXPayModel, FAILED, signal )
@@ -272,29 +229,6 @@ ON_SIGNAL3( C1_CheckOutBoard_iPhone, ACTION_BACK, signal )
  */
 ON_SIGNAL3( C1_CheckOutBoard_iPhone, PAY_SDK, signal )
 {
-	ALIAS( bee.services.alipay,	alipay );
-
-    @weakify(self);
-    
-    alipay.config.tradeNO		= self.flowModel.order_info.order_sn;
-    alipay.config.productName	= self.flowModel.order_info.subject;
-    alipay.config.productDescription	= self.flowModel.order_info.desc;
-    alipay.config.amount	= self.flowModel.order_info.order_amount;
-    
-    alipay.whenWaiting = ^
-    {
-    };
-    alipay.whenSucceed = ^
-    {
-        @normalize(self);
-        [self didPaySuccess];
-    };
-    alipay.whenFailed = ^
-    {
-        @normalize(self);
-        [self didPayFail];
-    };
-    alipay.PAY();
 }
 
 /**
@@ -302,15 +236,6 @@ ON_SIGNAL3( C1_CheckOutBoard_iPhone, PAY_SDK, signal )
  */
 ON_SIGNAL3( C1_CheckOutBoard_iPhone, PAY_WAP, signal )
 {
-	ALIAS( bee.services.alipay,	alipay );
-
-	// 进行wap支付
-	H1_PayBoard_iPhone * board	= [H1_PayBoard_iPhone board];
-	board.backBoard				= self.previousBoard;
-	board.orderID				= self.flowModel.order_id;
-	board.order_info			= self.flowModel.order_info;
-	board.wapCallBackURL		= alipay.config.wapCallBackURL;
-	[self.stack pushBoard:board animated:YES];
 }
 
 /**
@@ -588,40 +513,6 @@ ON_MESSAGE3( API, order_pay, msg )
 {
 	if ( msg.succeed )
 	{
-		ALIAS( bee.services.uppayplugin, uppayplugin );
-		
-		@weakify(self);
-		
-		// 银联支付流水号
-		if ( msg.GET_OUTPUT( @"upop_tn" ) )
-		{
-			uppayplugin.config.tn	= msg.GET_OUTPUT( @"upop_tn" );
-		}
-		else
-		{
-			// 返回的流水号为空的时候，提示支付失败
-			[self presentMessageTips:__TEXT(@"pay_failed")];
-		}
-		
-		uppayplugin.whenCancel = ^
-		{
-			@normalize(self);
-			// 取消操作
-			[self didPayFail];
-		};
-		uppayplugin.whenFailed = ^
-		{
-			@normalize(self);
-			//支付失败
-			[self didPayFail];
-		};
-		uppayplugin.whenSucceed = ^
-		{
-			@normalize(self);
-			//支付成功
-			[self didPaySuccess];
-		};
-		[uppayplugin payInViewController:self];
 	}
 	else if ( msg.failed )
 	{

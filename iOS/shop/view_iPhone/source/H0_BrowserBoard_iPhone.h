@@ -7,7 +7,6 @@
 //
 
 #import "Bee.h"
-#import "bee.services.uppayplugin.h"
 @interface H0_BrowserBoard_iPhone : BeeUIBoard<UIWebViewDelegate>
 
 AS_SINGLETON( H0_BrowserBoard_iPhone )

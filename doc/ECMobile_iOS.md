@@ -3,6 +3,7 @@
 1. 打开工程
 2. 找到[AppDelegate load]方法，修改 [ServerConfig sharedInstance].url
 3. 找到[AppDelegate updateConfig]方法，修改以下代码：
+
 <pre>
 // 配置微信
 weixin.config.appId			= @"<Your information>";
@@ -17,14 +18,6 @@ sweibo.config.redirectURI	= @"<Your information>";
 tweibo.config.appKey		= @"<Your information>";
 tweibo.config.appSecret		= @"<Your information>";
 tweibo.config.redirectURI	= @"<Your information>";
-
-// 配置支付宝
-alipay.config.partner		= @"<Your information>";
-alipay.config.seller		= @"<Your information>";
-alipay.config.privateKey	= @"<Your information>";
-alipay.config.publicKey		= @"<Your information>";
-alipay.config.notifyURL		= @"<Your information>";
-alipay.config.wapCallBackURL	= @"<Your alipayWapURL>";
 
 // 配置语音识别
 siri.config.showUI			= NO;
