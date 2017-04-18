@@ -1,10 +1,10 @@
-#Step 1
+# Step 1
 
 1. Locate `bee.services.wizard` under `/services`
 2. Then drag and drop it into your project.
 3. \#import "bee.services.wizard.h"
 
-#Step 2
+# Step 2
 
 <pre>
 bee.services.wizard.config.showPageControl = YES;
@@ -26,11 +26,11 @@ bee.services.wizard.whenSkipped = ^{
 };
 </pre>
 
-#Step 3
+# Step 3
 
 <pre>
 bee.services.wizard.ON();
 bee.services.wizard.OFF();
 </pre>
 
-#Good luck
+# Good luck
