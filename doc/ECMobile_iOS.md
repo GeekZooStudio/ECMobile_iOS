@@ -1,4 +1,4 @@
-#修改工程
+# 修改工程
 
 1. 打开工程
 2. 找到[AppDelegate load]方法，修改 [ServerConfig sharedInstance].url
@@ -30,7 +30,7 @@ siri.config.appID			= @"<Your iflyKey>";
 [ExpressModel setKuaidi100Key:@"<Your kuaidi100Key>"];
 </pre>
 
-#联系方式
+# 联系方式
 
 官方论坛：http://bbs.ecmobile.cn/    
 
